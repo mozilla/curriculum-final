@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/stickerz-love.png">
+          <a class="attribution" href="https://learning.mozilla.org">By Mozilla</a>
+        </div>
+
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Introduction</a></li>
+          <li><a href="#step-3">Breaking Down the Project</a></li>
+          <li><a href="#step-4">Making Pixel Art</a></li>
+          <li><a href="#step-5">Remixing the Thimble Project</a></li>
+          <li><a href="#step-6">Pasting Stickers on the Web</a></li>
+          <li><a href="#step-7">Reflection</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Web Literacy Basics II | 6. #allthestickerz</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            Made by <a href="https://learning.mozilla.org">Mozilla</a>
+          </p>
+
+          <p class="time total-time">
+            60 minutes
+          </p>
+
+          <p class="summary">
+            Learners will create pixel art stickers, publish them for others, and use them to annotate and remix the Web, learning <strong>composing, designing, evaluating, working open, remixing, sharing, and synthesizing</strong>.
+          </p>
+
+        <p>Activity 6 of 9</p>
+
+
+      <h4>Read, Write, and Participate on the Web</h4>
+
+      <h4>21st Century Skills</h4>
+
+      <span class="web-literacy">Collaboration</span>
+      <span class="web-literacy">Communication</span>
+      <span class="web-literacy">Creativity</span>
+      <span class="web-literacy">Problem-solving</span>
+
+      <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+      <span class="web-literacy">Code</span>
+      <span class="web-literacy">Compose</span>
+      <span class="web-literacy">Contribute</span>
+      <span class="web-literacy">Connect</span>
+      <span class="web-literacy">Evaluate</span>
+      <span class="web-literacy">Open Practice</span>
+      <span class="web-literacy">Rexmix</span>
+      <span class="web-literacy">Synthesize</span>
+
+      <h4>Learning Objectives</h4>
+
+      <ul>
+        <li>Compose art on the Web.</li>
+        <li>Share art openly on the Web.</li>
+        <li>Use art to comment on, criticize, and review Web content.</li>
+      </ul>
+
+      <h4>Audience</h4>
+
+      <ul>
+        <li>13+</li>
+        <li>Beginner web users</li>
+      </ul>
+
+      <h4>Materials</h4>
+
+      <ul>
+        <li>Internet-connected student computers</li>
+        <li>An Internet-connected instructor computer with a projector</li>
+        <li>Multi-colored Post-Its or 5cm x 5cm, chopped up squares of multi-colored construction paper</li>
+      </ul>
+
+          <!--
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="https://discourse.webmaker.org/t/testing-web-lit-basics-ii-allthestickerz/392">Discussion Forum</a>.
+</p>
+-->
+
+        </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+      <!--Old Web X-Ray Goggles: https://webmaker.org/en-US/goggles-->
+      <!--New Web X-Ray Goggles: https://goggles-mozilla-org-staging.herokuapp.com/-->
+      <!--Thimble project: https://d157rqmxrxj6ey.cloudfront.net/chadsansing/7048/-->
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Preparation</h1>
+
+            <p>Do <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/7048/">the activity</a> on your own to become familiar with making Web-native pixel art, dragging images into the <a href="https://thimble.mozilla.org">Thimble</a> interface, and using the <a href="https://webmaker.org/en-US/goggles">Web X-Ray Goggles</a>.</p>
+
+      <ol>
+        <li>Follow <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/7048/">this link</a> to the Thimble project for this activity.</li>
+        <li>Click on the green "Remix" button in the upper right-hand corner of the window to go into the project's code.</li>
+        <li>Click on the "Tutorial" pane next to the "Preview" pane in the upper right-hand corner of the coding window.</li>
+        <li>Follow the steps in the tutorial to complete the activity. You may also need to check back here and complete some of the steps in this lesson plan to successfully finish the Thimble project.</li>
+      </ol>
+
+            <p>You can also try this module on <a href="https://developer.mozilla.org/en-US/Learn/HTML/Multimedia_and_embedding">embedding media in a webpage</a> from the <a href="https://developer.mozilla.org/en-US/Learn">Mozilla Developer Network Learning Area</a>.
+
+      <p><em>This is complex and multi-part project that you may want to split up over several classes, sessions, workshops, or events. Please do work through the activity and chunk it appropriately for your community.</em></p>
+
+      <p><em>You should also feel free to adapt bits and pieces of this project to teach students how to make Web-native pixel art, for example, without using all of the project.</em></p>
+
+      <p><em>You can also reimagine this project as a lo-fi or no-fi activity about community participation by having learners create mock-up, paper prototype websites, as well as the stickers they might use to comment on those sites.</em></p>
+
+      <p>You may also wish to set up accounts on Thimble that you can share with your learners. This will save time later when they are ready to remix today's project.</p>
+
+      <p>Make sure students can bookmark websites in their browsers.</p>
+
+      <p>Be sure students can save the art they make somewhere on their devices.</p>
+
+      <p>Post the URL, or Web address, of today's project somewhere highly visible in your room. You may want to post it as a shortened link using a service like bit.ly.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Introduction</h1>
+            <div class="time step-time">25 minutes</div>
+
+            <p>Welcome your learners and explain that today we'll begin a project to make our own Web stickers that we can paste on our favorite websites using Mozilla's Thimble and Web X-Ray Goggle tools.</p>
+
+      <p>Explain that a web sticker, similar to emojis or emoticons, is a small image file that captures an emotion, serves as a reaction, or is used as a metaphorical symbol.</p>
+
+      <p>Next, explain that we'll begin with a hands-on activity to explore the idea of pixel art. Ask learners if anyone knows what a pixel is or what 8-bit art looks like. Facilitate conversation to help the group come to a common understanding of pixels as building blocks of light that our devices and screens use to display images.</p>
+
+      <p>Next, explain that we're going to practice making pixel art with Post-Its or chopped up squares of construction paper. To do so,</p>
+
+      <ol>
+        <li>Get students into groups of 3 or 4.</li>
+        <li>Pass out a big pile of multi-colored Post-Its or chopped up squares of multicolored construction paper to each group.</li>
+        <li>Invite group members to brainstorm a piece of "pixel" art they could create using the Post-Its or paper. Give them about 3-5 minutes to agree on an idea.</li>
+        <li> Give groups about 10 minutes to build their art from their Post-Its or paper.</li>
+        <li>Take pictures of each group's finished product in case there's a table-bumping catastrophe later in class.</li>
+        <li>Gather the whole group's attention again after that.</li>
+        <li>Ask learners to very carefully take a gallery walk around the room to see one another's art. Offer 3-5 minutes for the walk.</li>
+      </ol>
+
+      <p>After the gallery walk, facilitate a very brief reflective discussion, asking students how it felt to build art with blocks of color instead of having to draw or paint on a blank page or canvas from scratch. Try to help learners develop the idea that we can all be successful building stickers with pixel art today and that our work online won't be very different or much more difficult than playing with paper as we just did.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. Breaking Down the Project</h1>
+            <div class="time step-time">10 minutes</div>
+
+            <p>Visit today's Thimble project called #allthestickerz. Take students through the page on your projected computer. Explain that our goal is to make Web art stickers that we can share with others and use to mark-up, decorate, and comment on other Web pages using a remix tool called the Web X-Ray Goggles. There are three big parts to this project that we'll tackle together in order.</p>
+
+      <ol>
+        <li>First, we'll make our sticker images using tools on the Web.</li>
+        <li>Second, we'll remix this Thimble page to show our own stickers.</li>
+        <li>Third, we'll use the Web X-Ray Goggles to put our stickers on other webpages.</li>
+      </ol>
+
+      <p>Tell students that there is a tutorial inside the Thimble project that will help us do each step. Also, give students an idea of how you will split up and pace the project so that they don't feel overwhelmed by all the steps at once. Be ready to help students who experience processing, reading, and writing difficulties to complete the project with your help, additional scaffolding, and/or peer support. It's fine to have students work in pairs on this project so long as they and you share expectations about both partners' inclusion and participation.</p>
+
+      <p>Hit the green "Remix" button on the Thimble project. This will take you and your students into the code of the page. Talk through the structure of the Thimble interface.</p>
+
+      <ul>
+        <li>The files we'll use in the project, eventually including our own stickers, live in the left sidebar called "FILES."</li>
+        <li>We can edit the code and change the webpage in the middle window.</li>
+        <li>We can see a preview of the webpage, as well as the tutorial for the activity, in the window to the right.</li>
+      </ul>
+
+        <p>Answer any questions about the interface that come up.</p>
+
+        <p>Click on the "Tutorial" tab in the upper right-hand part of the screen. Show students how the tutorial is broken up into steps and tell them which steps you'll do when. Chunk the project to help students see that there are specific beginning and ending points built in, such as "Make pixel art," "Put our art into the Thimble project," and "Put our stickers on other webpages."</p>
+
+        <p>This is also a good time to remind students of community norms about Web content and images in your community. Help students identify safe online habits, as well as good digital citizenship practices, while creating images and annotating webpages. Invite students to create awesome work that doesn't unjustly make others uncomfortable in your shared learning space.</p>
+
+        <p>Once you feel like learners have a solid understanding of how the project will be paced so as not to overwhelm them, go on to make your art!</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Making Pixel Art</h1>
+            <div class="time step-time">45 minutes</div>
+
+            <p>Steps 1-4 of the tutorial take learners through making a sticker, resizing it, and exporting it for use later in the project.</p>
+
+      <p>Think-aloud through the steps using whichever art-making tool you suggest for your community. Demonstrate how to make, re-size, and export a simple sticker. Assure learners that you, peers, and the tutorial can help them accomplish those steps, as well.</p>
+
+      <p>Answer any questions about making the stickers and then set learners loose to create at least 2 stickers each. Budget enough time for resizing and exporting. Also, help students make sure that they know where their files will be saved on their devices or, say, jump drives.</p>
+
+      <p>If those files can stay on those machines until the next class, session, workshop, or event, consider pausing here and resuming next class or session.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>5. Remixing the Thimble Project</h1>
+            <div class="time step-time">30 minutes</div>
+
+            <p>Steps 5-8 of the tutorial help learners get their images into the Thimble project. Those steps also teach learners how to publish their remixed Thimble projects and get the URLs, or Web addresses, of their stickers for us later on with the Web X-Ray Goggles.</p>
+
+      <p>Demo the process of importing your stickers, publishing your Thimble make, and finding your stickers URLs for your learners. Answer any questions they have about the process, and then give them the balance of available time to get their own stickers into their own, published remixes.</p>
+
+      <p>Once students have published their remixed projects, you may want to pause again and take on the last part of the project during your next time together as a group.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>6. Pasting Stickers on the Web</h1>
+            <div class="time step-time">30 minutes</div>
+
+            <p>Steps 9 and 10 of the tutorial help learners remix other webpages using their stickers. They will need to grab their stickers' URLs, or Web addresses, from their published Thimble projects. You and the tutorial can both remind them of that before you begin.</p>
+
+      <p>Guide your community through installing the Web X-Ray Goggles in students' browsers.</p>
+
+      <p>Then walk learners through the process of using the goggles to remix a webpage and add your stickers to it.</p>
+
+      <p>When you demo those steps, be sure also to publish your Web X-Ray Goggles remixes so you can get their URLs. You will need those URLs for Step 10 when you update your Thimble project to share the pages that have your stickers.</p>
+
+      <p>Answer any questions that come up and then give learners the rest of the available time to remix favorite webpages with their stickers and to update the links on the bottom of their Thimble projects.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>7. Reflection</h1>
+            <div class="time step-time">30 minutes</div>
+
+            <p>Once learners have had the chance to update their Thimble projects with their Web X-Ray Goggles remixes, facilitate a reflective discussion of students' experiences on the Web.</p>
+
+      <p>Before you begin, remind students of community norms about kindness and encourage them to talk about their own learning, not about other people.</p>
+
+      <p>Use questions like these or develop your own.</p>
+
+      <ol>
+        <li>This was a pretty involved project. How do you feel after completing it? How did it compare to other projects we've done?</li>
+          <li> How did it feel to begin with pixel art instead of having to draw or paint from scratch? How did pixel art support your work? How did pixel art limit your work?</li>
+          <li>What seemed easiest in this project?</li>
+          <li>What seemed most difficult?</li>
+          <li>Why do we like using stickers, emojis, emoticons, and other symbols like kawaii faces to communicate on the Web? What do they do for us that words don't?</li>
+          <li>Do you think we can communicate complex ideas through images like the ones we made in this project? Why or why not?</li>
+          <li>How did it feel to remix someone else's webpage with your stickers and the goggles?</li>
+          <li>How did it feel to comment on other people's webpages using the stickers you made?</li>
+          <li>How do you feel about sharing your stickers with others? Would you be happy or upset if someone else uses them? Why?</li>
+          <li>What if everything was shared openly on the Web? Would that be the Web you want? Why or why not?</li>
+          <li>What if you couldn't make anything or use anything someone else made on the Web? Would that be the Web you want? Why or why not?</li>
+          <li>What do you think is a good balance between openness or remix and private property in a community like ours or in a community like the Web?</li>
+          <li>What parts of this project would you do again? Which parts would you avoid? Why?</li>
+          <li>What did you learn?</li>
+      </ol>
+
+      <p>You may ask students to document or record their answers for assessment. Be sure to help each student find a way to share that works for her, as well as for you, so you can gauge her learning about today's topic without a particular tool (like paper/pencil) blocking a student's expression.</p>
+
+            <p>If you or your learners are curious to learn more, check out this <a href="https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a> or this <a href="https://developer.mozilla.org/en-US/Learn/HTML/Multimedia_and_embedding">module on embedding media on a webpage</a> from the <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> <a href="https://developer.mozilla.org/en-US/Learn">Learning Area</a>.</p>
+
+      <p>Next --> <a href="bridge03-who-am-i.html">Who Am I?</a></p>
+
+          </li> <!-- end of step-->
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

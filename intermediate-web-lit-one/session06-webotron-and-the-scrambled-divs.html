@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 6. Webotron and the Scrambled Divs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/webotron-head.png">
+          <a class="attribution" href="https://learning.mozilla.org">by Mozilla</a>
+        </div>
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Puzzling Out the Importance of Layout and Order</a></li>
+          <li><a href="#step-3">Unscrambling a CSS Layout with Float</a></li>
+          <li><a href="#step-4">Reflection and Assessment</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Intermediate Web Literacy I: Intro to CSS | 6. Webotron and the Scrambled Divs</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            Made by <a href="https://learning.mozilla.org">Mozilla</a>
+          </p>
+
+          <p class="time total-time">
+            60 minutes
+          </p>
+
+          <p class="summary">
+            Learners will apply text- and box-effect CSS styling techniques to inline and block elements on an HTML webpage, learning about <strong>coding, composing, desining, evaluating, and synthesizing</strong>.
+          </p>
+
+      <p>Activity 6 of 7</p>
+
+      <h4>Write the Web</h4>
+
+      <h4>21st Century Skills</h4>
+
+      <span class="web-literacy">Problem-solving</span>
+
+      <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+      <span class="web-literacy">Code</span>
+      <span class="web-literacy">Compose</span>
+      <span class="web-literacy">Design</span>
+      <span class="web-literacy">Evaluate</span>
+      <span class="web-literacy">Synthesize</span>
+
+
+          <h4>Learning Objectives</h4>
+
+          <ul>
+            <li>Understand and be able to explain the connection between an HTML webpage and a CSS stylesheet.</li>
+            <li>Re-order divs using HTML.</li>
+         <li>Use CSS to float div elements on an HTML webpage into different positions relative to one another.</li>
+          </ul>
+
+          <h4>Audience</h4>
+
+          <ul>
+            <li>13+</li>
+            <li>Intermediate web users</li>
+          </ul>
+
+          <h4>Materials</h4>
+
+          <ul>
+            <li>Internet-connected computers</li>
+        <li>Markers</li>
+        <li>Graph paper</li>
+      <li>Pecils and pens</li>
+      <li>Scissors</li>
+          </ul>
+
+
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="https://discourse.webmaker.org/t/testing-intermedite-web-lit-webotron-and-the-scrambled-divs/378">Discussion Forum</a>.
+</p>
+
+
+        </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+      <!--Thimble project: https://d157rqmxrxj6ey.cloudfront.net/chadsansing/17148/-->
+      <!--Discourse: https://discourse.webmaker.org/t/testing-intermedite-web-lit-webotron-and-the-scrambled-divs/378-->
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Preparation</h1>
+
+                  <p>Do <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/17148/">the activity</a> on your own to become familiar with how to find and use webfonts on a webpage.</p>
+
+            <ol>
+              <li>Follow <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/17148/">this link</a> to the <a href="https://thimble.mozillaz.org">Thimble</a> project for this activity.</li>
+              <li>Click on the green "Remix" button in the upper right-hand corner of the window to go into the project's code.</li>
+              <li>Click on the "Tutorial" pane next to the "Preview" pane in the upper right-hand corner of the coding window.</li>
+              <li>Follow the steps in the tutorial to complete the activity. You may also need to check back here and complete some of the steps in this lesson plan to successfully finish the Thimble project.</li>
+          </ol>
+
+      <p>Post the URL, or Web address, of <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/17148/">today's project</a> somewhere highly visible in your room. You may want to post it as a shortened link using a service like <a href="http://bit.ly">bit.ly</a>.
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Puzzling Out the Importance of Layout and Order</h1>
+            <div class="time step-time">25 minutes</div>
+
+      <p>Working with student-generated puzzles, explore the importance of ordering and positioning in a complete design.</p>
+
+      <ol>
+        <li>Gather students and explain that today we'll be looking at the importance of order and layout in creating a unified design. First, we'll use markers, paper, and scissors to do so; then we'll use a Thimble activity to learn more about ordering <code>div</code> elements using the <code>float</code> property to create webpage layout using HTML and CSS.</li>
+        <li>Ask students to take 10 minutes to draw and color an illustration of a robot. Feel free to pick a better theme for your community. The illustration should take up most of the height and width of standard sheet of composition paper. You should also provide a few blank robot templates for students to color in in case some learners feel overwhelemed by the idea of drawing and coloring a robot in the given amount of time.</li>
+        <li>After 10 minutes, ask students to turn their robots into puzzles. Ask them to use scissors to cut their robot into several pieces, but also ask them to keep each piece at 1" x 1" in size so that puzzles don't become too complex and pieces aren't easily lost. Give students about 5 minutes to turn their illustrations into puzzle pieces.</li>
+        <li>Use an equitable method to pair students and have them exchange robot puzzles.</li>
+        <li>Give students 5-10 minutes to complete their partners' puzzles.</li>
+        <li>After students have had enough time to solve their puzzles, facilitate a brief conversation about the importance of ordering and layout to a unified design. Ask students why it might be important for the parts of a webpage to fit together like the pieces of a completed puzzle.</li>
+      </ol>
+
+      <p>After discussing the importance of getting the part of a webpage to 'fit' together, ask students to take their seats at computers.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. Unscrambling a CSS Layout with Float</h1>
+            <div class="time step-time">30 minutes</div>
+
+            <p>Once students have returned to their seats and computers, explain that today we're going to look at how we can use the <code>float</code> and <code>clear</code> properties on a CSS stylesheet to position HTML elements relative to one another on a webpage.</p>
+
+      <p>Share <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/17148/">the link to today's project</a> with students. You might want to shorten this link ahead of time or else provide a link to it from a classwebpage or shared do.</p>
+
+      <p>Once students all arrive at the project, invite them to click the green 'Remix' button. This will take students into the Thimble code editor. They will be abablelse to see the code of the webpage, as well as a preview of how it looks in a browser. Students can also switch between this 'Preview' pane (in the upper righthand part of the Thimble interface) and a 'Tutorial' pane that takes them through today's work in a step-by-step way.</p>
+
+      <p>Work through the tutorial on a projected computer. Invite students to help one another, but also to work ahead if they feel ready to do so. Through the course of the tutorial, you'll ask students to:</p>
+
+      <ol>
+        <li>Reorder scrambled div elements so that they appear in the correct order on an HTML webpage.</li>
+        <li>Learn how the <code>float</code> and <code>clear</code> CSS proprties can work together to <code>position</code> block elements relative to one another on an HTML webpage.</li>
+        <li>Apply <code>float</code> and <code>clear</code> CSS properties to 'solve' the puzzle of the scrambled layout of an HTML webpage.</li>
+        <li>Mess with the code to discover new ways to style a webpage and order its layout in an independent and playful way.</li>
+      </ol>
+
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Reflection and Assessment</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>After working through the tutorial, bring students back together as a group and facilitate a brief, reflective conversation about today's work. Make a list of your own questions or ask questions like those suggested below.</p>
+
+      <p>If you have time, consider asking students to write, type, or otherwise record their responses for self-assessment and teacher evaluation. Just be sure to match recording technologies to students' needs so that whatever medium (or media) you chose for (or with) the group isn't a barrier to learners' expression.</p>
+
+      <ol>
+          <li>How are <code>float</code> and <code>clear</code> similar to and different from other layout properties we've used like <code>position</code>?</li>
+        <li>When might you use <code>float</code> as a layout technique instead of <code>position</code>?</li>
+        <li>What are the advantages of having a unified design or layout instead of a scambled or random one?</li>
+        <li>Can you think of times when you might want a more broken or seemingly disorganized layout?</li>
+        <li>How did styling from the CSS stylesheet interact with the HTML elements on the webpage? What's the connection there?
+What seemed easiest or most difficult about today's work? Why?</li>
+      </ol><br><br>
+
+            <p>If you or your learners are curious to learn more, check out this <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> from the <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> <a href="https://developer.mozilla.org/en-US/Learn">Learning Area</a>.</p>
+
+      <p><strong>Next</strong> --> <a href="session07-external-css-tutorials.html">External CSS Tutorials</a></p>
+          </li> <!-- end of step-->
+
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

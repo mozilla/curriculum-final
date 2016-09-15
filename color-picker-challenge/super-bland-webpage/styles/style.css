@@ -1,0 +1,54 @@
+body {
+  background-color: #ccc;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 25px;
+}
+
+a {
+  color: #555;
+}
+
+h1 {
+  color: #555;
+}
+
+h2 {
+  color: #777;
+}
+
+.level-3 {
+  background-color: #eee;
+  border: 3px solid #555;
+  border-radius: 5px;
+  color: #777;
+  float: left;
+  height: 300px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 380px;
+}
+
+.level-4 {
+  border: 3px solid #555;
+  border-radius: 5px;
+  float: left;
+  height: 300px;
+  width: 400px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 5px;
+}
+
+.level-5 {
+  clear: both;
+  color: #777;
+  font-size: .9em;
+}
+
+#cloud-pic {
+  height: 300px;
+  width: 400px;
+}
+

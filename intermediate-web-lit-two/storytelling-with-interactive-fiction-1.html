@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <title>Storytelling with Interactive Fiction</title>
+
+  <meta name="author" content="Mozilla">
+  <meta name="title" content="Storytelling with Interactive Fiction">
+  <meta charset="utf-8">
+
+
+  <script src="scripts/storytelling-with-interactive-fiction.js"></script>
+
+  <!--We're calling in web fonts, as well as our own stylesheet.-->
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/storytelling-with-interactive-fiction-style.css">
+
+</head>
+
+<body>
+
+  <h1>Storytelling with Interactive Fiction</h1>
+  <h2>Write a simple choose-your-own-adventure story using HTML and JavaScript!</h2>
+
+  <!--This button lauches a script called "fillBlanks()" when it's clicked. The script tells a story using the words that users type into the blank boxes.-->
+
+  <p><button onClick="twoDoors()">Click here to begin!</button></p>
+
+  <div id="story-space"></div>
+
+  <div class="license">CC-BY <a href="https://teach.mozilla.org">Mozilla</a></div>
+
+</body>
+
+</html>

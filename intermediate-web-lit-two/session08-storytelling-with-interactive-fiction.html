@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/cyoa-maze-head.png" alt="An image of a line-drawing head with a question mark inside it looking at a line-drawing maze">
+          <a class="attribution" href="https://learning.mozilla.org">By Mozilla</a>
+        </div>
+        <!-- Image made by Mozilla using assets from the Noun Project, http://thenounproject.com -->
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Paper Prototyping for Interactivity</a></li>
+          <li><a href="#step-3">Coding Interactivity with Conditionals</a></li>
+          <li><a href="#step-4">Reflection and Assessment</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Intermediate Web Literacy II | Storytelling with Scripts | 8. Storytelling with Interactive Fiction</h1>
+
+         <section class="overview">
+
+           <p class="made-by">
+             Made by <a href="https://learning.mozilla.org">Mozilla</a>
+           </p>
+
+           <p class="time total-time">
+             45 to 60 minutes
+           </p>
+
+           <p class="summary">
+             Learn how HTML, CSS, and JavaScript connect to one another by creating an interactive story that responds to user input.
+           </p>
+
+      <p>Activity 8 of 8</h4>
+
+
+       <h4>Write the Web</h4>
+
+       <h4>21st Century Skills</h4>
+
+      <span class="web-literacy">Communication</span>
+      <span class="web-literacy">Creativity</span>
+
+      <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+      <span class="web-literacy">Code</span>
+      <span class="web-literacy">Compose</span>
+      <span class="web-literacy">Remix</span>
+      <span class="web-literacy">Synthesize</span>
+
+      <h4>Learning Objectives</h4>
+
+      <ul>
+       <li>Understand how CSS stylesheets and JavaScript code connect to an HTML webpage.</li>
+       <li>Code a button and script that work together to tell an interactive story that responds to user input.</li>
+      </ul>
+
+      <h4>Audience</h4>
+
+      <ul>
+       <li>13+</li>
+       <li>Intermediate web users</li>
+      </ul>
+
+      <h4>Materials</h4>
+
+      <ul>
+      <li>An Internet-connected, projected instructor computer</li>
+      <li>Internet-connected computers</li>
+      <li>Markers</li>
+      <li>Paper cups or paper</li>
+      <li>Scissors</li>
+      </ul>
+
+           <!--
+ <p class="discussion-link">
+ Check out the ways educators and activists have modified this activity for their specific audiences
+ in our <a href="http://discourse.webmaker.org/t/testing-1-reading-for-the-web/1149/22">Discussion Forum</a>.
+ </p>
+ -->
+
+         </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Preparation</h1>
+
+              <p>
+                Work through <a href="https://thimbleprojects.org/chadsansing/50676/">today's activity</a> to get a feel for how each of its parts - the HTML, CSS, and JavaScript - looks and for how those parts work together. Review this lesson plan, as well, to make sure you're comfortable facilitating it.</p>
+
+          <p>Be sure to read through the lesson so you can familairize yourself with its mark-up and code. Review <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form"><code>form</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><code>input</code></a> (from our lesson on storytelling with user input), as well as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">conditionals</a> (from our lesson on storytelling with pictures), as well.</p>
+
+        <p>You don't need to be an expert on JavaScript to teach this lesson. Just be able to explain that we can use conditional statements, like <code>if</code> statements, to display new parts of a story in response to user input. For example, if a user types "left" into an <code>input</code>, we can write a code that displays the part of a story that happens when a character turns left.</p>
+
+        <p>
+          Be sure to test your technology and Internet connectivity.
+        </p>
+
+      <p>
+        Have somewhere highly visible that you can list web addresses.
+      </p>
+
+      <p>Prepare the paper cups (or plain paper) and markers you'll use for paper protoyping during today's lesson.</p>
+
+        <p>
+          Create a class account or several accounts for students to use on <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor, and post the URL, or a shortened link, for <a href="https://thimbleprojects.org/chadsansing/50676/">today's project</a> somewhere highly visible in the learning space.
+        </p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Paper Prototyping for Interactivity</h1>
+            <div class="time step-time">20 minutes</div>
+
+            <p>Welcome your learners and explain that today we'll be creating interactive stories that display different chapters, so to speak, depending on user input. For example, if we wrote a story in which we asked our user to choose a salad or sandwich for lunch, the next part of the story would match whether or not our user typed in "salad" or "sandwich" in the input field on our webpage.</p>
+
+      <p>Today's lesson will combine work we've done in the past, connecting the <code>form</code> and <code>input</code> HTML elements we used in our fill-in-the-blanks stories with the JavaScript conditional statements, like <code>if else</code>, from our storytelling with pictures project.</p>
+
+      <p>To think through how we might structure our stories, we're going to paper prototype some interactive fiction using markers and paper cups.</p>
+
+      <p><strong>Paper prototyping</strong> is a design practice people use to quickly and cheaply test out the ideas for the interface and behavior of apps, devices, and webpages. When you paper prototype, you use paper to model how a piece of technology will look and act from a user's perspective.</p>
+
+      <p><em><strong>Note:</strong> you can use paper instead of paper cups for this lesson. Adapt the instructions below if you do so. Essentially, everything will be the same, but the story will be flat instead of moving across the surface of a cylinder.</em></p>
+
+      <p>Let's check out <a href="https://www.youtube.com/watch?v=pQEh9lwL3o4">this video</a> to get an idea of what we're after today. Thanks and credit go to user <a href="https://www.youtube.com/channel/UCHphbYRGjDNUcPRPCnUEknA">shin shinrashinge</a> for the idea!</p>
+
+      <p style="text-align:center;"><iframe width="480" height="360" src="https://www.youtube-nocookie.com/embed/pQEh9lwL3o4" frameborder="0" allowfullscreen></iframe></p>
+
+      <p>We're going to make a version of this project that uses two paper cups. We'll use the outside paper cup as an interface, and we'll use the inside paper cup to tell our story using three panels - a central panel that shows some kind of decision to be made, and two outcome panels - one to the left and one to the right - that show what happens after our user makes their choice.</p>
+
+      <p>Let's tackle this project step-by-step. If you already get how to do this, move ahead at your own pace and then help other  classmates finish.</p>
+
+      <ol>
+        <li>Invite students to grab two paper cups each, along with a handful or markers and a pair of scissors. Certainly share as needed.</li>
+        <li>Take one paper cup and use it as the external interface for the story. To do so, cut out a window in one side of the cup. The window should take up no more than a quarter of the cup. <em>Younger web literacy learners should get adult help with this step.</em> All learners should be careful with the scissors.</li>
+        <li>Draw a right-facing arrow to the right of the window on the external paper cup. This is a paper-prototyped interface button for selecting the choice to the right in this story.</li>
+        <li>Draw a left-facing arrow to the left of the window on the external paper cup. This is a paper-prototpyed interface button for selecing the choice to the left in this story.</li>
+        <li>Grab the other paper cup. This will be the internal paper cup that tells the story.</li>
+        <li>Put the internal cup inside the external cup.</li>
+        <li>Trace the external paper cup's window on to the internal cup.</li>
+        <li>Turn the internal paper cup to the right until you can't see your first traced window. Trace another window.</li>
+        <li>Turn the internal paper cup back to the left until you go past the first window again and can no longer see it. Trace a third window on to the internal paper cup.</li>
+        <li>Take the internal paper cup out of the external one.</li>
+        <li>In the middle panel or window on the internal paper cup, draw a scene that presents your user with a choice - like a choice between two foods or paths. You can use stick figures or any other kinds of drawing you want, and you can certainly help others or get help as needed.</li>
+        <li>Move on to the panel or window on the right of your internal paper cup. Make a drawing there that shows what happens if your user makes the decision to the right in your story.</li>
+        <li>Then move on to the panel or window on the left of your internal paper cup. Make a drawing there that shows what happens if your user makes the decision to the left in your story.</li>
+        <li>Finally, put the internal paper cup back inside the external paper cup and move around the room sharing your story with others. When a user "clicks" one of the buttons on the external paper cup of your project, turn the internal paper cup to show them what happens next.</li>
+      </ol><br>
+
+      <p>After everyone has had a chance to complete and share a story, bring everyone together and hold a brief reflective conversation about how this project might connect to interactive storytelling online with <code>if else</code> statements. Ask students if they can explain how their paper cup stories work using <code>if else</code> statements out loud.</p>
+
+      <p>When you think your learners have heard enough explanations of the idea to understand the basics of <code>if else</code> statements and how they can add interactivity to a story or webpage, ask them to take their seats and to load <a href="storytelling-with-interactive-fiction-1">today's project</a> in their browsers.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. Coding Interactivity with Conditionals</h1>
+            <div class="time step-time">20 minutes</div>
+
+      <p>After students have loaded <a href="https://thimbleprojects.org/chadsansing/50676/">today's project</a> in their browsers, ask them to "play" through the short story on the page several times to see how it works.</p>
+
+      <p>Ask students to think about the page in terms of conditionals. How do they think the page is responding each time a user types something into an <code>input</code>?</p>
+
+            <p>Invite a few volunteers to share their thinking with the group.</p>
+
+      <p>After hearing from a few learners, ask learners to hit the "Remix" button in the upper right-hand corner of <a href="https://thimbleprojects.org/chadsansing/50676/">today's activity page</a>. This will take them into <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor.</p>
+
+      <p>Inside Thimble, learners can see the code for the webpage itself (<code>index.html</code>), as well as the CSS stylesheet (<code>style.css</code>) and JavaScript code (<code>script.js</code>) for the page. Those files are accessible in the left-hand FILES sidebar and can be edited in the central column of the page. A preview of what the webpage will look like when published is over on the right.</p>
+
+      <p>At this point, ask learners to log-in to Thimble using their accounts or a class account you provide.</p>
+
+      <p>Notice that the preview pane also has a "Tutorial" tab above it. Click on this tab to show learners the tutorial and then work through it with the group, inviting students who feel comfortable doing so to work ahead.</p>
+
+      <p>This tutorial will take learners through revising the text and conditionals in an interactive story.</p>
+
+      <p>Syntax and punctuation will be especially important today, so help students place their semi-colons and quotation marks when they have trouble.</p>
+
+      <p>Once you and your learners have gone through the tutorial, ask them to hit "Publish" in the upper-right hand corner of the screen. This will give them a URL they can use to visit their own versions of this page and they can share the URL with friends and family, as well.</p>
+
+      <p>Give learners a few minutes to visit each other's computers and play through each other's stories.</p>
+
+      <p>Finally, ask students to gather and debrief on the lesson.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Reflection and Assessment</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>At the end of the lesson, use questions like these (or make your own!) to facilitate a brief, reflective discussion of the day's work.</p>
+
+      <ul>
+        <li>Can you explain, in your own words, how conditionals can work with user input to change a webpage?</li>
+        <li>When do you think someone would use conditionals in another way online?</li>
+        <li>When do we use conditonals in real life? How do they help us make sense of our worlds?</li>
+        <li>What seemed easiest about today's work? Most difficult?</li>
+        <li>How would this project have been different if you had to start from scratch instead of remixing someone's work?</li>
+        <li>How would you improve this lesson or project?</li>
+      </ul>
+
+      <p>You can record learners' responses for the purpose of assessment, as well, but be sure to do so in a way that doesn't disadvantage those who struggle with composing in any particular medium. For example, be ready to record spoken answers, as well as to read typed or written responses.</p>
+
+      <P>If you and your learners are ready for more JavaScript, check out <a href="https://developer.mozilla.org/en-US/Learn/JavaScript">this introductory module</a> from the <a href=\"https://developer.mozilla.org">Mozilla Developer Network</a> (MDN). You can also find <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps">JavaScript First Steps</a> and the <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Silly_story_generator">Silly Story Generator</a> at the <a href="https://developer.mozilla.org/en-US/Learn">MDN Learning Area</a>, as well.</p>
+
+      <p>Back to <a href="https://teach.mozilla.org/activities">our teaching activities</a></p>
+
+          </li> <!-- end of step-->
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

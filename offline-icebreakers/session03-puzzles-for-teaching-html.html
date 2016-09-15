@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/puzzle-pieces.jpg" alt="An image of puzzle pieces in a heap">
+          <a class="attribution" href="https://www.flickr.com/photos/jhritz/409083204">By John Hritz</a> <!--CC-BY 2.0-->
+
+        </div>
+
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Human HTML Tag Puzzle, Part 1</a></li>
+          <li><a href="#step-3">Human HTML Tag Puzzle, Part 2</a></li>
+          <li><a href="#step-4">Markup Mixer</a></li>
+          <li><a href="#step-5">Reflection</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title"><a href="index.html">Offline Icebreakers | <a href="session03-puzzles-for-teaching-html.html#overview">Puzzles for Teaching HTML</a></h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a> by <a href="https://learning.mozilla.org">Mozilla</a>, <a href="https://twitter.com/ossington">ginger coons</a>, <a href="https://twitter.com/malesser">Mark Lesser</a>, <a href="https://twitter.com/thomashpark">Thomas Park</a> and <a href="https://twitter.com/smithisgeneric">Karen Smith</a>
+          </p>
+
+          <p class="time total-time">
+            30 minutes
+          </p>
+
+          <p class="summary">
+            Explore web literacy skills with these puzzle-like activities designed to engage participants with offline learning about the web.
+          </p>
+
+          <h4>Activity 3 of 6 </h4>
+
+          <h4>Read and Participate on the Web</h4>
+
+          <h4>21st Century Skills</h4>
+
+          <span class="web-literacy">Collaboration</span>
+          <span class="web-literacy">Communication</span>
+          <span class="web-literacy">Problem-solving</span>
+
+          <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+          <span class="web-literacy">Synthesize</span>
+
+
+          <h4>Learning Objectives</h4>
+
+          <ul>
+            <li>Learn how HTML tags function.</li>
+            <li>Explore "webmaking 101" tags and website components.</li>
+            <li>Explore the markup of text as a component of site architecture and the <a href="https://learning.mozilla.org/web-literacy">Web Literacy Map</a>.</li>
+            <li>Solve an HTML puzzle dealing with search syntax.</li>
+          </ul>
+
+          <h4>Audience</h4>
+
+          <ul>
+            <li>13+</li>
+            <li>Beginner web users</li>
+          </ul>
+
+          <h4>Materials</h4>
+
+          <ul>
+            <li>Cards labeled with opening and closing HTML tags for common elements like <code>p</code>, <code>h1</code>, and <code>img</code>.</li>
+          </ul>
+
+          <!--
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="http://discourse.webmaker.org/t/testing-1-reading-for-the-web/1149/22">Discussion Forum</a>.
+</p>
+-->
+
+        </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>Preparation</h1>
+
+            <p>These activities are design for offline environments. You will find it helpful to print the acitivies in advance if possible.</p>
+
+            <p>Make written sets of commonly used HTML tags on sticky notes. Include all of the tags that would be found in the structure of a standard web page (check out the example like <a href="http://www.w3schools.com/html/html_intro.asp">this one</a>). Each post-it should include only one tag, like <code>&lt;p&gt;</code> with the related closing tag (say, <code>&lt;/p&gt;</code>) appearing on another post-it.</p>
+
+            <p>Througought the activities, learners can collaborate  to assist each other and work towards solutions. Mentors or teachers can provide correct solutions to the HTML tag-matching puzzles in the activities below or, if you'd like to add an online component to any of the puzzles, learners can check their HTML for errors in <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>Human HTML Tag Puzzle, Part One</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>Randomly assign your sticky note HTML tags to participants. Everyone should get one tag.</p>
+
+            <p>Ask participants to find the person who has the tag corresponding to their own. This means that the person holding <code>&lt;p&gt;</code> should find the person holding <code>&lt;/p&gt;</code>, the person holding <code>&lt;h1&gt;</code> should find the person with <code>&lt;/h1&gt;</code>, and so on.</p>
+
+            <p>Once participants have found their tag partners, ask them to have a brief chat about the possible meanings of their tags. What might <code>&lt;h1&gt;</code> do or mean? What purpose might <code>&lt;body&gt;</code> serve?</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>Human HTML Tag Puzzle, Part Two</h1>
+            <div class="time step-time">10 minutes</div>
+
+            <p>Next, arrange the room into rows, numbered 1-7. Each row should be clearly marked, and should have enough room for three people to stand side-by-side.</p>
+
+            <p>Make sure every participant still has a tag from part one of the activity. If there aren't enough participants to make up the entire sample document found <a href="http://www.w3schools.com/html/html_intro.asp">here</a>, exclude some tags, starting with <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code>.</p>
+
+            <p>Ask participants to explain to the rest of the group what role they believe their tag plays in the HTML document. Drawing on these answers, see if the group can come to a consensus about which tags serve which functions.</p>
+
+            <p>Then, based on the consensus from the previous step, ask participants to move to the row in which they think their tag belongs. If a row has more than one participant in it, ask them to arrange themselves in order, from left to right, based on their understanding of opening and closing tags.</p>
+
+            <p>At the end of this activity, pause and ask the group to assess its performance collectively. Do they believe they have created a functioning HTML document? If there are errors in their ordering, ask the participants to "debug" the code, offering placement suggestions to their peers. Continue this debugging, providing guidance as necessary, until participants have replicated the tag order of the document.
+</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>Markup Mixer</h1>
+            <div class="time step-time">10 minutes</div>
+
+            <p>Introduce the activity by explaining that for web browsers to understand how to display a webpage, its contents needs to be "marked up" using a language called HTML. We will mark up real-world objects in a similar way.</p>
+
+            <p>Explain that we use a pair of tags to mark up content — one at the start and one at the end of the item. Demonstrate the activity by using post-it notes to create your own start and end tags that describe an object in the room and "wrapping" them with the tags.</p>
+
+            <img src="http://i.imgur.com/Rm497sZ.jpg" width="90%" alt="An image of a first aid kit on a wall surrounded by tags that say 'first aid' and '/first aid'"><br><br>
+
+            <p> Distribute post-it notes that have been prepared with blank start and close tags: &lt;_______&gt; and &lt;/_______&gt;. Have others invent their own tag, separate the start and close tags, and mark up an object.</p>
+
+            <img src="http://i.imgur.com/afgTfJu.jpg" width="90%" alt="An image of empty handwritten HTML tags"><br><br>
+
+            <p>Extend this activity by using photos or posters containing lots of objects, or print-outs of text documents like magazine pages and recipes.</p>
+
+            <p>Finally, provide post-it tags for valid HTML elements like img, h1, and p. Explain what each tag stands for, and then have participants mark up a printed webpage.</p>
+
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>Reflection</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>Participants can share their puzzle solutions verbally throughout the session or activities. Then they can assess and reflect on their work once it's complete by checking their puzzle solutions with a mentor or by checking their HTML code in <a href="https://thimble.mozilla.org">Thimble</a>.</p>
+
+            <p>You can prompt discussion using questions like these:</p>
+
+              <ul class="fancy">
+                <li>What are the top 5 points about HTML you would teach a friend?</li>
+                <li>What did you learn about today in additon to HTML?</li>
+              </ul>
+
+      <p><strong>Up Next</strong> --> <a href="session04-a-strong-wind.html">A Strong Wind Blows for Web Literacy</a></p>
+
+          </li> <!-- end of step-->
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

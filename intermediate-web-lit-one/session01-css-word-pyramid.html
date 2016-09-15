@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/blue-pyramid.png">
+          <a class="attribution" href="https://pixabay.com/en/pyramids-layers-blue-3d-305074/">By ClkerFreeVectorImages</a>
+        </div>
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Drawing Dinos</a></li>
+          <li><a href="#step-3">Reversing a Word Pyramid with CSS</a></li>
+          <li><a href="#step-4">Reflection and Assessment</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            Made by <a href="https://learning.mozilla.org">Mozilla</a>
+          </p>
+
+          <p class="time total-time">
+            60 minutes
+          </p>
+
+          <p class="summary">
+            Learners will use CSS to change the size of text on an HTML webpage, learning about <strong>coding, composing, and desinging</strong>.
+          </p>
+
+      <p>Activity 1 of 7</p>
+
+      <h4>Write the Web</h4>
+
+      <h4>21st Century Skills</h4>
+
+      <span class="web-literacy">Problem-solving</span>
+
+          <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+          <span class="web-literacy">Code</span>
+          <span class="web-literacy">Compose</span>
+          <span class="web-literacy">Design</span>
+
+
+          <h4>Learning Objectives</h4>
+
+          <ul>
+            <li>Understand and be able to explain the connection between an HTML webpage and a CSS stylesheet.</li>
+      <li>Change the size of text on an HTML webpage using selectors and values on a CSS stylesheet.</li>
+          </ul>
+
+          <h4>Audience</h4>
+
+          <ul>
+            <li>13+</li>
+            <li>Intermediate web users</li>
+          </ul>
+
+          <h4>Materials</h4>
+
+          <ul>
+            <li>Internet-connected computers</li>
+            <li>Markers</li>
+            <li><a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/21593/">Dino drawing styling instructions template</a></li>
+          </ul>
+
+
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="https://discourse.webmaker.org/t/testing-intermediate-web-lit-css-pyramid/377">Discussion Forum</a>.
+</p>
+
+
+        </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+          <!--Thimble project: https://d157rqmxrxj6ey.cloudfront.net/chadsansing/19784/-->
+          <!--Discourse: https://discourse.webmaker.org/t/testing-intermediate-web-lit-css-pyramid/377-->
+          <!--Dino Drawings: https://d157rqmxrxj6ey.cloudfront.net/chadsansing/21593/-->
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Preparation</h1>
+
+            <p>Do <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/19784">the activity</a> on your own to become familiar with how to find and use webfonts on a webpage.</p>
+
+            <ol>
+              <li>Follow <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/19784">this link</a> to the <a href="https://thimble.mozilla.org">Thimble</a> project for this activity.</li>
+              <li>Click on the green "Remix" button in the upper right-hand corner of the window to go into the project's code.</li>
+              <li>Click on the "Tutorial" pane next to the "Preview" pane in the upper right-hand corner of the coding window.</li>
+              <li>Follow the steps in the tutorial to complete the activity. You may also need to check back here and complete some of the steps in this lesson plan to successfully finish the Thimble project.</li>
+            </ol>
+
+            <p>Post the URL, or Web address, of <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/19784">today's project</a> somewhere highly visible in your room. You may want to post it as a shortened link using a service like <a href="http://bit.ly">bit.ly</a>.</p>
+
+            <p>Customize and print copies of the <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/21593/">dino drawing styling instructions template</a> for students to use in today's activity.</p>
+
+              <p>Note that you can remix this template in Thimble, Mozilla's online code editor, to tailor the subject ('Dino Drawing') and styling instructions (e.g. 'ferocity') for your classroom and community. Visit the link and click on the green 'Remix' button. After you make your changes, you can publish your own version of the project and print it.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Drawing Dinos</h1>
+            <div class="time step-time">25 minutes</div>
+
+            <p>Help students understand the concept of styling instructions by exchanging directions for drawing and coloring a dinosaur (or any other theme or thing that best fits your community).</p>
+
+      <ol>
+
+        <li>Gather students together for today's participatory prompt.</li>
+        <li>Explain that we're going to learn how cascading stylesheets - or CSS - give webpages instructions on how to display all their different parts. In other words, we're going to learn how CSS makes a webpage look like it does.</li>
+        <li>Tell students that in order to visualize how CSS instructions work, we're going to make up and share some drawing instructions of our own.</li>
+        <li>Hand out copies of the <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/21593/">styling instructions</a> template and invite students to grab markers if they need drawing utensils.<br><br>
+
+        <img src="images/dino-instructions.png" alt="An image of a blank styling and drwaing template"><br><br></li>
+
+        <li>Give students about 5 minutes to complete their instructions. Students can use whatever values they want for the instructions on the template. For example, for the <code>ferocity</code> property, a student could write anyting from <code>-999</code> to lots to <code>no</code>. The idea is just to provide guidelines a partner can understand and use. There is no set format for values here. You might suggest that the <code>realism</code> value be kept as <code>low</code> so as many students as possible feel comfortable tackling the drawing portion of this activity.</li>
+        <li>Use an equitable method to have students swap instruction templates with partners.</li>
+        <li>Give students 10-15 minutes to draw a dinosaur using their partners' styling instructions. You may want to provide blank dinosaur templates for coloring or allow students to search for dinosaur pictures that fit their partners' styling instructions. This will help students who experience difficulty drawing to engage with and learn from the activity in a complementary way.</li>
+        <li>After time is up, have students post their templates and drawings on a shared space in the classroom like a whiteboard or empty wall.</li>
+        <li>Take another 5 minutes to do a gallery walk and invite learners to see each other's work and look at how their drawings and styling instructions are connected.</li>
+        <li>Once students have had a chance to complete their gallery walks, gather the group back together and facilitate a brief 5 minute discussion about what seemed easiest and most difficult in both coming up with directions and following them while drawing.</li>
+        <li>When conversation winds down, invite students to take their seats at computers.</li>
+        </ol>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. Reversing a Word Pyramid with CSS</h1>
+            <div class="time step-time">30 minutes</div>
+
+            <p>Once students have made it back to their computers, explain that today we'll be tackling our first intermediate web literacy lesson - the 'CSS Pyramid.' We're going to learn what CSS is and how it works with HTML before using some CSS code to change the size of text on a webpage.</p>
+
+      <p>In short, we're going to see how stylesheets give webpages and browsers instructions about what to display - or 'draw' - on screen.</p>
+
+      <p>Share the link to <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/19784/">today's project</a> with students. You might want to shorten this link ahead of time or else provide a link to it from a classwebpage or shared document. Help students who experience difficulty with processing or typing links get to the webpage and encourage classmates to help, as well.</p>
+
+      <p>Once students all arrive at the project, invite them to click the green 'Remix' button. This will take students into the Thimble code editor. They will be ableto see the code of the webpage, as well as a preview of how it looks in a browser. Students can also switch between this 'Preview' pane (in the upper righthand part of the Thimble interface) and a 'Tutorial' pane that takes them through today's work in a step-by-step way.</p>
+
+      <p>Work through the tutorial on a projected computer. Invite students to help one another, but also to work ahead if they feel ready to do so. Through the course of the tutorial, you'll ask students to:</p>
+
+      <ul>
+        <li>Learn what CSS is.</li>
+        <li>Explore how CSS styling impacts the way elements display on an HTML webpage.</li>
+        <li>Use CSS to change the size of text displayed on a webpage so that a right-side-up 'pyramid' of words looks upside down instead.</li>
+        </li>Mess with the code to discover new ways to style parts of a webpage in an independent and playful way.</li>
+      </ul>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Reflection and Assessment</h1>
+            <div class="time step-time">15 minutes</div>
+
+            <p>After working through the tutorial, bring students back together as a group and facilitate a brief, reflective conversation about today's work. Make a list of your own questions or ask questions like those suggested below.</p>
+
+      <p>If you have time, consider asking students to write, type, or otherwise record their responses for self-assessment and teacher evaluation. Just be sure to match recording technologies to students' needs so that whatever medium (or media) you chose for (or with) the group isn't a barrier to learners' expression.</p>
+
+      <ul>
+        <li>Would you explain, in your own words, what CSS is and how it works?</li>
+        <li>Why do you think we use CSS?/li>
+        <li>What do you imagine a website looks like without CSS?/li>
+        <li>What seemed easiest or most difficult about today's work? Why?/li>
+        <li>What else do you want to learn about styling a webpage? What do you think might be possible to do with CSS and HTML</li>
+      </ul><br><br>
+
+      <p>If you or your learners are curious to learn more, check out this <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> from the <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> <a href="https://developer.mozilla.org/en-US/Learn">Learning Area</a>.</p>
+
+      <p><strong>Next</strong> --> <a href="session02-css-fonts.html">CSS Fonts</a></p>
+
+          </li> <!-- end of step-->
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

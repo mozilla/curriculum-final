@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/ice-cream.jpg" alt="An image of three hand-drawn ice cream cones with smiling faces">
+          <a class="attribution" href="https://www.flickr.com/photos/jelene/3400224598">By Jelene Morris</a>
+        </div>
+
+        <!-- Image credit CC-BY Jelene Morris, https://www.flickr.com/photos/jelene/3400224598 -->
+
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Setting the Tableau</a></li>
+          <li><a href="#step-3">Storyboarding Your Script</a></li>
+          <li><a href="#step-4">Using <code>if</code> Statements to Tell a Story</a></li>
+          <li><a href="#step-5">Reflection and Assessment</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Intermediate Web Literacy II | Storytelling with Scripts | 4. Storytelling with Pictures</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            Made by <a href="https://learning.mozilla.org">Mozilla</a>
+          </p>
+
+          <p class="time total-time">
+            45 to 60 minutes
+          </p>
+
+          <p class="summary">
+            Use HTML, CSS, and JavaScript to tell a simple story using three sequential pictures.
+          </p>
+
+       <p>Activity 4 of 8</h4>
+
+      <h4>Write the Web</h4>
+
+      <h4>21st Century Skills</h4>
+
+      <span class="web-literacy">Communication</span>
+      <span class="web-literacy">Creativity</span>
+
+      <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+      <span class="web-literacy">Code</span>
+      <span class="web-literacy">Compose</span>
+      <span class="web-literacy">Remix</span>
+      <span class="web-literacy">Revise</span>
+      <span class="web-literacy">Share</span>
+
+      <h4>Learning Objectives</h4>
+
+      <ul>
+        <li>Understand how CSS stylesheets and JavaScript code connect to an HTML webpage.</li>
+        <li>Code a button and script that work together to tell a story through three sequential pictures.</li>
+      </ul>
+
+      <h4>Audience</h4>
+
+      <ul>
+        <li>13+</li>
+        <li>Intermediate web users</li>
+      </ul>
+
+      <h4>Materials</h4>
+
+      <ul>
+        <li>An Internet-connected, projected instructor computer</li>
+        <li>Internet-connected computers</li>
+        <li>Markers</li>
+        <li>Paper</li>
+        <li>A storyboarding template like <a href="https://commons.wikimedia.org/wiki/File:Storybord_template_002.jpg">this one</a> (contributed to the public domain by Tomas Mitkus).</li>
+      </ul>
+
+          <!--
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="http://discourse.webmaker.org/t/testing-1-reading-for-the-web/1149/22">Discussion Forum</a>.
+</p>
+-->
+
+        </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Preparation</h1>
+
+            <p>
+              Work through <a href="https://thimbleprojects.org/chadsansing/50669/">today's activity</a> to get a feel for how each of its parts - the HTML, CSS, and JavaScript - looks and for how those parts work together. Review this lesson plan, as well, to make sure you're comfortable facilitating it.</p>
+
+        <p>Be sure to read through the lesson to familairize yourself with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code> statements</a>. Statements like these are called "conditionals" in JavaScript because they set up statements or commands that happen when a certain condition is met on the webpage. The <code>if</code> statement looks for that condition and reacts to it.
+
+      <p>You don't need to be a JavaScript expert for this lesson. Just be able to explain that conditionals can check to see what's happening on a webpage and then make different things happen under different conditions.</p>
+
+      <p>
+        Be sure to test your technology and Internet connectivity.
+      </p>
+
+      <p>
+        Come up with an equitable way for your learners to form groups of three.
+      </p>
+
+      <p>
+        Create a class account or several accounts for students to use on <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor, and post the URL, or a shortened link, for today's project somewhere highly visible in the learning space.
+      </p>
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Setting the Tableau</h1>
+            <div class="time step-time">15 minutes</div>
+
+            <p>Once you've welcomed your students, explain that today we'll use pictures to tell our stories. We're each going to use three pictures to show the beginning, middle, and end of a story. Today our script will use logic to figure out which picture to show next and when to restart the story.</p>
+
+      <p>To get the hang of that idea, we're going to perform three-part stories in groups of three using an activity called "Setting the Tableau." Tableau is another word for scene. Here is how to play:</p>
+
+      <ol>
+        <li>Form groups of three with one student playing the beginning of the story, another student playing the middle, and the last student playing the end of the story.</li>
+        <li>Each group comes up with an idea for a three-part story they can tell by performing the same character at three different moments of time. For example, the first students plays someone stirring a pot; the second student ladles food from the pot on to a plate; the last student eats the food. Each student plays the same character, but does something different to show the beginning, middle, and end of the story.</li>
+        <li>Each student should begin facing right.</li>
+        <li>Each student should then turn to the left as they perform their part of the story.</li>
+        <li>When the previous student faces to their left, the next student begins their performance, also moving from right to left.</li>
+        <li>This right-to-left motion is meant to reflect how an <code>if</code> statement works - if the last student is facing right, don't perform. If there is no last student (like at the beginning) or if the last student is facing left, then perform.</li>
+        <li>At the end of the story, the group should "reset" and all group members should face right again.</li>
+        <li>Give groups 5 minutes to come up with a story and to rehearse it incorporating the right-to-left motion.</li>
+        <li>Take another five minutes or so for each group to perform.</li>
+      </ol>
+
+      <p>Encourage classmates to applaud one another's work. After the last performance, ask students, "What condition had to be met for you to perform? How did you know when to start your part of the story?"</p>
+
+      <p>After facilitating a few volunteers' responses to those questions, ask students to take their seats at their computers and to open <a href="https://thimbleprojects.org/chadsansing/50669/">today's project</a> in their broswers.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. Storyboarding Your Script</h1>
+            <div class="time step-time">15 minutes</div>
+
+            <p>Give students a few minutes to click through the story on <a href="https://thimbleprojects.org/chadsansing/50669/">today's project</a>  page. Ask them how they think the page works? How does it know which picture to show next? Can they think of <code>if</code> kinds of statements that might explain what's going on here?</p>
+
+      <p>Tell students that we'll look inside the project and begin coding our own stories in a few minutes. First though, we'll plan the stories that we want to tell using a simple storyboarding template. Our storyboards don't need to be fancy; we can use stick figures. The big idea is just to figure out what kinds of pictures we should search for later on to tell our own stories. If we decide on our stories now, we'll save time searching for images later.</p>
+
+      <p>Hand out copies of the storyboarding template you want to use and give students about 10 minutes to sketch and describe the three images they want to find for their stories. Each student should finish with a drawing and description of the beginning, middle, and end of their story. Here is an example template:</p>
+
+      <p><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Storybord_template_002.jpg/640px-Storybord_template_002.jpg" alt="An image of a three-panel storyboarding template" width="500px"><br>
+      <em style="font-size: .9em;">Image credit <a href="https://commons.wikimedia.org/wiki/File:Storybord_template_002.jpg">public domain by Tomas Mitkus</em></a></p>
+
+      <p>After ten minutes, ask the group to turn its attention towards the project's code and explain that students who aren't finished storyboarding can put their templates aside and work on them later.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Using <code>if</code> Statements to Tell a Story</h1>
+            <div class="time step-time">15 minutes</div>
+
+            <p>Ask learners to hit the "Remix" button in the upper right-hand corner of <a href="https://thimbleprojects.org/chadsansing/50669/">today's activity page</a>. This will take them into <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor.</p>
+
+      <p>Inside Thimble, learners can see the code for the webpage itself (<code>index.html</code>), as well as the CSS stylesheet (<code>style.css</code>) and JavaScript code (<code>script.js</code>) for the page. Those files are accessible in the left-hand FILES sidebar and can be edited in the central column of the page. A preview of what the webpage will look like when published is over on the right.</p>
+
+      <p>At this point, ask learners to log-in to Thimble using their accounts or a class account you provide.</p>
+
+      <p>Notice that the preview pane also has a "Tutorial" tab above it. Click on this tab to show learners the tutorial and then work through it with the group, inviting students who feel comfortable doing so to work ahead.</p>
+
+      <p>This tutorial will take learners through searching for their images and swapping them into the JavaScript code included in the project.</p>
+
+      <p>You can also use this <a href="https://docs.google.com/document/d/1nUBu3Qn9RxkpbDzgvmzgOYHC0HmGnb0lairbhVXFocM/edit#heading=h.prvvr736xsy8"> external tutorial about finding openly shared images online</a> or this <a href="https://docs.google.com/document/d/1ONmORiEuKqm7iVaimEeRV3O5efr8tbQIUlmpyKez3ec/edit#heading=h.7f2pwjyoptan">external image search resource</a>.
+
+      <p>Syntax and punctuation will be especially important today, so help students place their brackets, semi-colons, and quotation marks when they have trouble.</p>
+
+      <p>Once you and your learners have gone through the tutorial, ask them to hit "Publish" in the upper-right hand corner of the screen. This will give them a URL they can use to visit their own versions of this page and they can share the URL with friends and family, as well.</p>
+
+      <p>Give learners a few minutes to visit each other's computers and to test their webpages and read one another's stories. Then ask them to gather together again to debrief on the lesson.</p>
+
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>5. Reflection and Assessment</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>At the end of the lesson, use questions like these (or make your own!) to facilitate a brief, reflective discussion of the day's work.</p>
+
+      <ul>
+        <li>In your own words, how do <code>if</code> statements work?</li>
+        <li>How else could people use <code>if</code> statements on a webpage or, say, in a game or in a robot's brain?</li>
+        <li>Can you think of a time in real life when you used <code>if</code> statements in your head?</li>
+        <li>What are some similarities and differences between this lesson and our previous ones?</li>
+        <li>What's your favorite way to tell a story? Through words? Pictures? Both? Something else?</li>
+        <li>How would this lesson have been different if you had to write it from scratch instead of remixing it?</li>
+        <li>What seemed easiest about today's work? Most difficult? Why?</li>
+        <li>How would you improve this lesson or project?</li>
+      </ul>
+
+      <p>You can record learners' responses for the purpose of assessment, as well, but be sure to do so in a way that doesn't disadvantage those who struggle with composing in any particular medium. For example, be ready to record spoken answers, as well as to read typed or written responses.</p>
+
+      <p><strong>Next</strong> --> <a href="session05-storytelling-with-user-input.html">Storytelling with User Input</a></p>
+
+          </li> <!-- end of step-->
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

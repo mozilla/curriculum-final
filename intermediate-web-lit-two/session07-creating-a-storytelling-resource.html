@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/paper-cats.jpg" alt="An image of three simple origami cats">
+          <a class="attribution" href="https://www.youtube.com/watch?v=fNwn_zJDaXg">By SKY BLUE</a>
+        </div>
+        <!-- Image credit CC-BY SKY BLUE https://www.youtube.com/watch?v=fNwn_zJDaXg -->
+
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+      <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Defining a Cat Object</a></li>
+          <li><a href="#step-3">Storytelling with Object-oriented Programming (OOP)</a></li>
+          <li><a href="#step-4">Reflection and Assessment</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Intermediate Web Literacy II | Storytelling with Scripts | 7. Creating a Storytelling Resource</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            Made by <a href="https://learning.mozilla.org">Mozilla</a>
+          </p>
+
+          <p class="time total-time">
+            45 to 60 minutes
+          </p>
+
+          <p class="summary">
+            Learn how HTML, CSS, and JavaScript connect to one another by using buttons and scripts to create storytelling prompts.
+          </p>
+
+        <p>Activity 7 of 8</h4>
+
+      <h4>Write the Web</h4>
+
+      <h4>21st Century Skills</h4>
+
+      <span class="web-literacy">Communication</span>
+      <span class="web-literacy">Crreativity</span>
+
+      <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+      <span class="web-literacy">Code</span>
+      <span class="web-literacy">Compose</span>
+      <span class="web-literacy">Contribute</span>
+      <span class="web-literacy">Remix</span>
+      <span class="web-literacy">Share</span>
+      <span class="web-literacy">Synthesize</span>
+
+
+      <h4>Learning Objectives</h4>
+
+      <ul>
+        <li>Understand how JavaScript lets us create objects we can reuse by changing their values.</li>
+        <li>Understand how HTML, CSS, and JavaScript can work together to generate prompts for creative work and self-expression.</li>
+      </ul>
+
+      <h4>Audience</h4>
+
+      <ul>
+        <li>13+</li>
+        <li>Intermediate web users</li>
+      </ul>
+
+      <h4>Materials</h4>
+
+      <ul>
+        <li>An Internet-connected, projected instructor computer</li>
+        <li>Internet-connected computers</li>
+        <li>Markers</li>
+        <li>Paper</li>
+      </ul>
+
+          <!--
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="http://discourse.webmaker.org/t/testing-1-reading-for-the-web/1149/22">Discussion Forum</a>.
+</p>
+-->
+
+        </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Preparation</h1>
+
+              <p>
+                Work through <a href="https://thimbleprojects.org/chadsansing/50675/">today's activity</a> to get a feel for how each of its parts - the HTML, CSS, and JavaScript - looks and for how those parts work together. Review this lesson plan, as well, to make sure you're comfortable facilitating it.</p>
+
+          <p>Be sure to read through the lesson so you can familairize yourself with it's mark-up and code and check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">object-oriented programming</a> (OOP), as well.</p>
+
+        <p>You don't need to be an expert on JavaScript to teach this lesson. Just be able to explain that with JavaScript you can create "objects" that are templates or models you can use over and over again by changing their values.</p>
+
+      <p>Objects are made up of their parts - they typically have names, attrbiutes, and behaviors. For example, an animal  object might have a name like "dog," attributes like "four legs" or "floppy ears" or "long tail," and behaviors like "bark" or "play."
+      </p>
+
+        <p>
+          Be sure to test your technology and Internet connectivity.
+        </p>
+
+      <p>
+        Have somewhere highly visible that you can list ideas and write some example code. You might use a chalkboard or whiteboard, a piece of chart paper, or a document projected from your computer.
+      </p>
+
+        <p>
+          Create a class account or several accounts for students to use on <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor, and post the URL, or a shortened link, for <a href="https://thimbleprojects.org/chadsansing/50675/">today's project</a> somewhere highly visible in the learning space.
+        </p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Defining a Cat Object</h1>
+            <div class="time step-time">15 minutes</div>
+
+            <p>Welcome your group to class and explain that today we're going to learn how to code objects. This is called "object-oriented programming" or "OOP" for short. If you like to pun, you can also share that it's okay to say "oops" a lot today.</p>
+
+      <p>An object is a JavaScript function that you define with particular characteristics. For example, if you created an object in JavaScript called "room," it might have characteristics like "door," "window," "floor," "ceiling," and "furniture."</p>
+
+      <p>Objects are useful because you can reuse them just by changing the values of their characteristcs. There are countless rooms in the world, but each might have a different number of doors or windows, or different colors on the walls, or different kinds of floors and ceilings. By creating a room object, you create a piece of code you can modify endlessly to reflect different examples of the same object.</p>
+
+      <p>Let's explore the idea of objects further by drawing some cats - or, to put it another way, let's draw a bunch of different examples of a cat object.</p>
+
+      <ol>
+        <li>Invite learners to grab some paper and markers.</li>
+        <li>Ask students to take 5 minutes to draw and color a cat. Each student will wind up with his or her own version of a cat object. Students can help one another draw or even describe their cats out loud or in writing if drawing is a struggle.<br><br>
+
+        <!--Image credit CC0 Public Domain by isobelyf, https://pixabay.com/en/drawing-cat-pet-feline-pencil-854034/-->
+
+          <p style="text-align:center;"><img src="https://pixabay.com/static/uploads/photo/2015/07/21/15/32/drawing-854034_960_720.png" width="50%" alt="An image of a child-like drawing of a cat"></p></li>
+        <li>After everyone has finished drawing a cat, ask a few volunteers to share their drawings with the group by holding up the drawing and talking a little bit about it.</li>
+        <li>Once the whole group has seen several examples of cat drawings, ask the class what kinds of features or characteristics are common to all of the cats. At this point, you're looking for common features like "eye color or "hair color," rather than for values like "blue eyes." List these features somewhere highly visible in the room - like on your whiteboard, chart paper, or projected document.</li>
+        <li>Once you have five or six features listed, explain that now you have enough ideas to begin building a cat object in code.</li>
+        <li>Underneath that list of ideas, write a line of pseudo-code that looks like this (but plug in a few of your students' ideas for the features here):<br><br>
+
+          <code>function Cat(name, hairLength, hairColor, eyeColor,) {<br>
+          &nbsp;&nbsp;this.name = name;<br>
+          &nbsp;&nbsp;this.hairLength = hairLength;<br>
+          &nbsp;&nbsp;this.hairColor = hairColor;<br>
+          &nbsp;&nbsp;this.eyeColor = eyeColor;<br>
+          }</code><br><br>
+
+        This is the cat object. The <code>this</code> prefix makes each cat's features usable throughout any longer script that might use those variables in different ways.</li>
+
+        <li>Next, explain that you can create new variables to create new cats that follow this function, model, or object. Write a line of code like this:<br><br>
+
+          <code>var mittens = new Cat("Mittens", "long haired", "calico", "green");</code><br><br></li>
+
+          <li>Finally, ask students if they can list the cat's name, hair length, hair color, and eye color from reading that code. Also ask if a few volunteers can explain how they made those connections between Mittens (or the cat your class creates) and the cat object.</li>
+        </ol>
+
+        <p>Thie big idea here is to realize that you can write an object to describe and create examples of nearly anything that has a structure, whether its an animal, a computer, a song, or a story. If you can break something down into parts, you can write an object to describe it and serve as a container for different examples of it.
+        </p>
+
+        <p>When you feel like your learners have had enough time to think through, verbalize, and understand the connections between Mittens (or the cat your class creates) and the object model, invite them to load <a href="https://thimbleprojects.org/chadsansing/50675/">today's project</a> in their browsers.</li>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. Storytelling with Object-oriented Programming (OOP)</h1>
+            <div class="time step-time">25 minutes</div>
+
+      <p>After students have loaded <a href="https://thimbleprojects.org/chadsansing/50675/">today's project</a> in their browsers, invite them to click the button several times to see how the page generates prompts for multimedia stories.</p>
+
+      <p>Ask students to think about the page in terms of object-oriented programming (OOP). Which parts of the page do they think might be objects? Which features or characteristics might those objects have based on the values displayed on the page? How is writing a story with different parts like describing a cat with different parts</p>
+
+            <p>Invite a few volunteers to share their thinking with the group.</p>
+
+      <p>After hearing from a few learners, ask learners to hit the "Remix" button in the upper right-hand corner of <a href="https://thimbleprojects.org/chadsansing/50675/">today's activity page</a>. This will take them into <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor.</p>
+
+      <p>Inside Thimble, learners can see the code for the webpage itself (<code>index.html</code>), as well as the CSS stylesheet (<code>style.css</code>) and JavaScript code (<code>script.js</code>) for the page. Those files are accessible in the left-hand FILES sidebar and can be edited in the central column of the page. A preview of what the webpage will look like when published is over on the right.</p>
+
+      <p>At this point, ask learners to log-in to Thimble using their accounts or a class account you provide.</p>
+
+      <p>Notice that the preview pane also has a "Tutorial" tab above it. Click on this tab to show learners the tutorial and then work through it with the group, inviting students who feel comfortable doing so to work ahead.</p>
+
+      <p>This tutorial will take learners through revising existing objects or writing their own.</p>
+
+      <p>Syntax and punctuation will be especially important today, so help students place their semi-colons and quotation marks when they have trouble.</p>
+
+      <p>Once you and your learners have gone through the tutorial, ask them to hit "Publish" in the upper-right hand corner of the screen. This will give them a URL they can use to visit their own versions of this page and they can share the URL with friends and family, as well.</p>
+
+      <p>Give learners a few minutes to visit each other's computers and to click through one another's storytelling resources to see what kinds of prompts they create.</p>
+
+      <p>After that, ask students to gather again for a debrief on the lesson.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Reflection and Assessment</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>At the end of the lesson, use questions like these (or make your own!) to facilitate a brief, reflective discussion of the day's work.</p>
+
+      <ul>
+        <li>Can you explain, in your own words, how object-oriented programming (OOP) works?</li>
+        <li>When do you think someone would use OOP in a project for the web? Can you think of how other people, like designers or video game creators might use objects in their work?</li>
+        <li>When would it be good to use something like OOP or modeling in real life?</li>
+        <li>What seemed easiest about today's work? Most difficult?</li>
+        <li>How would this project have been different if you had to start from scratch instead of remixing someone's work?</li>
+        <li>How would you improve this lesson or project?</li>
+      </ul>
+
+      <p>You can record learners' responses for the purpose of assessment, as well, but be sure to do so in a way that doesn't disadvantage those who struggle with composing in any particular medium. For example, be ready to record spoken answers, as well as to read typed or written responses.</p>
+
+      <p><strong>Next</strong> --> <a href="session08-storytelling-with-interactive-fiction.html">Storytelling with Interactive Fiction</a></p>
+
+          </li> <!-- end of step-->
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/buttons-1.jpg" alt="An image of a pile of different buttons">
+          <a class="attribution" href="https://pixabay.com/en/buttons-couture-materials-617323/">By jackmac34</a>
+        </div>
+        <!-- Image credit CC0 Public Domain by jackmac34, https://pixabay.com/en/buttons-couture-materials-617323/ -->
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Building Human Machines</a></li>
+          <li><a href="#step-3">Discovering JavaScript</a></li>
+          <li><a href="#step-4">Coding a Button and Alert</a></li>
+          <li><a href="#step-5">Reflection and Assessment</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Intermediate Web Literacy II | Storytelling with Scripts | 1. Buttons and Alerts</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            Made by <a href="https://learning.mozilla.org">Mozilla</a>
+          </p>
+
+          <p class="time total-time">
+            45 to 60 minutes
+          </p>
+
+          <p class="summary">
+            Learn how HTML, CSS, and JavaScript connect to one another by using buttons and scripts to tell a simple story.
+          </p>
+
+      <p>Activity 1 of 8</h4>
+
+      <h4>Write the Web</h4>
+
+      <h4>21st Century Skills</h4>
+
+      <span class="web-literacy">Communication</span>
+      <span class="web-literacy">Creativity</span>
+
+
+      <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+      <span class="web-literacy">Code</span>
+      <span class="web-literacy">Compose</span>
+      <span class="web-literacy">Remix</span>
+       <span class="web-literacy">Revise</span>
+
+      <h4>Learning Objectives</h4>
+
+      <ul>
+        <li>Understand how CSS stylesheets and JavaScript code connect to an HTML webpage.</li>
+        <li>Code a button and script that work together to tell a story inside a pop-up alert window.</li>
+      </ul>
+
+      <h4>Audience</h4>
+
+      <ul>
+        <li>13+</li>
+        <li>Intermediate web users</li>
+      </ul>
+
+      <h4>Materials</h4>
+
+      <ul>
+  <li>An Internet-connected, projected instructor computer</li>
+        <li>Internect-connected computers</li>
+        <li>Markers</li>
+        <li>Paper</li>
+      </ul>
+
+          <!--
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="http://discourse.webmaker.org/t/testing-1-reading-for-the-web/1149/22">Discussion Forum</a>.
+</p>
+-->
+
+        </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Preparation</h1>
+
+            <p>
+              Work through <a href="https://thimbleprojects.org/chadsansing/50661/">today's activity</a> to get a feel for how each of its parts - the HTML, CSS, and JavaScript - looks and for how those parts work together. Review this lesson plan, as well, to make sure you're comfortable facilitating it.
+            </p>
+
+      <p>
+        Be sure to test your technology and Internet connectivity.
+      </p>
+
+      <p>
+        Come up with an equitable way for your learners to form groups of four.
+      </p>
+
+      <p>
+        Create a class account or several accounts for students to use on <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor, and post the URL, or a shortened link, for <a href="https://thimbleprojects.org/chadsansing/50661/">today's project</a> somewhere highly visible in the learning space.
+      </p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Building Human Machines</h1>
+            <div class="time step-time">15 minutes</div>
+
+            <p>
+              Welcome your learners and explain that today we'll begin learning how even a basic webpage can connect to styling instructions and code that can make the page interactive, rather than static or unchanging, for its users. We're going to connect a webpage to a CSS stylesheet that tells the page how to look. Then we're going to connect the page to a script that tells the page what to do when we click on a button.
+            </p>
+
+      <p>First, though, we're going to explore this idea of connectedness and interactivity with a game called Human Machines.</p>
+
+      <p>Human Machines is an improv game - a game actors sometimes use to practice performing new ideas right on the spot.</p>
+
+      <p>In Human Machines, each person in a group forms part of the machine and repeats a function - or job - over and over again as part of the way the machine works. For example, a group might make an assembly line of robots that make paper airplanes or sandwiches or the group members might combine to perform something more abstract like a machine that makes dreams.</p>
+
+      <p>We're going to perform a webpage with a button. Here are the rules:</p>
+
+      <ol>
+        <li>We will form groups of four.</li>
+        <li>One person will be the user - the person using the computer or webpage.</li>
+        <li>One person will be the webpage.</li>
+        <li>One person will be a button on the webpage.</li>
+        <li>One person will be a piece of code connected to the button that does something.</li>
+        <li>Group members can only give verbal instructions - you don't need to actually press or click anything.</li>
+        <li>The user will say something like, "I'm clicking the button to blank," and "blank" will be whatever you want your webpage to do - it can even do something silly. Maybe it sings a song. Maybe it plays a cat video. Maybe it buys you a new pair of kicks.</li>
+        <li>Then the webpage will tell the button something like, "You've been clicked!"</li>
+        <li>Then the button will tell the code something like, "Hey! The user wants blank!" Again, change "blank" to be whatever your webpage does.</li>
+        <li>Then the code will perform doing whatever it is the code does. The person playing the code might sing a song or perform a cat video or box up a new pair of shoes for shipping.</li>
+        <li>The button will then mimic te code the same action to the webpage, passing along whatever the code did to the webpage. The button connects the code to the webpage.</li>
+        <li>Then the webpage performs whatever the button did to the user. The webpage connectes the user to the button and code.</li>
+        <li>Finally, the user celebrates and says something like, "What a great song!", or, "What a cute video!", or, "Aw yes, my shoes are here!"</li>
+        <li>Each group will perform its machine for the whole group.</li>
+        <li>Audience members should give a little cheer at the end of each performance.</li>
+      </ol><br>
+
+      <p>Once each small group has had a chance to perform, bring the whole group back together and facilitate a brief reflective discussion on the activity using questions like these:</p>
+
+      <ul>
+        <li>Can you describe, in your own words, how a user, webpage, button, and code might work together to make something happen on that webpage?</li>
+        <li>What would the web be like if there was no interactivity - if it was only webpages and no stylesheets or pieces of code?</li>
+        <li>What questions do you have about how these kinds of interactions and connections work? What do you wonder about HTML, CSS, and JavaScript or other coding languages?</li>
+      </ul>
+
+      <p>Finally, invite learners to gather around your projected computer for an introduction to JavaScript and computational thinking.</p>
+
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. Discovering JavaScript</h1>
+            <div class="time step-time">10 minutes</div>
+
+      <p>Explain that JavaScript and other coding languages give webpages and other technologies - like video game consoles - instructions about what to do. For example, the "next" button on a webpage goes to the next picture or page. The "up" button on a video game controller makes a character move on-screen. Languages like JavaScript have code that detects when a user clicks a button, as well as code that produces a response.</p>
+
+      <p>Any action that a program takes can be called a "function" - a set of steps that the code executes or makes happen. Inside each function, different things can happen, but usually the function uses a set of "variables" - which are like building blocks - to define what happens next. For example, in a video game, code can keep track of something like your score, health, or inventory and tell the webpage or gaming console how much you have and how to show you that information on-screen through a health bar of inventory tab or something.</p>
+
+      <p>Let's say that we have a function called "keepScore." One variable in that function would be your score while other variables, like the number of coins you collect or enemies you defeat, would trigger the function to update your score as you play.</p>
+
+      <p>Or let's say we have a function that counts the money in our piggy banks. Counting is the function; how much we count or put into the bank at any given time is a variable.</p>
+
+      <p>Functions can use values attached to variables, and can change those values.</p>
+
+      <p>Check out these brief videos to learn more. Consider playing each video 2-3 times since they are short and ask learners to try to pick up something new each time they watch.</p>
+
+      <h2>Functions</h2>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Mu_2GFV9VGU" frameborder="0" allowfullscreen></iframe><br><em>by Chloe Varelidi</em>
+
+      <h2>Variables</h2>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jLN9e6oAC9U" frameborder="0" allowfullscreen></iframe><br><em>by Chloe Varelidi</em><br><br>
+
+      <p>Once you've shared the videos, ask learners what they thought about coding before they saw the videos and what they think now after viewing them. Encourage 3-5 volunteers to share their thinking. You can also ask, "What's a function?", or, "What's a variable?" Then, invite learners to their computers and ask them to load <a href="https://thimbleprojects.org/chadsansing/50661/">today's project</a> in their broswers.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Coding a Button and Alert</h1>
+            <div class="time step-time">15 minutes</div>
+
+            <p>Once learners have loaded the webpage for <a href="https://thimbleprojects.org/chadsansing/50661/">today's activity</a>, ask them to hit the button on the page a few times to see what it does. This button doesn't do much - it just launches an alert box with a tiny, one-sentence story in it. We're going to remix this page to edit that story and see how parts of the page connect to one another.</p>
+
+      <p>Invite learners to hit the "Remix" button in the upper right-hand corner of the activity page. This will take them into <a href="https://thimble.mozilla.org">Thimble</a>, Mozilla's online code editor.</p>
+
+      <p>Inside Thimble, learners can see the code for the webpage itself (<code>index.html</code>), as well as the CSS stylesheet (<code>style.css</code>) and JavaScript code (<code>script.js</code>) for the page. Those files are accessible in the left-hand FILES sidebar and can be edited in the central column of the page. A preview of what the webpage will look like when published is over on the right.</p>
+
+      <p>At this point, ask learners to log-in to Thimble using their accounts or a class account you provide.</p>
+
+      <p>Notice that the preview pane also has a "Tutorial" tab above it. Click on this tab to show learners the tutorial and then work through it with the group, inviting students who feel comfortable doing so to work ahead.</p>
+
+      <p>The tutorial will take learners through changing the background color of the page on the stylesheet and changing the text in the alert box in the JavaScript file so they can see how parts of the page connect to one another. Encourage students to mess around with the code to see what else they can change or if they can add to the story in the box.</p>
+
+      <p>Look at how the <code>alert</code> command in <code>script.js</code> is part of the function on the page. Above the <code>alert</code>, the variable <code>microstory</code> holds the string - or the exact sentence - that the button calls into the webpage. Our <code>alert</code> takes that vairable in its parentheses and delivers its value - the string or the words in the variable - to the webpage.<p>
+
+        <p>To put it another way: <code>alert</code> is as a method, a command that's built-in to JavaScript. Our <code>alert</code> calls whatever is inside its  parentheses into the alert box on the webpage. We've put the <code>microstory</code> variable in the alert box and we've defined that variable just above the <code>alert</code>. In effect, the <code>alert</code> is calling the value of the variable into the alert box on the web page whenever we hit the button. There's a lot of connection-making here!</p>
+
+      <p>Once you've gone through the tutorial, ask learners to hit "Publish" in the upper-right hand corner of the screen. This will give them a URL they can use to visit their own versions of this page and they can share the URL with friends and family, as well.</p>
+
+      <p>Give learners a few minutes to visit each other's computers and to test their webpages and read one another's stories. Then ask them to gather together again for a closing conversation.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>5. Reflection and Assessment</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>Finally, facilitate a brief, reflective discussion about the day's learning using prompts like these - or make your own!</p>
+
+      <ul>
+        <li>In your own words, can you describe how today's webpage worked?</li>
+        <li>How did our human machines activity connect to our Thimble project?</li>
+        <li>How do HTML, CSS, and JavaScript connect?</li>
+        <li>What other examples of interactivity have you seen on other webpages? How do you think those pages work?</li>
+        <li>Was it difficult or easy to begin remixing a Thimble project? How would the activity have been different if you had to start from scratch?</li>
+        <li>What surprised, delighted, or frustrated you about the activity or about HTML, CSS, and JavaScript?</li>
+        <li>What else do you wonder about HTML, CSS, and/or JavaScript?</li>
+        <li>How would you improve this lesson?</li>
+      </ul>
+
+      <p>You can record learners' responses for the purpose of assessment, as well, but be sure to do so in a way that doesn't disadvantage those who struggle with composing in any particular medium. For example, be ready to record spoken answers, as well as to read typed or written responses.</p>
+
+      <p><strong>Next</strong> --> <a href="session02-three-buttons.html">Storytelling with Three Buttons</a></p>
+
+
+          </li> <!-- end of step-->
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

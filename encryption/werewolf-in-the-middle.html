@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/werewolf-1.png" alt="A PNG image of a werewolf">
+          <a class="attribution" href="https://pixabay.com/en/werewolf-wolf-halloween-monster-151661/">By OpenClipartVectors</a>
+        </div>
+
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Introduction</a></li>
+          <li><a href="#step-3">Playing Encyption Werewolf-in-the-Middle</a></li>
+          <li><a href="#step-4">Reflection and Assessment</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Encryption Basics | Werewolf-in-the-Middle</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            Made by <a href="https://teach.mozilla.org">Mozilla</a>
+          </p>
+
+          <p class="time total-time">
+            45 minutes
+          </p>
+
+          <p class="summary">
+            Introduce the basics of <strong>surveillance</strong> and <strong>man-in-the-middle</strong> (MITM) attacks with this social activity adapted from the popular party game <a href="http://werewolfgame.wikia.com/wiki/The_Werewolf_Game_Wiki">Werewolf</a>.
+          </p>
+
+          <h4>Participate on the Web</h4>
+
+          <h4>21st Century Skills</h4>
+
+          <span class="web-literacy">Collaboration</span>
+          <span class="web-literacy">Communication</span>
+          <span class="web-literacy">Problem-solving</span>
+
+
+          <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+          <span class="web-literacy">Connect</span>
+          <span class="web-literacy">Evaluate</span>
+          <span class="web-literacy">Protect</span>
+          <span class="web-literacy">Share</span>
+
+          <h4>Learning Objectives</h4>
+
+          <ul>
+            <li>Understand and explain how intercepts and surveillance works online.</li>
+            <li>Understand and explain man-in-the-middle (MITM) attacks.</li>
+            <li>Evaluate and share strategies for secure communication online.</li>
+          </ul>
+
+          <h4>Audience</h4>
+
+          <ul>
+            <li>13+</li>
+            <li>Beginner web users</li>
+          </ul>
+
+          <h4>Materials</h4>
+
+          <ul>
+            <li>Projected Internet-connected computer</li>
+            <li><a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/33434/">Werewolf-in-the-Middle cards</a></li>
+          </ul>
+
+          <!--
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="http://discourse.webmaker.org/t/testing-1-reading-for-the-web/1149/22">Discussion Forum</a>.
+</p>
+-->
+
+        </section> <!-- End of Introduction -->
+
+        <ul class="agenda">
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Preparation</h1>
+
+            <p>Get familiar with the foundations of today's activity:</p>
+
+            <ul>
+              <li>The kids' game <em><a href="https://en.wikipedia.org/wiki/Chinese_whispers">Telephone</a></em>.</li>
+              <li>The party game <em><a href="https://en.wikipedia.org/wiki/Mafia_(party_game)">Werewolf</a></em>.</li>
+              <li>Online <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle (MITM)</a> attacks.</li>
+            </ul>
+
+            <p>Print enough <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/33434/">Werewolf-in-the-Middle cards</a> for your group.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Introduction</h1>
+            <div class="time step-time">10 minutes</div>
+
+            <p>Welcome learners and explain that today we're going to play a mash-up of two games: Telephone (a.k.a. The Whisper Game or Pass the Message) and Wereworlf. We're going to combine the two games to learn the basics of how "main-in-the-middle" (MITM) attacks intercept our un-encrypted communications online.
+            </p>
+
+            <p>
+              Why should we encrypt our communications? What would happen if we didn't encrypt? How does Encryption even work?
+            </p>
+
+            <p>
+              Questions like these are common ones when it comes to securing our data online. Generally, encryption helps us make sure people other than our intended recipients can read our communications. Many servcies already employ encryption on our behalf - you can see this when you visit a website with an address that begins with <code>https://</code> instead of just <code>http://</code> without the <code>s</code>. Services that use <code>https://</code> scramble the information you send back and forth with them.</p>
+
+            <p>Here are a few other ways to think about encrytion from <a href="https://advocacy.mozilla.org/encrypt/">the Mozilla advocacy team's latest public awareness campaign</a>:</p>
+
+            <p>
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V5jlHv_GNr4" frameborder="0" allowfullscreen></iframe><br><em>Privacy Lets You Be You</em>
+            </p>
+
+            <p>
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-dIV47ZzWOY" frameborder="0" allowfullscreen></iframe><br><em>Meet Encryption</em>
+            </p>
+
+            <p>Next, explain to participants that by looking at how MITM can take-over our unsecure communications online, we'll see the importance of encryption and help each other think of strategies to stay private, safe, and secure online.</p>
+
+            <p>Briefly explain each game, as well as the big ideas behind MITM attacks, to your learners. You might use language like this:</p>
+
+            <ul>
+              <li><strong>Telephone:</strong><br>
+                <blockquote><p>In Telephone, you and the other players line up or form a circle. The first person in the line or circle comes up with a message, like, "I love mango smoothies!" Then, the first person whipsers the message to the second person so no one else can hear it. The second person likewise passes the message down the line until it reaches the last player. That player repeats the message out loud so everyone can hear it. The group "wins" if the right message made it all the way down the line or across the circle. The group "loses" if the message has changed, but sometimes the last message is funny, so "losing" becomes a fun part of the game.</p></blockquote></li>
+
+              <li><strong>Werewolf:</strong><br>
+                <blockquote><p>In Werewolf, there are two groups of players. There is a small, two-person group of werewolves. There is a large group of villagers including everyone else who is playing the game. There is also a judge or facilitator who runs the game and hands out cards beforehand to assign players their roles as werewolves or villagers. The judge tells the players when it is day or night. During the night, everyone except the werewolves has to close his or her eyes. The werewolves communicate silently and pick a villager to eat. During the day everyone opens his or her eyes, the faciltator says who got eaten, that player leaves the game, and everyone else tries to figure out who the werewolves are. During the day, the werewolves can lie and misdirect players into thinking other people are werewolves, too. The villagers can exile one person a day. The game ends when either the werewolves have eaten every villager or when the villagers have gotten rid of all the werewolves.</p></blockquote></li>
+
+              <li><strong>Man-in-the-Middle (MITM) Attacks:</strong>
+                <blockquote><p>In a MITM attack, someone online practices surveillance to find out when you email someone else. Then, that person intercepts your message by grabbing it out of the data-stream connecting you and your recipient. If your message is not encrypted, that "man-in-the-middle" can read everything you wrote. If the message is encrypted well, even though that person has your message, he or she can't decipher it. In illustrations of MITM attacks, the sender is usually someone whose name begins with A, the recipient is someone whose name begins with B (since messages go from Point A to Point B), and the interceptor is someone whose name begins with M, for "man-in-the-middle." These attacks are dangerous because the people intercepting your information - often called bad actors - can steal personal and financial information from you, as well as impersonate you or your recipient and send false messages to get more private information from you.</p></blockquote><br>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Man_in_the_middle_attack.svg/800px-Man_in_the_middle_attack.svg.png" width="50%" alt="An illustration of a man-in-the-middle attack by a bad actor names Mallory between a sender named Alice and a recipeint named Bob"><br><span style="font-size:.9em;"><em>Man in the middle attack</em>, CC-BY-SA by <a href="https://en.wikipedia.org/wiki/File:Man_in_the_middle_attack.svg">Miraceti</a></span></li>
+
+              <p>While encryption can't solve every security problem imaginable, it does keep your information confidential. Even if a bad actor manages to grab a message from you and somehow corrupts or damages it before it gets to your intended receiver, the damaged message won't decrpyt correctly, letting you know there's been an attack or problem.</p>
+
+              <p>Encryption should be used with other security measures to make sure MITM attacks don't happen elsewhere. For example, you wouldn't want a bad actor to steal your account or public key and impersonate messages from you (as a sender, rather than interceptor), and you wouldn't want a bad actor to cut or otherwise control your access to the Internet itself.</p>
+
+        <p>If the message is encrypted well, even though that person has your message, he or she normally can't decipher it.</p>
+            </ul>
+
+            <p>Take time to answer participants' questions about each game and the big ideas behind MITM attacks. When your learners seem comfortable with each part of the activity, go on to the next step.</p>
+
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. Playing Encryption Werewolf-in-the-Middle</h1>
+            <div class="time step-time">30 minutes</div>
+
+            <p>
+              Share the instructions with your learners and answer any questions they have about the game before the group begins play.
+            </p>
+
+            <ol>
+              <li>Split the class into groups of six. If you wind up with one to five extra players, assign them in some equitable way to other groups or send them all to one group so it has seven to eleven players.</li>
+              <li>Pass out the <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/33434/">Werewolf-in-the-Middle cards</a>. Each group of six players needs one set of cards. If you wind up with one to five extra players after making groups of six, include whichever extra hop, hub, or server cards and create a game of seven to eleven players.</li>
+              <li>Explain that the "sender" in each group will begin the line and that he or she needs to come up with a simple message to whisper down the line.</li>
+              <li>Explain that the "receiver" at the end of the line will say the message out loud when it gets to the end of the line.</li>
+              <li>Explain that each person between the sender and receiver is a router, server, or phone line connected to the Internet, and that each of our online communications goes from hop to hop until it finds its way around the world to it receiver.</li>
+              <li>Explain that one of the people in the middle of each line is a "bad actor" who wants to perform a MITM attack on the sender's whipsered message.</li>
+              <li>The bad actor's job is to intercept and change the message before passing it along. However, in order to hide his or her identity, the bad actor can, twice per game, pass along the correct message.</li>
+              <li>The rest of the group wants to whipser the correct message all the way down the line to the receiver.</li>
+              <li>Sending one message to the receiver and hearing it out loud is one "turn" of the game.</li>
+              <li>After each turn, the sender and receiver can talk with one another and pick a router, server, or phone line that they suspect to be the bad actor to kick off the Internet. Their goal is to identify and exile the bad actor.</li>
+              <li>Only the sender and receiver can talk about who to exile from the Net. All other players must remain quiet during this part of the turn.</li>
+              <li>Once a player is exiled, he or she leaves the line and can't participate in the game.</li>
+              <li>A new turn begins when the sender whispers a new message down the line to test his or her information security.</li>
+              <li>The game lasts for three turns.</li>
+              <li>At the end of the game, each router, server, or phone line reveals his or her identity.</li>
+              <li>The bad actor wins if he or she hasn't been exiled after three turns.</li>
+              <li>The sender and receiver win if the bad actor has been exiled.</li>
+            </ol><br>
+
+            <p>Try to run the game at least 3 times so that as many group members as possible get to be the sender and receiver.</p>
+            <p>After about 30 minutes of play, gather the group back together to reflect on what players learned.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Reflection and Assessment</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>Take a few moments at the end of the lesson to gather together again as a whole group. Join in a facilitated conversation about encryption basics answering questions like these - or ask your own questions of the group!</p>
+
+            <ul>
+              <li>In your own words, how do MITM attacks work?</li>
+              <li>How does sending un-encrypted information across the Internet help bad actors who perform MITM attacks?</li>
+              <li>What are some ways you can think of to protect your information, even if it's interecepted?</li>
+              <li>What questions do you have about how to make your own communications more secure?</li>
+            </ul>
+
+            <p>Congratulate your players on working through the basics of encryption with games that teach the web. Encouarge them to grab extra sets of cards and to teach their friends how to play. Spread the word about the importance of encryption to online privacy, safety, and security!</p>
+
+          </li> <!-- end of step-->
+
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>

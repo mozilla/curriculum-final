@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intermediate Web Literacy I: Intro to CSS | 1. CSS Word Pyramid</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="196x196" href="../template-assets/images/favicon.png">
+    <link rel="stylesheet" href="../template-assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../template-assets/template.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" mode="overview">
+      <aside>
+        <div class="image">
+          <img src="https://c1.staticflickr.com/3/2824/13334048894_001d3e53d1.jpg" alt="An image of a stylized lock in front of computer code">
+          <a class="attribution" href="https://www.flickr.com/photos/yusamoilov/13334048894">By Yuri Samoilov</a>
+        </div>
+        <!-- Photo credit CC-BY 2.0 by Yuri Samoilov, https://www.flickr.com/photos/yusamoilov/13334048894 -->
+
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Introduction</a></li>
+          <li><a href="#step-2">Encrypting with Public and Private Keys</a></li>
+          <li><a href="#step-3">A Note on Crypto</a></li>
+          <li><a href="#step-4">Creating Color Keys</a></li>
+          <li><a href="#step-5">Reflection</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Encryption Basics | Really Private Messaging</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            Made by <a href="https://teach.mozilla.org">Mozilla</a> with thanks to <a href="https://twitter.com/aprilmpls">April King's</a> <a href="https://marumari.github.io/crypto-presentation/#/">"Intro to Cryptography"</a>
+          </p>
+
+          <p class="time total-time">
+            45 minutes
+          </p>
+
+          <p class="summary">
+        Participants will learn the basic importance and mechanics of encryption, modeling public-private key encryption schemes with simple tools like paper and markers, crayons, or colored pencils, thereby learning how to <strong>collaborate, connect, evaluate encryption schemes, and secure their communications online.</strong>.
+          </p>
+
+      <h4>Participate on the Web</h4>
+
+      <h4>21st Century Skills</h4>
+
+      <span class="web-literacy">Collaboration</span>
+      <span class="web-literacy">Communication</span>
+      <span class="web-literacy">Creativity</span>
+      <span class="web-literacy">Problem-solving</span>
+
+          <h4><a href="https://learning.mozilla.org/web-literacy">Web Literacy Skills</a></h4>
+
+          <span class="web-literacy">Collaborate</span>
+          <span class="web-literacy">Connect</span>
+          <span class="web-literacy">Evaluate</span>
+          <span class="web-literacy">Protect</span>
+
+          <h4>Learning Objectives</h4>
+
+          <ul>
+            <li>Understand encryption as a way to keep private information secret from eavesdroppers.</li>
+      <li>Understand how public-private key encryption works (a.k.a. asymmetric or RSA encryption).
+      <li>Create simplified public and private keys to model asymmetric encryption.</li>
+      <li>Understand encryption best practices for beginner users.</li>
+          </ul>
+
+          <h4>Audience</h4>
+
+          <ul>
+            <li>13+</li>
+            <li>Beginner users of encryption.</li>
+          </ul>
+
+          <h4>Materials</h4>
+
+          <ul>
+            <li>Internet-connected instructor computer</li>
+      <li>Markers, colored pencils, crayons, paints, or any other coloring tools that <em><strong>easily mix</strong></em>.</li>
+        <li>Paper</li>
+        <li>Optional: internet-connected computers for participants</li>
+          </ul>
+
+<!--
+<p class="discussion-link">
+Check out the ways educators and activists have modified this activity for their specific audiences
+in our <a href="">Discussion Forum</a>.
+</p>
+      -->
+
+
+        </section> <!-- End of Introduction -->
+
+    <!--April King's cryptogrpahy preso https://marumari.github.io/crypto-presentation/#/103-->
+
+        <ul class="agenda">
+
+      <!--Thimble project: https://d157rqmxrxj6ey.cloudfront.net/chadsansing/15991/-->
+      <!--Discourse: https://discourse.webmaker.org/t/testing-intermediate-web-lit-css-building-blocks/376-->
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>1. Introduction</h1>
+      <div class="time step-time"> 10 minutes</div>
+
+      <p><span style="font-size:.9em;"><em>With thanks to <a href="https://marumari.github.io/crypto-presentation/#/">April King</a>!</em></span></p>
+
+      <p>We all value our privacy online - especially when we're sending messages to a friend or family member that we don't want anyone else to read! <em><strong>Encryption</strong></em> - the practice of making our private messages encoded and more secure from prying eyes - is one tool that makes things like private messaging possible.
+
+            <p>Encryption has been around for thousands of years.</p>
+
+      <p>Originally, encryption helped allied military leaders communicate their plans with one another while keeping their enemies in the dark. Some of the earliest ciphers, or codes, were <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar Ciphers</a>. These ciphers swapped letters to scramble messages by shifting each letter to a different letter a certain number of spaces away in the alphabet. The sender and recipient knew how to unscramble the letters, but since some letters show up more frequently than others, eventually the frequency of the encoded letters let enemies break one another's codes.</p>
+
+      <p><a href="https://en.wikipedia.org/wiki/Caesar_cipher#/media/File:Caesar_cipher_left_shift_of_3.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/856px-Caesar_cipher_left_shift_of_3.svg.png" width="75%" alt="An image of a Caesar Cipher swapping each letter of the English alphabet for another one three letters away"></a><br><span style="font-size:.8em;"><em>"Caesar cipher left shift of 3," CC0 Public Domain by Matt_Crypto</em></span></p>
+
+      <p>Try your own Caesar Cipher using this <a href="http://codepen.io/MattCK/pen/OyQyxE">pen from MattC.K</a>:</p>
+
+      <p>Type your message into the textbox, pick a number of letters to shift, and your newly encrypted message will appear.</p>
+        <div class="input">
+          <form id="form">
+            <p><em>Message:</em>
+            <input type="text" id="cypher"/></p>
+            <p><em>Shift:</em>
+            <input type="number" value="7" id="offset"/></p>
+            <p><em>Finish:</em>
+            <input type="text" id="finish"/></p>
+        </form>
+        </div>
+
+        <p>Take a moment to do the following:</p>
+
+        <ol>
+          <li>Write a short message to someone else at the workshop or to a friend.</li>
+          <li>Encrypt the message using the form above.</li>
+          <li>Send your workshop partner or friend the message along with your cipher - like "Caesar Cipher shift 5" - so they can decode it.</li>
+          <li>Decode any messages people send you.</li>
+          <li>Think about how easy or difficult it would have been to decrypt the messages you sent and received if you didn't have the key. Would it have been easy? Impossible? Would it just have taken some time? How much, would you estimate?</li>
+        </ol>
+
+      <p>Today, after solving problems once thought impossible, cryptographers have created sophisticated, two-key encryption systems that allow for privacy and trust between sender and recipient. We'll explore one of those methods next called <em>public-private key encryption</em>.</p>
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>2. Encrypting with Public and Private Keys</h1>
+            <div class="time step-time"> 10 minutes</div>
+
+      <p>In the mid seventies two teams of cryptographers published "public-key" encryption systems. In 1976, <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Whitfield Diffie and Martin Hellman</a> published what is now known as the Diffie-Hellman key exchange protocol, and in 1977, <a href="https://en.wikipedia.org/wiki/RSA_%28cryptosystem%29">Ron Rivest, Adi Shamir, and Leonard Adleman</a> shared public-key encryption with the world. This system is sometimes called "RSA encryption" after the initials of its inventors.</p>
+
+      <p>These techniques power a lot of the encryption you already use today, so it is useful to know how they work. These systems use complex algorithms to generate complex keys that work in pairs to independently encrypt and decrypt messages between two parties. The keys also validate each party's identity to the other to help prevent <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle attacks</a>.</p>
+
+      <p>Here's an example of a Diffie-Hellman encryption system that uses color to explain how it works. Watch from the beginning through 2:10 to get an idea of how these color keys work.</p>
+
+      <p><iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/3QnD2c4Xovk?rel=0" frameborder="0" allowfullscreen></iframe></p>
+
+      <p>Simply put, public-private key encryption lets you create a pair of keys that talk to one another like so:</p>
+
+      <ol>
+        <li>You create a public key that anyone can see. People use this key to encrypt messages they send you. Once someone encrypts a message with this key, that same key cannot decrypt the message at all - the math is all wrong for that.</li>
+        <li>At the same time you create your public key, you create a private key that you must keep safe from everyone else. It goes with your public key. Whatever your public key encodes, your private key can decode.</li>
+        <li>When you receive a message encrypted with your public key, you can decode it with your private key.</li>
+        <li>You can also "sign" a message with your public key (by attaching it to a message encoded with the recipient's public key) so that its recipient can trust that you sent the message.</li><br>
+      </ol>
+
+      <p>In this scheme, even if a "man-in-the-middle" eavesdropper manages to intercept, read, or steal your message, that person will be missing the second key needed to decrypt it.</p>
+
+      <p>These systems matter so much because without such strong encryption, anyone can easily read the private communications intercepted online. However, if we use strong encryption, even if someone intercepts our private communications, it’s highly unlikely they will be able to read what we've sent. If we agree to let a government break or outlaw our encryption schemes, it hasccess to all of our communication with one another, as will bad actors.</p>
+
+      <p>Next, we'll get together with a partner and try encrypting colors of our own to see first-hand how this kind of public-key encryption works.</p>
+
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>3. A Note on Crypto</h1>
+            <div class="time step-time"> 5 minutes</div>
+
+            <p>While we're going to play around with color to learn how public-private key encryption works, it's important to know that we're "playing" with encryption today to see how it works. Don't write your own "crypto" after today's activity. The kinds of systems we can come up with on our own are weak and easily breakable by others and by computers. If you need help encrypting your communications, you should use standard tools available to everyone. Check out this page from the <a href="https://freedom.press/encryption-works">Freedom of the Press Foundation</a> for helpful hints. When we set up encryption correctly on our computers, our computers do most of the work.</a></p>
+
+      <p>Not even the experts get everything right, but it's better to use the experts' crypto than our own.</p>
+
+      <!-- Commenting out an image here pending internal feedback
+
+        <a href="http://xkcd.com/1286/"><img src="http://imgs.xkcd.com/comics/encryptic.png" alt="An image of a comic from xkcd showing improperly encrypted,leaked password hints from Adobe as if in a crossword puzzle"></a><br>
+        <span style="font-size:.9em"><em>"Encryptic," CC-BY-NC 2.5 by <a href="http://xkcd.com/1286/">xkcd</a></em>
+
+        -->
+
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Creating Color Keys</h1>
+            <div class="time step-time">15 minutes</div>
+
+            <p>Let's try to create some Diffie-Hellman color keys ourselves! You can revisit <a href="https://www.youtube.com/watch?v=3QnD2c4Xovk">the video from <em>Step 2 - Encrypting with Public and Private Keys</a></em> to see how this works and illustrate the instructions below.</p>
+
+      <ol>
+
+        <li>First, even before you get a partner, grab a marker, crayon, or other coloring tool from the workshop supplies and try to keep it totally secret. Your facilitator may call you up one by one to grab a color, or she may pass out colors sealed in envelopes to help with this step.</li>
+
+        <li>Once your secret color is secure, Find a partner at the workshop (or grab a friend). Make sure you understand the basics from the video in <em>Step 2 - Encypting with Public and Private Keys</em>. Ask any questions you still have before we begin. Here is an illustration of the system we're trying to create:<br><br>
+
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Diffie-Hellman_Key_Exchange.svg/427px-Diffie-Hellman_Key_Exchange.svg.png" width="75%" alt="An illustration of how three colors can be combined in certain sequence to show how public-private key encryption works"><br>
+          <span style="font-size:.9em;"><em>Illustration of the Diffie–Hellman Key Exchange</em>, CC0 Public Domain by <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#/media/File:Diffie-Hellman_Key_Exchange.svg">A.J. Han Vinck</a></li>
+
+        <li> At this point you and your partner should each have a secret color. These are your private keys.</li>
+
+        <li>If that's the case, grab a third color. This is your public key. You, your partner, and everybody else can see it.</li>
+
+        <li>Grab two pieces of paper - one for you and one for your partner.</li>
+
+        <li>Color a large portion of each paper with your third, public key color.</li>
+
+        <li>Move away from your partner and color over that public key color with your private key color. Color thoroughly, but <em><strong>stay inside the original patch of color</strong></em> so that you don't give your private color away by coloring over blank parts of the page.</li>
+
+        <li>Meet your partner again.</li>
+
+        <li>Exchange papers. You should have a paper that has your public key color mixed with your partner's private key color.</li>
+
+        <li>Move away from your partner once more.</li>
+
+        <li>Add your color to the mix of the public key color and your partner's private key color. Again, color thoroughly, but <em><strong>stay inside the original patch of color</strong></em>.</li>
+
+        <li>Team up with your partner one more time.</li>
+
+        <li>Compare your "messages" - or pieces of paper. You should both have a similar color made up of your public key color and both partners' private key colors.</li>
+
+        <li>Spend the rest of the time left for this step visiting other groups. Can anyone guess either of your private key colors from your group's mixture? Can you easily guess other people's private key colors?</li>
+
+      </ol>
+
+      <p>Imagine huge, interrelated public-private numbers and their factors interacting in a similar way and you've grasped basic cryptography and encryption. My number, your number, and a shared number talk to one another in a unique relationship that would take even a computer years and years and years to crack.</p>
+
+
+          </li> <!-- end of step-->
+
+          <li>
+            <h1>4. Reflection</h1>
+            <div class="time step-time">5 minutes</div>
+
+            <p>Take a few moments at the end of the lesson to gather together again as a whole group. Join in a facilitated conversation about encryption basics answering questions like these - or ask your own questions of the group!</p>
+
+      <ol>
+        <li>In general terms and in your own words, can you summarize how public-private key encryption works?</li>
+        <li>How does encryption connect to privacy and security?</li>
+        <li>What are some situations in your own life in which you want your private information to stay private between you and another person?</li>
+      </ol>
+
+      <p>Congratulations on working through the basics of encryption - while it's tough to learn and even tougher to write, it's important to understand how encryption protects your privacy and communications online. How else can we all teach about the importance and mechanics of encryption? Whom else can you teach in your community or at home?</p>
+
+          </li> <!-- end of step-->
+
+        </ul>
+      </article>
+    </div>
+  </body>
+</html>
