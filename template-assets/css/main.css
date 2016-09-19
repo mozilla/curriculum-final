@@ -333,13 +333,6 @@ figcaption {
   font-size: 14px;
 }
 
-.web-literacy {
-  display: inline-block;
-  padding: 7px 10px;
-  background: #efefef;
-  margin-right: 2px;
-}
-
 .time {
   color:#3fb58e;
   background: #caf6e6;
@@ -580,6 +573,13 @@ figcaption {
 
 [weblit-category] {
   margin: 8px 0;
+}
+
+[weblit-category] span {
+  display: inline-block;
+  padding: 7px 10px;
+  background: #efefef;
+  margin-right: 2px;
 }
 
 [weblit-category]:before {
