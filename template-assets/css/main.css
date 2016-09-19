@@ -1,3 +1,5 @@
+
+
 body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
@@ -359,7 +361,7 @@ figcaption {
   display: inline-block;
   border-width: 0 0 0 2px;
   padding: 10px 12px 10px 32px;
-  background-image: url(images/clock.svg);
+  background-image: url(../images/clock.svg);
   background-size: 18px;
   background-position: 8px center;
   background-repeat: no-repeat;
@@ -431,28 +433,17 @@ figcaption {
   position: relative;
 }
 
-.agenda-navigation li.selected a:after {
-  content: "";
-  font-weight: bold;
-  width: 20px;
-  height: 100%;
-  position: absolute;
-  right: -20px;
-  top: 0;
-  background: url("../images/selected-nav-arrow.svg") left center no-repeat;
-}
-
-.agenda-navigation a:hover {
-  background: #C92751;
+.agenda-navigation li a {
+  padding-left: 60px;
+  color: rgba(255,255,255,.6);
 }
 
 .agenda-navigation a {
   padding: 18px 22px;
 }
 
-.agenda-navigation li a {
-  padding-left: 60px;
-  color: rgba(255,255,255,.6);
+.agenda-navigation a:hover {
+  background: #C92751;
 }
 
 .agenda-navigation li.selected a {
@@ -480,144 +471,25 @@ figcaption {
   color: rgba(255,255,255,1);
 }
 
-.agenda-navigation li:nth-child(1) a:after {
+.agenda-navigation li:nth-child(1):after {
   content: "";
   height: 22px;
   width: 22px;
   left: 27px;
   top: 19px;
   position: absolute;
-  background-image: url(images/flag.svg);
+  border: none;
+  border-radius: 0;
+  background-image: url(../images/flag.svg);
   background-size: 22px;
   background-position: center;
   background-repeat: no-repeat;
   opacity: .4;
 }
 
-.agenda-navigation li.selected:nth-child(1) a:after {
+.agenda-navigation li.selected:nth-child(1):after {
   opacity: 1;
 }
-
-/* For narrow viewports */
-
-@media all and (max-width: 600px) {
-
-  [mode=step] .activity-title {
-    margin: 0 0 5px 0;
-  }
-
-  .agenda > li > h1 {
-    font-size: 30px;
-    padding-bottom: 15px;
-    margin: 0 0 25px 0;
-  }
-
-  .total-time {
-    padding: 8px 12px;
-    margin: 20px 0 0px 0;
-  }
-
-  .step-time {
-    font-size: 16px;
-    padding: 5px 10px;
-  }
-
-  aside {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .wrapper {
-    min-height: auto;
-  }
-
-  .main {
-    padding: 30px 25px 30px 25px;
-    margin-top: 50px;
-  }
-
-  aside {
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-  }
-
-  aside img {
-    display: none;
-  }
-
-  .agenda-navigation {
-    margin: 0;
-    display: flex;
-    overflow-x: auto;
-    position: relative;
-    /*    height: 80px;*/
-    line-height: 80px;
-  }
-
-  /*  This is the little arrow when there are scrolling steps*/
-  .agenda-navigation:after {
-    display: none;
-    position: fixed;
-    right: 0px;
-    top: 0px;
-    color: white;
-    height: 58px;
-    content:  "\f105";
-    font-family: FontAwesome;
-    padding: 18px 15px 18px 25px;
-    font-size: 22px;
-    color: rgba(255,255,255,.4);
-    box-sizing: border-box;
-    background-image: linear-gradient(90deg, rgba(201,39,81,0), #C92751 80%);
-  }
-
-
-  .agenda-navigation li {
-    flex: 1;
-    position: relative;
-    min-width: 40px;
-  }
-
-  .agenda-navigation li a {
-    padding: 18px 0;
-
-  }
-
-  .agenda-navigation li:after {
-    pointer-events: none;
-    position: absolute;
-    border: none !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    padding-top: 17px;
-    border: none;
-  }
-
-  .agenda-navigation li:first-child:after {
-    content:  "\f024";
-    font-family: FontAwesome;
-    top: 3px;
-  }
-
-  .agenda-navigation li:nth-child(1):after {
-    left: 0 !important;
-  }
-
-  .agenda-navigation li a {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-}
-
-
 
 /* This adds the numbers to each agenda step link */
 
@@ -683,80 +555,6 @@ figcaption {
 
 .agenda-navigation li:nth-child(17):after {
   content: "16";
-}
-
-@media print {
-
-  h1.activity-title {
-    font-size: 30px;
-  }
-
-  .agenda h1 {
-    font-size: 30px;
-  }
-
-  body {
-    font-size: 15px !important;
-  }
-
-  article {
-    padding: 0 10px !important;
-  }
-
-  p.summary {
-    padding: 0;
-    background: transparent;
-    font-size: 15px;
-  }
-
-  .time {
-    border: solid 2px #DDD;
-    color: #999 !important;
-    border-width: 2px 2px 2px 2px;
-    background: transparent;
-  }
-
-  figure {
-    max-width: 65%;
-  }
-
-  .btn {
-    border: solid 2px #BBB !important;
-    color: #999 !important;
-    border-width: 2px 2px 2px 2px !important;
-    background: transparent !important;
-    padding: 8px;
-    font-size: 15px;
-  }
-
-  aside {
-    display: none !important;
-  }
-
-  .discussion-link {
-    display: none !important;
-  }
-
-  .agenda {
-    margin-top: 30px !important;
-  }
-
-  .main ul li {
-    line-height: 100%;
-  }
-
-  .agenda > li {
-    margin-top: 55px !important;
-    display: block !important;
-    position: relative !important;
-  }
-
-  .agenda > li .step-time {
-    right: 2px !important;
-    top: 0 !important;
-    padding: 8px;
-    font-size: 15px;
-  }
 }
 
 .next-up {
