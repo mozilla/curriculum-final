@@ -386,6 +386,10 @@ figure img {
   max-width: 100%;
 }
 
+.agenda img {
+  max-width: 100%;
+}
+
 figcaption {
   background: #efefef;
   padding: 4px 8px;
@@ -771,3 +775,41 @@ figcaption {
   color: rgba(0,0,0,.2);
   font-size: 30px;
 }
+
+
+
+/* Web Literacy Categories */
+
+[weblit-category] {
+  margin: 8px 0;
+}
+
+[weblit-category]:before {
+  display: inline-block;
+  border-width: 0 0 0 2px;
+  padding: 7px 14px 7px 12px;
+  text-transform: uppercase;
+  margin-right: 2px;
+  color: #D3627F;
+  border-left: solid 2px #EF9AB6;
+  background: #fae6ea;
+  font-weight: 600;
+}
+
+[weblit-category=read]:before {
+  content: "read";
+}
+
+[weblit-category=write]:before {
+  content: "write";
+}
+
+[weblit-category=participate]:before {
+  content: "participate";
+}
+
+[weblit-category] + a {
+  margin-top: 5px;
+  display: inline-block;
+}
+
