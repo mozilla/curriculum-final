@@ -59,9 +59,12 @@ function navigate(hash){
     $(".wrapper").attr("mode","step");
   }
 
-  // Here we add the selected class to the activity navigation link.
+  // Add the selected class to the activity navigation link.
   navEl.find(".selected").removeClass("selected");
   navEl.find("a[href="+hash+"]").parent().addClass("selected");
+
+  // Scroll the page to the top
+  $(window).scrollTop(0);
 
   window.location.hash = hash;
 }

@@ -115,6 +115,23 @@ blockquote {
   padding: 20px;
 }
 
+blockquote a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.fancy blockquote {
+  background: transparent;
+  margin: 25px 0;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 0 0 0 20px;
+  background: rgba(255,255,255,.7);
+  padding: 20px 20px;
+  border-left: solid 2px rgba(203,35,79,.2);
+}
+
 h2 {
   color: rgba(0,0,0,.65);
   margin: 30px 0 20px 0;
@@ -173,6 +190,10 @@ aside .image {
   position: relative;
 }
 
+aside .image.padded {
+  padding: 25px;
+}
+
 aside .image img {
   width: 100%;
   display: block;
@@ -201,6 +222,8 @@ aside .image .attribution:hover {
   color: rgba(255,255,255,.9);
 }
 
+/* Fancy red list */
+
 .agenda ul.fancy, .agenda ol.fancy {
   background: #fae6ea;
   color: #D3627F;
@@ -217,6 +240,12 @@ aside .image .attribution:hover {
 .agenda .fancy li {
   color: #D3627F;
   border-bottom: solid 1px rgba(203,35,79,.15);
+}
+
+.fancy a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .overview li:last-child,
@@ -287,7 +316,7 @@ figcaption {
 
 .web-literacy {
   display: inline-block;
-  padding: 8px;
+  padding: 7px 10px;
   background: #efefef;
   margin-right: 2px;
 }
