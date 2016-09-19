@@ -36,12 +36,10 @@ h1 {
 }
 
 [mode="overview"] .activity-title a {
-
   color: inherit;
   text-decoration: none;
   cursor: text;
 }
-
 
 .activity-title .meta {
   display: block;
