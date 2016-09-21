@@ -230,32 +230,6 @@ aside .image .attribution:hover {
   color: rgba(255,255,255,.9);
 }
 
-/* Fancy red list */
-
-.agenda ul.fancy, .agenda ol.fancy {
-  background: #fae6ea;
-  color: #D3627F;
-  margin: 25px 0 35px 0;
-  padding: 5px 35px 5px 40px;
-  padding-left: 45px !important;
-  border-left: solid 2px rgba(203,35,79,.2);
-}
-
-.agenda ul.fancy {
-  list-style-type: disc;
-}
-
-.agenda .fancy li {
-  color: #D3627F;
-  border-bottom: solid 1px rgba(203,35,79,.15);
-}
-
-.fancy a {
-  color: inherit;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
 .overview li:last-child,
 .agenda li:last-child {
   border: none;
@@ -611,3 +585,32 @@ figcaption {
   display: inline-block;
 }
 
+
+
+
+/* Fancy red list */
+
+ul.fancy, ol.fancy {
+  background: #fae6ea;
+  color: #D3627F;
+  margin: 25px 0 35px 0;
+  padding: 5px 35px 5px 40px;
+  padding-left: 45px !important;
+  border-left: solid 2px rgba(203,35,79,.2);
+}
+
+ul.fancy {
+  list-style-type: disc;
+}
+
+.fancy li {
+  color: #D3627F;
+  border-bottom: solid 1px rgba(203,35,79,.15);
+  padding: 14px 0 !important;
+}
+
+.fancy a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
