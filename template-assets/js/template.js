@@ -14,6 +14,13 @@ $(document).ready(function(){
 
   navigate(window.location.hash);
 
+  $(".activity-menu").on("click",".toggle",function(){
+    $(".activity-menu ol").slideToggle();
+    $(this).toggleClass("menu-open");
+    return false;
+  });
+
+
   navEl.on("click","a",function(){
     var step = $(this).attr("href");
     navigate(step);
@@ -53,10 +60,10 @@ function navigate(hash){
   if(overview) {
     hash = "#overview";
     $("section.overview").show();
-    $(".wrapper").attr("mode","overview");
+    $("body").attr("mode","overview");
   } else {
     $(".agenda > li:nth-child("+step+")").show();
-    $(".wrapper").attr("mode","step");
+    $("body").attr("mode","step");
   }
 
   // Add the selected class to the activity navigation link.
