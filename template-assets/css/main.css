@@ -331,9 +331,6 @@ figcaption {
   color:#3fb58e;
   background: #caf6e6;
   border-radius: 2px;
-}
-
-.total-time {
   padding: 8px 12px;
   margin: 14px 0 0 0;
   display: inline-block;
@@ -345,16 +342,9 @@ figcaption {
   background-repeat: no-repeat;
 }
 
-.step-time {
-  font-size: 18px;
-  padding: 10px 16px 10px 14px;
-  border-width: 0 0 0 2px;
-  display: block;
-  font-size: 16px;
-  margin: 0 0 15px 0;
-  display: inline-block;
+.agenda .time {
+  margin: 0 0 25px 0;
 }
-
 
 figure {
   padding: 0 0 50px 0;

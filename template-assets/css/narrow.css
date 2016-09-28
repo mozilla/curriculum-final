@@ -111,6 +111,7 @@
     border: solid 1px rgba(0,0,0,.05);
     top: 0;
     margin-bottom: 15px;
+    font-size: 1em;
   }
 
   .activity-menu .toggle {
