@@ -12,10 +12,6 @@ p, li, span {
   min-height: 100vh;
 }
 
-article {
-  /*  max-width: 750px;*/
-}
-
 h1 {
   font-size: 40px;
   font-weight: normal;
@@ -411,7 +407,7 @@ figcaption {
 }
 
 .agenda-navigation a:hover {
-  background: #C92751;
+  background: #d13359;
 }
 
 .agenda-navigation li.selected a {
