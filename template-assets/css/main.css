@@ -527,19 +527,17 @@ figcaption {
 
 .next-up {
   background: #eee;
-  padding: 20px 50px 20px 30px;
+  padding: 20px 30px 20px 30px;
   text-align: right;
   position: relative;
 }
 
-.next-up:after {
-  content:  "\f105";
-  position: absolute;
-  right: 20px;
-  width: 20px;
-  font-family: "FontAwesome";
-  color: rgba(0,0,0,.2);
-  font-size: 30px;
+.next-up .arrow {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  padding: 0 5px;
+  position: relative;
+  top: -2px;
 }
 
 /* Web & 21st Century Skills lists */
@@ -571,18 +569,10 @@ figcaption {
   color: #D64262;
 }
 
-.arrow-strong {
-  color: rgba(0,0,0,.4);
+.overview .skills-list li {
+  margin-bottom: 0;
+  padding-bottom: 5px;
 }
-
-.arrow-strong:after {
-  content: "\2192";
-  font-family:"Helvetica Neue" ;
-  font-weight: bold;
-  padding-left: 4px;
-  color: rgba(0,0,0,.2);
-}
-
 
 /* Fancy red list */
 
@@ -643,7 +633,7 @@ ul.fancy {
   width: 100%;
   padding-right: 40px;
   opacity: .7;
-  transition: padding .2s ease-out;
+  transition: padding .15s ease-out;
 }
 
 .activity-menu .toggle:hover,.activity-menu .toggle.menu-open {
@@ -701,15 +691,3 @@ ul.fancy {
 .activity-menu li.current a {
   font-weight: bold;
 }
-
-.activity-list li.current a:hover {
-  text-decoration: none;
-}
-
-/*
-  .activity-title a:empty:after {
-    content: "Activity Title Goes Here";
-    font-style: italic;
-    background: yellow;
-  }
-*/
