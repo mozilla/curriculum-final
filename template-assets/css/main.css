@@ -356,12 +356,6 @@ figure img {
   max-width: 100%;
 }
 
-figcaption {
-  background: #efefef;
-  padding: 4px 8px;
-  margin-top: 8px;
-}
-
 .discussion-link {
   border-top: solid 1px #DDD;
   padding-top: 20px;
@@ -561,8 +555,8 @@ figcaption {
   padding: 6px 13px 7px 13px;
   border-radius: 2px;
   cursor: pointer;
-  background: #fae6ea;
-  color: #D64262;
+  color: #3897c1;
+  background: rgba(56,151,193,.2);
 }
 
 .overview .skills-list li {
@@ -655,7 +649,7 @@ ul.fancy {
 }
 
 .activity-menu ol {
-  padding: 5px 0 13px 36px;
+  padding: 5px 0 13px 42px;
   overflow: auto;
   margin: 0;
   width: 100%;
