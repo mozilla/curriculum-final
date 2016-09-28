@@ -615,6 +615,10 @@ ul.fancy {
   padding: 14px 0 !important;
 }
 
+.fancy li:last-child {
+  border-bottom: none;
+}
+
 .fancy a {
   color: inherit;
   font-weight: 700;
@@ -701,7 +705,7 @@ ul.fancy {
 }
 
 .activity-menu li:last-child {
-  border: none;
+  border-bottom: none;
 }
 
 .activity-menu li.current a {
