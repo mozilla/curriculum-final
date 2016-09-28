@@ -313,7 +313,6 @@ figcaption {
   font-size: 14px;
 }
 
-
 .activity-indicator {
   padding: 8px 12px;
   margin: 18px 0 0 0;
@@ -327,11 +326,10 @@ figcaption {
   color:#3fb58e;
   background: #caf6e6;
   border-radius: 2px;
-  padding: 8px 12px;
   margin: 14px 0 0 0;
   display: inline-block;
   border-width: 0 0 0 2px;
-  padding: 10px 12px 10px 34px;
+  padding: 8px 13px 8px 34px;
   background-image: url(../images/clock.svg);
   background-size: 18px;
   background-position: 10px center;
@@ -545,16 +543,15 @@ figure img {
   font-family: "Helvetica Neue";
   font-weight: bold;
   padding-left: 4px;
+  margin-right: 1px;
   color: rgba(0,0,0,.2);
 }
 
 .skills-list a {
   display: inline-block;
   margin: 3px 3px 3px 0;
-  background: rgba(0,0,0,.05);
-  padding: 6px 13px 7px 13px;
+  padding: 8px 13px 8px 13px;
   border-radius: 2px;
-  cursor: pointer;
   color: #3897c1;
   background: rgba(56,151,193,.2);
 }
@@ -571,7 +568,7 @@ ul.fancy, ol.fancy {
   color: #D3627F;
   border-radius: 2px;
   margin: 20px 0 35px 0;
-  padding: 10px 35px 10px 40px;
+  padding: 8px 35px 8px 40px;
   border-left: solid 2px rgba(203,35,79,.2);
 }
 
