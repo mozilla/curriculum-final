@@ -1,4 +1,3 @@
-
 /* For narrow viewports */
 
 @media all and (max-width: 600px) {
@@ -26,7 +25,7 @@
     min-height: auto;
   }
 
-  .main {
+  article.main {
     padding: 30px 25px 30px 25px;
     margin-top: 50px;
   }
@@ -48,7 +47,6 @@
     display: flex;
     overflow-x: auto;
     position: relative;
-    line-height: 80px;
   }
 
   /*  This is the little arrow when there are scrolling steps*/
@@ -76,7 +74,6 @@
 
   .agenda-navigation li a {
     padding: 18px 0;
-
   }
 
   .agenda-navigation li:after {
@@ -95,11 +92,61 @@
 
   .agenda-navigation li:nth-child(1):after {
     top: 10px !important;
+    left: calc(50% - 10px);
+    opacity: 1;
+
   }
 
   .agenda-navigation li a {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    }
+
+  .activity-menu {
+    display: block;
+    padding: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: solid 1px rgba(0,0,0,.05);
+    top: 0;
+    margin-bottom: 15px;
+  }
+
+  .activity-menu .toggle {
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+
+  .activity-menu .toggle:after {
+    float: right;
+  }
+
+  .activity-menu .activity-list {
+    margin: 0;
+    width: auto;
+    padding-left: 20px;
+    padding: 10px 20px 12px 40px;
+  }
+
+  .activity-menu .toggle:hover,.activity-menu .toggle.menu-open {
+    padding-bottom: 15px;
+  }
+
+  .overview .skills-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .skills-list h5 {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 5px 0;
+    color: rgba(0,0,0,.6);
+    font-weight: 600;
+  }
+
+  .skills-list h5:after {
+    display: none;
   }
 }
