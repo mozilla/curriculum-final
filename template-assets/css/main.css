@@ -636,10 +636,6 @@ ul.fancy {
   transition: padding .15s ease-out;
 }
 
-.activity-menu .toggle:hover,.activity-menu .toggle.menu-open {
-  padding-bottom: 17px;
-}
-
 .activity-menu .toggle.menu-open:after {
   transform: rotate(180deg);
 }
@@ -663,7 +659,7 @@ ul.fancy {
 }
 
 .activity-menu ol {
-  padding: 0 0 13px 36px;
+  padding: 5px 0 13px 36px;
   overflow: auto;
   margin: 0;
   width: 100%;
