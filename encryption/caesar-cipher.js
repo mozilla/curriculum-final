@@ -13,7 +13,7 @@ function runCipher(){
      var letter = cipherText[i];
      var upper = (letter == letter.toUpperCase());
      letter = letter.toLowerCase();
-    
+
      var index = alphabet.indexOf(letter);
      if(index == -1){
        cipherFinish += letter;
@@ -24,7 +24,7 @@ function runCipher(){
        cipherFinish += nextLetter;
      }
   }
-    
+
   $('#finish').val(cipherFinish);
 }
 
@@ -38,5 +38,5 @@ $(document).ready(function() {
   $('#offset').change(function(){
     setTimeout(runCipher(),20);
   });
-  
+
 });

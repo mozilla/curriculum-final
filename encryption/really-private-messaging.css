@@ -1,0 +1,20 @@
+.cipher-form {
+  background: #eee;
+  padding: 5px 25px;
+  margin-bottom: 40px;
+}
+
+.cipher-form p {
+  margin: 15px 0;
+  padding: 0;
+}
+
+.cipher-form input {
+  padding: 5px;
+}
+
+.cipher-form label {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}

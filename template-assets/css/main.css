@@ -129,13 +129,19 @@ h2 {
   font-weight: 500;
 }
 
-h4 {
+h3 {
   color: rgba(0,0,0,.65);
   margin: 40px 0 15px 0;
   font-size: 18px;
   font-weight: 700;
+}
 
-/*  text-transform: uppercase;*/
+
+h4,h5 {
+  color: rgba(0,0,0,.65);
+  margin: 40px 0 15px 0;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 b, strong {
@@ -679,4 +685,9 @@ ul.fancy {
 
 .activity-menu li.current a {
   font-weight: bold;
+}
+
+.image-caption {
+  font-size: .8em;
+  font-style: italic;
 }
