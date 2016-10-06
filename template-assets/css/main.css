@@ -43,10 +43,14 @@ h1 {
 }
 
 hr {
-  color: #FF4E1F;
-  background: #FF4E1F;
-  width: 75%;
-  height: 5px;
+  background: #d84060;
+  width: 50%;
+  height: 2px;
+  border: none;
+  margin: 35px 0 45px 0;
+  position: relative;
+  left: 25%;
+  opacity: .3;
 }
 
 [mode=step] .activity-title {
