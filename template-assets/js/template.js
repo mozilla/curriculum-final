@@ -14,12 +14,11 @@ $(document).ready(function(){
 
   navigate(window.location.hash);
 
-  $(".activity-menu").on("click",".toggle",function(){
-    $(".activity-menu ol").slideToggle();
-    $(this).toggleClass("menu-open");
-    return false;
+  jQuery.getScript("activity-menu.js", function( data, textStatus, jqxhr ) {
+    buildActivityMenu(title, activities);
+  }).error(function(){
+    console.log("This activity does not have a menu.");
   });
-
 
   navEl.on("click","a",function(){
     var step = $(this).attr("href");
@@ -38,6 +37,45 @@ $(document).ready(function(){
     navTop = navOffset.top;
   });
 });
+
+
+function buildActivityMenu(title, activities){
+
+  var path = window.location.pathname;
+  var index = path.indexOf("session");
+  var activityNum = parseInt(path.substring(index + 7,index + 9)) || 0;
+
+  var menu = $("<div class='activity-menu'></div>");
+  var activityCount = activities.length;
+  var toggle = $("<a class='toggle'><strong>" + title + "</strong> - Activity <span class='current-activity'>1</span> of " + activityCount + "</a>");
+  var activityList = $("<ol class='activity-list'/>");
+
+  menu.append(toggle);
+  menu.append(activityList);
+
+  for(var i = 0; i < activities.length; i ++){
+    var activity = activities[i];
+    var activityItem = $("<li><a href='" + activity.url + "'>" + activity.title + "</li>");
+    activityList.append(activityItem);
+
+    if(activity.extension){
+      var link = $("<br/><span class='extension'>Extension - <a href='"+activity.extension.url+"'>"+activity.extension.title+"</a></span>");
+      activityItem.append(link);
+    }
+  }
+
+  $(toggle).find(".current-activity").text(activityNum);
+  $(activityList).find("li:nth-child("+activityNum+")").addClass("current");
+
+  $(toggle).on("click",function(){
+    $(".activity-menu ol").slideToggle();
+    $(this).toggleClass("menu-open");
+    return false;
+  });
+
+  $(".main").prepend(menu);
+}
+
 
 function navigate(hash){
   // First, we'll hide all of the conten
