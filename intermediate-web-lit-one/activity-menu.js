@@ -3,7 +3,7 @@ var title = "Intermediate Web Literacy I";
 var activities = [
   {
     title : "CSS Pyramid",
-    url: "session02-css-fonts.html"
+    url: "session01-css-pyramid.html"
   },
   {
     title : "CSS Fonts",
