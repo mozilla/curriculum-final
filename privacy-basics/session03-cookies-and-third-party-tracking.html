@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Privacy Basics: Protect Your Data | Cookies and Third-Party Tracking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="196x196" href="https://mozilla.github.io/curriculum-final/template-assets/images/favicon.png">
+  <link rel="stylesheet" href="https://mozilla.github.io/curriculum-final/template-assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://mozilla.github.io/curriculum-final/template-assets/js/template.js" type="text/javascript" charset="utf-8"></script>
+  </head> 
+
+  <body>
+
+    <div class="wrapper" mode="overview">
+
+      <aside>
+        <div class="image">
+          <img src="images/lightbeam-1.jpg" alt="An image of dots connected by lines representing tracking between websites">
+          <a class="attribution" href="https://learning.mozilla.org">By Mozilla</a>
+        </div>
+
+        <!--Image credit CC-BY 3.0 by moyicat,http://moyicat.deviantart.com/art/Color-Picker-Icon-213577413-->
+
+        <ul class="agenda-navigation">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#step-1">Preparation</a></li>
+          <li><a href="#step-2">Learn about Cookies with <em>Do Not Track</em></a></li>
+          <li><a href="#step-3">Track the Trackers with Lightbeam</a></li>
+          <li><a href="#step-4">Run a Tracking Race</a></li>
+          <li><a href="#step-5">Get Rid of Some Cookies</a></li>
+          <li><a href="#step-6">Reflection and Assessment</a></li>
+        </ul>
+      </aside>
+
+      <article class="main">
+
+        <h1 class="activity-title">Privacy Basics: Protect Your Data | Cookies and Third-Party Tracking</h1>
+
+        <section class="overview">
+
+          <p class="made-by">
+            CC-BY-SA by <a href="https://twitter.com/epilepticrabbit">Laura Hilliger</a>, <a href="https://mozillians.org/en-US/u/BenMoskowitz/">Ben Moskowitz</a>, <a href="https://mozillians.org/en-US/u/atul/">Atul Varma</a>, <a href="https://mozillians.org/en-US/u/alina_mierlus/">Alina Hua</a>,
+            <a href="https://mozillians.org/en-US/u/stacy/">Stacy Martin</a>, <a href="https://mozillians.org/en-US/u/mattheww/">Matthew Willse</a>, and <a href="https://mozillians.org/en-US/u/scaraveo/">Shane Caraveo</a>. Remixed for clubs by <a href="https://learning.mozilla.org">Mozilla</a>.
+          </p>
+
+          <p class="time">60 minutes</p>
+
+          <p class="summary">
+            You will use a privacy tool called Mozilla Lightbeam to see how websites track yourt movement online, learning web literacy skills like <strong>navigate</strong>, <strong>open practice</strong>, and <strong>protect</strong>.
+          </p>
+
+          <!-- Delete non-relevant skills -->
+          <h4>Web Literacy Skills</h4>
+          <ul class="skills-list">
+            <li>
+              <h5>Read</h5>
+              <a href="https://learning.mozilla.org/web-literacy/read/navigate/">Navigate</a>
+            </li>
+            <li>
+              <h5>Participate</h5>
+              <a href="https://learning.mozilla.org/web-literacy/participate/protect/">Protect</a>
+              <a href="https://learning.mozilla.org/web-literacy/participate/open-practice/">Open Practice</a>
+            </li>
+          </ul>
+
+          <h4>21st Century Skills</h4>
+          <div class="skills-list">
+            <a href="https://learning.mozilla.org/en-US/web-literacy/skills#problem-solving">Problem Solving</a>
+          </div>
+
+
+          <h4>Learning Objectives</h4>
+          <ul class="fancy">
+            <li>Understand how third parties track your online movement with "cookies" while you navigate the web.</li>
+            <li>Use open-source tools like Lightbeam to protect online privacy.</li>
+          </ul>
+
+
+          <h4>Audience</h4>
+          <ul>
+            <li>13+</li>
+            <li>Beginner web users</li>
+          </ul>
+
+
+          <h4>Materials</h4>
+          <ul>
+            <li>Internet-connected computers</li>
+          </ul>
+
+        </section> <!-- End of overiview -->
+
+        <!-- Beginning of activity steps -->
+        <ul class="agenda">
+
+          <!-- Copy and paste this <li> tag to add additional steps -->
+          <li>
+            <h1>Preparation</h1>
+
+            <p><strong>Try the activity on your own</strong> to see how each step works. Be sure to preview the <em>Do Not Track</em> video and excerpt pieces for your community as appropriate.</p>
+          
+          </li><!-- End of step -->
+
+          <li>
+            <h1>Learn about Cookies with <em>Do Not Track</em></h1>
+            <div class="time">10 minutes</div>
+
+            <p><em><a href="https://donottrack-doc.com/en/">Do Not Track</a></em> is a personalized documentary series about privacy and the web economy. Today you'll share an episode of the film with your learners. You should preview the video and excerpt parts as appropriate for your community.</p>
+            
+            <p>Tell your learners that today you'll watch and interact with <em><a href="https://donottrack-doc.com/en/episode/2">"Do Not Track Episode 2: Breaking Ad</a></em> and discuss how cookies our movement online.</p>
+              
+            <p>Click on the image below to follow the link to episode 2. This is not a video embed. The episode will open in a new tab.</p>
+              
+            <p><a href="https://donottrack-doc.com/en/episode/2" target="blank"><img src="images/do-not-track-ep-2.png" width="90%" alt="An image of a screen capture of the Do Not Track episode 2 webpage"></a></p>              
+              
+            <p>After you watch the episode or excerpts from it, ask a few volunteers to summarize, in their own words, how cookies and tracking work on the web.</p>
+
+          </li> <!-- End of step -->
+          
+          <li>
+            <h1>Track the Trackers with Lightbeam</h1>
+            <div class="time">20 minutes</div>
+
+            <p>Tell your learnes that Mozilla's Lightbeam is a free and open source Firefox add-on that uses an interactive graph to show you how the sites you visit - and some you don't - follow you around the web. As you visit different sites, Lightbeam reveals which websites and companies add "cookies" - or trackers - to your browser. This lets learners see which sites and companies follow them in secret as they browse the web. Once learners know how they're being tracked, they can practice better online privacy habits by using the private mode on their broswers or by emptying the "cache" - or part of their browser's memory - that hold cookies.</p>
+            
+            <h2>Install Lightbeam</h2>
+            <div class="time">10 minutes</div>
+            
+            <p>Help learners install Lightbeam on their computers using the Firefox browser. You can share the instructions and links below by demo-ing the process or sharing the them in a highly visible place in the classroom or through a shared document or by whatever means or sharing work best for your learners.</p>
+            
+            <ol class="fancy">
+              <li>Install Firefox (if needed) by downloading the browser <a href="https://www.mozilla.org/en-US/firefox/new/">here</a>.<br><br>
+              <img src="images/firefox-install-1.png" width="90%" alt="An image of Forefox download page"><br><br>
+            </li>
+              <li>In Firefox, go to Tools &rarr; Add-ons.<br><br>
+                <img src="images/add-ons-1.png" width="90%" alt="An image of the Tools menu in Firefox with the Add-on choice highlighted"><br><br>
+              </li>
+              <li>On the Add-ons page, search for "Lightbeam".<br><br>
+                <img src="images/add-ons-2.png" width="90%" alt="An image of the Add-ons search bar in Firefox with 'Lightbeam' typed inside of it"><br><br>
+              </li>
+              <li>
+                Choose to install Lightbeam. A small Lightbeam activitation button will appear on your Firefox navigation bar.<br><br>
+                <img src="images/install-lightbeam-1.png" width="90%" alt="An image of a screen capture of the Lightbeam installation page"><br><br>
+              </li>
+              <li>Follow the instructions to use Lightbeam as you navigate the web. <br><br>
+                <img src="images/install-lightbeam-2.png" width="90%" alt="An image of a screen capture of the instructions for using Lightbeam"><br><br>
+              </li>
+            </ol>
+            
+            <h2>See Who's Tracking You</h2>
+            <div class="time">10 minutes</div>
+            
+            <p>Next, ask learners to activate Lightbeam and then to visit 5 of their favorite websites that are appropriate for your community. Lightbeam will open in a new tab and track how many different sites and companies track learners' movements on the web. Even though they'll visit 5 sites, learners will be able to revisit the Lightbeam tab at any time to see how many websites are actually tracking them at once.</p>
+            
+            <p>Explain to your learners that this kind of tracking works becuase websites add "cookies" to their browser as they go. These "cookies" are little bits of script that report where learners go online to several companies at once. For example, if you visit an online store, that store might add cookies to your browser that let other companies - or "third parties" - know what you look at and like online. This helps all of those companies advertise to you and sell you more stuff.</p>
+            
+            <p>For example, this graph shows how 7 sites follow a user who has visited YouTube and how 3 sites follow them after visiting amazon. No sites have followed this user after visiting <a href="https://duckduckgo.com">DuckDuckGo</a>, a search engine that protects users' online privacy.</p>
+            
+            <p><img src="images/lightbeam-graph-1.png" width="90%" alt="An image of a screen capture showing all the sites that terack a user after visiting sites like YouTube and amazon.com"></p>
+            
+            <p>Lightbeam will create a record of events for every site learners visit and every third party site that is watching even though learners may never have visited those sites.</p>
+            
+            <p>After learners visit their sites, ask them to look at how many cookies and trackers they've collected. Then give them the last few minutes of this step to visit one another's computers to see how many cookies and trackers their peers have collected as well.</p>
+
+          </li> <!-- End of step -->
+          
+          <li>
+          
+            <h1>Run a Tracking Race</h1>
+            <div class="time">10 minutes</div>
+          
+            <p>Next, have learners form groups of 2-4 people. Each group to should gather around 1 computer. Ask someone in each group to reset the data on Lightbeam using the "Reset Data" button on the left side of the window.</p>
+            
+            <p>Explain that each group will have 5 minutes to brainstorm and visit a list of sites that they think will add the most cookies to their browsers.</p>
+            
+            <p><strong><em>The big idea here is to prove how often websites and companies try to follow us around the web to spy on - and learn from - our habits.</em></strong></p>
+            
+            <p>Once each group is ready and has reset its Lightbeam data, have them race for 5 minutes to collect the most cookies possible.</p>
+            
+            <p>After 5 minutes, ask each group to share how many cookies it collected on Lightbeam and to share its strategy for collecting them. How did each group decide which sites to visit?<p>
+              
+              <p>Finally, ask your learners if there were any sites they all visited. What made your leaerners think that those sites would add so many cookies to their browsers?</p>
+          
+          </li>
+          
+          
+          <li>
+          
+            <h1>Get Rid of Some Cookies</h1>
+            <div class="time">10 minutes</div>
+          
+            <p>Before you reflect, show your learners a few different ways to deal with cookies and tracking.</p>
+            
+            <ol class="fancy">
+              <li>First, show your learners that they can clear their browsing history - including cookies - by using the menu in the upper right-hand corner of their browser window.<br><br>
+                <img src="images/privacy-settings-3.png" width="75%" alt="An image of a screen capture of the clear history option in Forefox's navigation bar menu"><br><br>
+              </li>
+              <li>Next, show learners how to manage whether or not Firefox remembers their history using the "Privacy" option under "Preferences" in the "Firefox" menu in the upper left-hand corner of their browser windows.<br><br>
+                <img src="images/privacy-settings-1.png" width="90%" alt="An image of a screen capture of Do Not Track settings in Firefox's Preferences and Privacy menu"><br><br>
+              <li>Finally, show learners that they can prevent some websites from tracking them by choosing the "Privacy" option under "Preferences" in the "Firefox" menu in the upper left-hand corner of their browser windows. They find anoption there that says, "You can also manage your Do Not Track settings."<br><br>
+                <img src="images/privacy-settings-2.png" width="90%" alt="An image of a screen capture of Do Not Track settings in Firefox's Preferences and Privacy menu"><br><br>
+              </li>
+            </ol>
+            
+            <p>Other browsers will have similar options and settings under menus for "History" or "Preferences." Give learners a few minutes to see if they can discover how to remove histories and cookies in another broswer before you go on to the last step of the activity.</p>
+                      
+          </li>
+          
+
+          <li>
+            <h1>Reflection and Assessment</h1>
+            <div class="time">10 minutes</div>
+
+            <p>Close the activity by facilitating a brief, reflective conversation about cookies and tracking. You can use questions like the ones below or come up with your own. You can also collect learners' responses for assessment purposes, but be sure to use technologies that allow your learners' their fullest range of expression.</p>
+            
+            <ul class="fancy">
+              <li>Is all tracking bad? Can you think of times when you might want to be tracked or when you might want cookies to share your information across several sites at once?</li>
+              <li>Can you think of an instance when you're ok with sharing your data with a website or company that's tracking you online?</li>
+              <li>What kinds of organizations might track you across the Web? How would tracking you help them?</li>
+              <li>What kinds of privacy tools should browser have built in to help you manage your privacy online?</li>
+              <li>In your own words, how might you explain cookies and traking to a friend or family member?</li>
+            </ul>
+
+            <!-- Optional navigation to next activity -->
+            <div class="next-up">
+              Next activity<span class="arrow">&rarr;</span><a href="session04-create-secure-passwords.html">Create Secure Passwords</a>
+            </div>
+          </li><!-- End of step -->
+
+        </ul><!-- End of all steps -->
+
+      </article>
+    </div>
+  </body>
+</html>

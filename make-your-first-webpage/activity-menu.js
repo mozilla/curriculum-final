@@ -1,7 +1,7 @@
 var title = "Make Your First Webpage";
 
 var activities = [
-  {
+{
     title : "Tag Tag Revolution",
     url: "session01-tag-tag-revolution.html"
   },
@@ -33,5 +33,4 @@ var activities = [
     title : "Make Your First Webpage",
     url: "session08-make-your-first-webpage.html"
   }
-
 ];
