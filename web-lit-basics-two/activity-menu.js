@@ -1,13 +1,13 @@
-var title = "Web Literacy Basics I";
+var title = "Web Literacy Basics II";
 
 var activities = [
 {
-  title : "Why Do We Use the Web?",
-  url: "session01-why-do-we-use-the-web.html"
+title : "Why Do We Use the Web?",
+url: "session01-why-do-we-use-the-web.html"
 },
 {
-  title : "The Web Is a Tool for Learning",
-  url: "session02-the-web-is-a-tool-for-learning.html"
+title : "The Web Is a Tool for Learning",
+url: "session02-the-web-is-a-tool-for-learning.html"
 },
 {
 title : "Project Playlist",

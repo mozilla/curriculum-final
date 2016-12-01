@@ -2,12 +2,12 @@ var title = "Web Literacy Basics I";
 
 var activities = [
 {
-  title : "Kraken the Code",
-  url: "session01-kraken-the-code.html"
+title : "Kraken the Code",
+url: "session01-kraken-the-code.html"
 },
 {
-  title : "Ping Kong",
-  url: "session02-ping-kong.html"
+title : "Ping Kong",
+url: "session02-ping-kong.html"
 },
 {
 title : "Hack the News",

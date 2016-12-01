@@ -7,11 +7,11 @@ var activities = [
   },
   {
     title : "CSS Fonts",
-    url: "session02-css-fonts.html",
-    extension : {
-      title: "Bridge to Infinity",
-      url: "https://d157rqmxrxj6ey.cloudfront.net/chadsansing/22265/"
-    }
+    url: "session02-css-fonts.html"
+  },
+  {
+    title: "CSS Fonts Extension Activity",
+    url: "session02a-css-fonts-extension-activity.html"
   },
   {
     title : "CSS Circles",
