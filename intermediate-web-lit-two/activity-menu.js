@@ -23,7 +23,7 @@ url: "session05-storytelling-with-user-input.html"
 },
 {
 title : "Storytelling with Color",
-url: "session06-storytelling-wuth-color.html"
+url: "session06-storytelling-with-color.html"
 },
 {
 title : "Creating a Storytelling Resource",
