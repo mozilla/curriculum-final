@@ -162,25 +162,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/*External link styling*/
-a[href^="http"] {
-/*
-  background: url(../images/external-link-icon.svg);
-  padding-right: 17px;
-  margin-right: 4px;
-  background-position: right;
-  background-size: 12px;
-  background-repeat: no-repeat;
-*/
-}
-
 article.main {
   position: relative;
   padding: 30px 40px 30px 50px;
 }
 
 article.main *:not(.activity-menu) {
-  /*  max-width: 750px;*/
+  max-width: 750px;
 }
 
 /* These are the activity steps */
@@ -188,7 +176,9 @@ article.main *:not(.activity-menu) {
 .agenda h1 {
   border-bottom: solid 2px #DDD;
   padding-bottom: 10px;
-  margin: 0 0 30px 0;
+  margin: 5px 0 30px 0;
+  text-indent: -3px;
+
 }
 
 .agenda ul,
@@ -201,8 +191,9 @@ article.main *:not(.activity-menu) {
 
 aside {
   background: #D64262;
-  max-width: 350px;
-  min-width: 300px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 300px;
 }
 
 aside .image {
@@ -222,10 +213,10 @@ aside .image .attribution {
   position: absolute;
   bottom: 11px;
   right: 11px;
-  padding: 4px 10px 6px 10px;
+  padding: 6px 10px 6px 10px;
   font-size: 13px;
   margin-left: 5px;
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.7);
   background: rgba(0,0,0,.3);
   text-decoration: none;
   transition: all .1s ease-out;
@@ -395,8 +386,6 @@ figure img {
 
 .agenda-navigation li.selected a {
   background: #C92751;
-  font-weight: 600;
-  position: relative;
 }
 
 .agenda-navigation li a {
@@ -426,10 +415,10 @@ figure img {
   color: rgba(255,255,255,.5);
   border-radius: 50%;
   width: 28px;
-  height: 25px;
   top: calc(50% - 15px);
   left: 20px;
-  padding-top: 2px;
+  padding: 5px 0;
+  top: 11px;
 }
 
 .agenda-navigation li.selected:after {
@@ -442,7 +431,7 @@ figure img {
   height: 22px;
   width: 22px;
   left: 27px;
-  top: 19px;
+  top: 17px;
   position: absolute;
   border: none;
   border-radius: 0;
@@ -451,6 +440,7 @@ figure img {
   background-position: center;
   background-repeat: no-repeat;
   opacity: .4;
+  padding: 0;
 }
 
 .agenda-navigation li.selected:nth-child(1):after {
