@@ -14,11 +14,24 @@ $(document).ready(function(){
 
   navigate(window.location.hash);
 
-  jQuery.getScript("activity-menu.js", function( data, textStatus, jqxhr ) {
-    buildActivityMenu(title, activities);
-  }).error(function(){
-    console.log("This activity does not have a menu.");
-  });
+  // If there is already a hardcoded menu in the markup.
+  var hasMenu = $(".activity-menu").length > 0;
+
+  if(hasMenu) {
+    $(".activity-menu .toggle").on("click",function(){
+      $(".activity-menu ol").slideToggle();
+      $(this).toggleClass("menu-open");
+      return false;
+    });
+  }
+
+  if(!hasMenu) {
+    jQuery.getScript("activity-menu.js", function( data, textStatus, jqxhr ) {
+      buildActivityMenu(title, activities);
+    }).error(function(){
+      console.log("This activity does not have a menu.");
+    });
+  }
 
   navEl.on("click","a",function(){
     var step = $(this).attr("href");
