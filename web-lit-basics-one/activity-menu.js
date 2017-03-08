@@ -35,6 +35,6 @@ url: "session08-cookies-and-third-party-tracking.html"
 },
 {
 title : "Data Trail Timeline",
-url: "session09-date-trail-timeline.html"
+url: "session09-data-trail-timeline.html"
 }
 ];
