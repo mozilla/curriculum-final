@@ -24,5 +24,17 @@ url: "session05-web-chef.html"
 {
 title : "A Story of Self",
 url: "session06-story-of-self.html"
+},
+{
+title : "Create Strong Passwords",
+url: "session07-create-strong-passwords.html"
+},
+{
+title : "Cookies and Third-Party Tracking",
+url: "session08-cookies-and-third-party-tracking.html"
+},
+{
+title : "Data Trail Timeline",
+url: "session09-date-trail-timeline.html"
 }
 ];
