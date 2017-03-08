@@ -26,8 +26,8 @@ title : "A Story of Self",
 url: "session06-story-of-self.html"
 },
 {
-title : "Create Strong Passwords",
-url: "session07-create-strong-passwords.html"
+title : "Create Secure Passwords",
+url: "session07-create-secure-passwords.html"
 },
 {
 title : "Cookies and Third-Party Tracking",
