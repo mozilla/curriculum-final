@@ -129,15 +129,11 @@ function navigate(hash){
 
 function scroll(){
   var scrolled = $(window).scrollTop();
-  var delta = scrolled - navTop;
-  navHeight = $(".agenda-navigation").height();
-  windowHeight = $(window).height();
+  var imgHeight = $("aside .image").height() || 0;
 
-  if(navHeight < windowHeight){
-    if(delta > 0){
-      $(".agenda-navigation").css("top",delta + "px");
-    } else {
-      $(".agenda-navigation").css("top",0);
-    }
+  if(scrolled > imgHeight){
+    $(".agenda-navigation").addClass("fixed")
+  } else {
+    $(".agenda-navigation").removeClass("fixed");
   }
 }

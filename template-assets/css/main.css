@@ -372,6 +372,12 @@ figure img {
   position: relative;
 }
 
+.agenda-navigation.fixed {
+  position: fixed;
+  top: 0;
+  width: 300px;
+}
+
 .agenda-navigation li {
   position: relative;
 }
