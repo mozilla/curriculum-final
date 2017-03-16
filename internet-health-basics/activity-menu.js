@@ -22,7 +22,7 @@ title : "Decentralization Activity",
 url: "session05-decentralization.html"
 },
 {
-title : "Open Innovation Activity",
-url: "session06-open-innovation.html"
+title : "Openness Activity",
+url: "session06-openness.html"
 }
 ];
