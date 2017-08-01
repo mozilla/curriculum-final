@@ -46,7 +46,7 @@
             Learners will apply multi-part CSS selectors and flexbox positioning with external CSS tutorial games, learning about <strong>coding, designing, evaluating, and synthesizing</strong>.
           </p>
           
-          <p><em><a href="https://thimbleprojects.org/chadsansing/125881/intermediate-web-lit-one/session07-external-css-tutorials.html#overview">Remix this lesson in Thimble!</a></em></p>
+           <p><em><a href="https://thimbleprojects.org/chadsansing/125881/intermediate-web-lit-one/session07-external-css-tutorials.html#overview">Remix this lesson in Thimble!</a></em></p>
 
           <h4>Web Literacy Skills</h4>
           <ul class="skills-list">
@@ -103,18 +103,36 @@
           <!-- Copy and paste this <li> tag to add additional steps -->
           <li>
             <h1>1. Preparation</h1>
+            
+            <h2>Learning Progression</h2>
+            <p>In this lesson, your learners will:</p>
+
+            <ol class="fancy">
+              <li>Brainstorm a list of foods they enjoy.</li>
+              <li>Create imaginary Cascading Stylesheet (CSS) "selectors" or labels to categorize and group the foods. For example, "chocolate bars" and "ice cream" might both be included in the selector "food sweet."</li>
+              <li>Use this empty plate template to draw sets of foods described by the selectors.</li>
+              <li>Play through a set of external CSS tutorials that give them practice using selectors to style groups of objects on a webpage all at once.</li>
+              <li>Reflect on their learning.</li>
+            </ol>
+
+            <hr>
+            
+            <h2>
+              You Should...
+            </h2>
 
             <p>Play through each external CSS tutorial on your own.</p>
 
             <ul class="fancy">
               <li><a href="http://flukeout.github.io/">CSS Diner</a>, by Luke Pacholski, takes players from using simple, single CSS selectors to using multi-part selectors that style very specific HTML elements of affect multiple elements at once.</li>
-              <li><a href="http://flukeout.github.io/">Flexbox Froggy</a>, by Thomas Park, teaches players how to use flexbox properties and values to create dyanmic layouts that avoid hiccups from using float instead.</li>
+              <li><a href="http://flexboxfroggy.com/">Flexbox Froggy</a>, by Thomas Park, teaches players how to use flexbox properties and values to create dyanmic layouts that avoid hiccups from using float instead.</li>
               <li><a href="http://www.flexboxdefense.com/">Flexbox Defense</a>, by Channing Allen, mixes flexbox styling with a tower defense game to teach dynamic layout designs.</li>
+              <li><a href="http://cssgridgarden.com/">Grid Garden</a>, also by Thomas Park, teaches players how to use grid selectors and properties instead as an alternative to flexbox.</li>
             </ul>
 
-            <p>You should also familiarize yourself with the advantages of using flexbox over float. The <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> has an explainer <a href="https://developer.mozilla.org/en-US/docs/Inbox/Advanced_layouts_with_flexbox">here</a>.</p>
+            <p>You should also familiarize yourself with the advantages of using grid and flexbox over float. The <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> has a grid explainer <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">here</a> and a flexbox explainer <a href="https://developer.mozilla.org/en-US/docs/Inbox/Advanced_layouts_with_flexbox">here</a>.</p>
 
-            <p>Post the URLs, or Web addresses, of today's tutorials (CSS Diner, Flexbox Froggy, and Flexbox Defense) somewhere highly visible in your room. You may want to post them as shortened links using a service like <a href="http://bit.ly">bit.ly</a>.</p>
+            <p>Post the URLs, or Web addresses, of today's tutorials (CSS Diner, Flexbox Froggy, Flexbox Defense, and Grid Garden) somewhere highly visible in your room. You may want to post them as shortened links using a service like <a href="http://bit.ly">bit.ly</a>.</p>
 
             <p>Print out copies of the <a href="https://d157rqmxrxj6ey.cloudfront.net/chadsansing/28131/">empty plate template</a>, as well.</p>
 
@@ -148,7 +166,7 @@
               <li><code>Mofongo</code></li>
             </ul>
 
-            <p>...you might all together come up with a series of selectors like <code>food swee</code>t to cover <code>chocolate bars</code>, <code>mofongo</code>, and <code>orange chicken</code> and another series of selectors like <code>food not-meat savory</code> to cover <code>potato chips (or crisps)</code> and <code>edamame</code>.</p>
+            <p>...you might all together come up with a series of selectors like <code>food sweet</code> to cover <code>chocolate bars</code>, <code>mofongo</code>, and <code>orange chicken</code> and another series of selectors like <code>food not-meat savory</code> to cover <code>potato chips (or crisps)</code> and <code>edamame</code>.</p>
 
             <p>
               Have learners generate several series of selectors or ways to categorize several foods at once. Take up to 10 minutes for this part of the activity.
@@ -172,12 +190,13 @@
             <h1>3. Playing the Tutorials</h1>
             <div class="time step-time">30 minutes</div>
 
-            <p>After learners settle at their computers, introduce them to today's tutorials on your projected computer and make sure every learner can get to both sites.</p>
+            <p>After learners settle at their computers, introduce them to today's tutorials on your projected computer and make sure every learner can get to each site.</p>
 
             <ul class="fancy">
               <li>CSS Diner - <a href="http://flukeout.github.io/">http://flukeout.github.io/</a></li>
               <li>Flexbox Froggy - <a href="http://flexboxfroggy.com/">http://flexboxfroggy.com/</a></li>
-              <li>Flexbox Defense = <a href="http://www.flexboxdefense.com/">http://www.flexboxdefense.com/</a></li>
+              <li>Flexbox Defense - <a href="http://www.flexboxdefense.com/">http://www.flexboxdefense.com/</a></li>
+              <li>Grid Garden - <a href="http://cssgridgarden.com/">http://cssgridgarden.com/</a></li>
             </ul>
 
               <p>Explain that today's we'll look at how we can use CSS to select very specific parts of a page for styling, as well as to select multiple parts of a page at once. We'll also play around with <code>flexbox</code> layout selectors which can help us make flowing, dynamic (or flexible) layouts that are difficult to do with other positioning properties.</p>
@@ -209,9 +228,6 @@
               If you or your learners are curious to learn more, check out this <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> or this <a href="https://developer.mozilla.org/en-US/Learn/CSS/CSS_layout/Flexbox">Flexbox tutorial</a> from the <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> <a href="https://developer.mozilla.org/en-US/Learn">Learning Area</a>.
             </p>
 
-            <div class="next-up">
-              Back to the <span class="arrow">&rarr;</span><a href="../index.html">Index</a>
-            </div><br><br>
           </li> <!-- end of step-->
         </ul>
       </article>

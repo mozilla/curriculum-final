@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Privacy Fill-in-the-Blanks Story Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="https://thimble.mozilla.org/tutorial/tutorial.css">
+  </head>
+
+  <body>
+    <div class="tutorial">
+      <h1>Privacy Fill-in-the-Blanks Story Tutorial</h1>
+      <p>
+        Welcome to this fill-in-the-blanks storytelling project. Today you'll work with a script that takes user input from a webpage and turns it into a story using helper text stored inside code.
+      </p>
+      <p>
+        You'll learn about
+      </p>
+      <ul>
+        <li><code>forms</code> and <code>inputs</code>.</li>
+        <li>writing <code>document</code> statements.</li>
+        <li>mixing and matching <code>strings</code> and <code>variables</code> to tell a story.</li>
+      </ul>
+      <p>
+        Here are the steps you'll follow:
+      </p>
+      
+      <ol>
+        <li>What's a <code>form</code>?</li>
+        <li>What's an <code>input</code>?</li>
+        <li>What does <code>document</code> do?</li>
+        <li>What does our project do?</li>
+        <li>Rewrite the story</li>
+        <li>Change the <code>input</code> labels</li>
+        <li>Mess with the code</li>
+        <li>Give yourself credit and publish</li>
+      </ol>
+
+      <h3>Step-by-Step Instructions</h3>
+      <ol class="steps">
+        <li>
+          <h4>
+            What's a <code>form</code>?
+          </h4>
+          <p>
+            A <code>form</code> on a webpage is a lot like a form in real life. It's a container for a bunch of fill-in-the-blanks boxes and lines that you fill out. Think of a workseheet at school, a form at the doctor's office, or a job application. These are all examples of <code>forms</code>.</p>
+          <p>
+            The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">Mozilla Developer Network</a> defines <code>form</code> like this:
+          </p>
+            <blockquote>
+              <em>The HTML <code>&lt;form&gt;</code> element represents a document section that contains interactive controls to submit information to a web server.</em>
+          </blockquote>
+          <p>
+            You can see an example of a <code>form</code> and the <code>inputs</code> it holds at <code>line 30</code> of the file called <code>index.html</code> in the FILES sidebar to the left.
+          </p>
+        </li>
+        <li>
+          <h4>
+            What's an <code>input</code>?
+          </h4>
+            <p>Each blank, box, or line in a <code>form</code>that needs you to fill something in is an <code>input</code>.</p>
+          <p>Working together, <code>forms</code> and <code>inputs</code> create webpages through which users can do things like buy something, complete a survey, or fill out an online application.
+          </p>
+          <p>
+            A <code>form</code> can hold any number of <code>inputs</code> inside of it. It's good practice to make sure that each of your <code>inputs</code> goes with the <code>form</code> it belongs to. For example, you wouldn't create an <code>input</code> for "your favorite piece of clothing" in a <code>form</code> about favorite foods.
+          </p>
+          <p>
+            The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Mozilla Developer Network</a> describes an <code>input</code> this way:
+          </p>
+          <blockquote>
+            <em>The HTML element <code>&lt;input&gt;</code> is used to create interactive controls for web-based forms in order to accept data from the user. How an <code>&lt;input&gt;</code> works varies considerably depending on the value of its type attribute.</em>
+          </blockquote>
+          <p>
+            There are many types of <code>input</code>. Today you'll work with text <code>inputs</code>, though other kinds like radial buttons and range sliders exist.
+          </p>
+        </li>
+        <li>
+          <h4>
+            What does <code>document</code> do?
+          </h4>
+          <p>
+            According to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Mozilla Developer Network</a>, 
+          </p>        
+          <blockquote>
+            <em>the Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content</em>
+          </blockquote>
+          <p>
+            What does that mean?
+          </p>
+          <p>
+            Well, it means that in JavaScript, you can use <code>document</code> as the beginning of a path to get and maniuplate any part of a webpage (which is <strong><em>the <code>document</code> itself</em></strong>) connected to a script. For example, using <code>document</code>, we can go into a webpage, find its <code>input</code> elements, and get whatever a user types into them. Then we can take that user input and do things with it like make calculations or store it as data.</p>
+          <p>In today's project, you'll generate stories with the user input you collect using <code>document</code>.
+          </p>
+        </li>
+        <li>
+          <h4>
+            What does our project do?
+          </h4>
+          <p>
+            Click on the file called <code>index.html</code> in the FILES sidebar to the left. Visit its preview pane (on the right) and "play" through the page a few times. That is to say, fill in the blanks and then hit the button to see how the page gathers your user input and transforms it into a story.
+          </p>
+          <p>
+            Look at the code for <code>index.html</code>, as well. Notice that each <code>input</code> in the <code>form</code> at <code>line 30</code> has an <code>id</code>, a unique identification. Our script uses those unique <code>ids</code> to gather user input from the webpage, or <code>document</code>.
+          </p>
+          <p>
+            Click on <code>script.js</code> to see how. Look at the code between <code>line 7</code> and <code>line 12</code>. Notice that the script is setting up <code>vairables</code> that follow a path back into the <code>document</code> to get the <code>input</code> from each box on the webpage.
+          </p>
+          <p>
+            In this set-up, a line like...
+          </p>
+          <p>
+            <code>var firstWord = document.getElementById('box1').value;</code>
+          </p>
+          <p>
+            ...really means make the first <code>variable</code> (which is also the first piece of user input we'll use in our story) equal to whatever <code>value</code> a user types into the <code>input</code> that has <code>box1</code> for its <code>id</code>. We are going to "get" that <code>input</code> by its <code>id</code> (which is <code>box1</code>) and make our <code>variable</code> called <code>firstWord</code> equal to the <code>value</code> of that <code>input</code>.
+          </p>
+          <p>
+            There are six <code>inputs</code> to collect from our webpage, and once the script gets them, it plugs those words into a kind of fill-in-the-blanks story at <code>line 18</code> of <code>script.js</code>.
+          </p>
+          <p>
+            This time, though, instead of getting a <code>value</code> from the webpage, our <code>document</code> pathway gets the element with <code>story-space</code> for its <code>id</code> and then replaces that element's <code>innerHTML</code> with this story (including all the user input gather above). This time <code>document</code> pushes text into the webpage instead of getting a textual <code>value</code> from it.
+          </p>
+          <p>
+            Notice that the story is a mix of <code>strings</code> and <code>variables</code>. The <code>strings</code> hold all the HTML and helper text for the story - they are the skeleton of the story. The strings have to appear in quotes so they can show up exactly as they're written on the webpage.</p>
+          <p>The <code>variables</code> show up between <code>strings</code> to deliver the user input from the page.
+          </p>
+        </li>
+        <li>
+          <h4>
+            Rewrite the story
+          </h4>
+          <p>
+            To begin making the project your own, start revising the story told inside the <code>strings</code> at <code>line 18</code>. Be creative, but stay within the boundaries of what's acceptable for your community. Try to change only the words inside the story - do not change the HTML tags in the strings or the <code>variables</code> between the strings.</p>
+          <p>
+            Your <code>variables</code> should stay outside of the <code>strings</code> - which means outside of the quotation marks. You can add separate <code>strings</code> and <code>variables</code> to the story using the plus sign, <code>+</code> between different parts. You do not need a <code>+</code> at the end of the story.
+          </p>
+          <p>Try to work in all six <code>variables</code>, as well. You can change the kinds of words you ask for if you need to on <code>index.html</code> in the next step.
+          </p>        
+        </li>
+        <li>
+          <h4>
+            Change the <code>input</code> labels
+          </h4>
+          <p>
+            Jump back into <code>index.html</code>. Visit the <code>input</code> elements between <code>line 31/code> and <code>line 36</code>. Find the label for each <code>input</code>, like "singular noun" or "verb." Change those labels to ask for the parts of speech your story needs.
+          </p>        
+          <p>
+            For example, if your story needs an adjective, or describing word, from the <code>input</code> with the id <code>box1</code>, then delete "singular noun" and type "adjective" instead. You can go back and forth between <code>index.html</code> and <code>script.js</code> to keep track of what kinds of words you need. Be sure to ask for help if you wonder what kinds of words to use for each label.
+          </p>
+          <p>
+            After you change the storytelling <code>function</code> on <code>script.js</code> and the labels on <code>index.html</code>, test your story a few times and identify any spots that need proof-reading and trouble-shooting. Ask a classmate or teacher for help if you get stuck. Debugging code can be tough for everyone, even coders!
+          </p>
+        </li>
+        <li>
+          <h4>
+            Mess with the code
+          </h4>
+          <p>
+            Remember that you can visit the file called <code>style.css</code>, as well, to play with the styling instructions for the page. Change the values of attributes like <code>color</code> or <code>font-size</code> to see what happens to <code>index.html</code> as a result. Try to break anything you fix, but don't be afraid to take some risks. You can always hit undo!
+          </p>        
+        </li>
+        <li>
+          <h4>
+            Give yourself credit and publish
+          </h4>
+          <p>
+            Finally, go to <code>line 43</code> of <code>index.html</code> and change the text to give yourself credit for crafting a fill-in-the-blanks story of your own.
+          </p>
+          <p>
+            After you revise the credits, hit the "Publish" button in the upper right-hand corner of the screen, describe your project, and then grab its URL to share with friends and family.
+          </p>
+        </li>
+      </ol>
+      <p>
+        Congratulations on completing your Privacy Fill-in-the-Blanks Story! What else can you do with <code>forms</code>, <code>inputs</code>, HTML, and JavaScript? Keep playing and learning to discover more ways to write the web and to express yourself creatively online!
+      </p>
+    </div>
+  </body>
+</html>
