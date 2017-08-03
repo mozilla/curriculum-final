@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: #333;
+    background: #10280d;
+    color: white;
+    text-align: center;
+    background-image: url(../chip.svg);
+    background-repeat: repeat;
+    background-size: 200px;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 20px 0;
+}
+
+.game-board {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 40px 20px;
+    margin: 30px 0 40px 0;
+    min-height: 450px;
+}
+
+.stats {
+    font-size: 20px;
+    width: 30%;
+    top: -10px;
+}
+
+.stats .thumbnail {
+    border: solid 3px white;
+    height: 55px;
+    width: 55px;
+}
+
+.stats .name {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+}
+
+.life-total {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.hacker-stats {
+    position: absolute;
+    right: 10px;
+    text-align: right;
+}
+
+.hacker-stats .thumbnail {
+    float: right;
+    margin-left: 10px;
+}
+
+.player-stats {
+    position: absolute;
+    left: 10px;
+    text-align: left;
+}
+
+.player-stats .thumbnail {
+    float: left;
+    margin-right: 10px;
+}
+
+.game-over .card {
+    display: none;
+}
+
+.game-over .button {
+    display: none;
+}
+
+
+
+.game-over .winner-message {
+    display: block;
+}
+
+.winner-message {
+    display: none;
+    color: white;
+    font-size: 60px;
+}
+
+
+button {
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    padding: 10px;
+    width: 200px;
+    box-sizing: border-box;
+    left: calc(50% - 100px);
+    font-weight: 700;
+    border: solid 3px white;
+    color: white;
+    background: transparent;
+    border-radius: 30px;
+    transition: all ease-out .2s;
+    cursor: pointer;
+    outline: none;
+}
+
+button[disabled=true] {
+    opacity: .3;
+    transform: scale(.95);
+}
+
+
+.card {
+    display: none;
+    background: white;
+    margin: 100px 20px 0 20px;
+    width: 240px;
+    height: 330px;
+    border-radius: 10px;
+    border: solid 10px rgba(0,0,0,.3);
+    padding: 10px 15px;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    animation: card .2s ease-out;
+    transition: transform .2s ease-out;
+}
+
+
+#player-card.better-card {
+    transform: scale(1.05) rotate(-3deg);
+}
+
+#hacker-card.better-card {
+    transform: scale(1.05) rotate(3deg);
+}
+
+#hacker-card.tie-card {
+    animation: hacker-tie .4s ease-out;
+}
+
+#player-card.tie-card {
+    animation: player-tie .4s ease-out;
+}
+
+@keyframes hacker-tie {
+    0% { transform: scale(1); }
+    30% { transform: translateX(-20px); }
+    100% { transform: translateX(100); }
+}
+
+
+@keyframes player-tie {
+    0% { transform: scale(1); }
+    30% { transform: translateX(20px); }
+    100% { transform: translateX(100); }
+}
+
+
+#hacker-card.worse-card {
+    transform: scale(.95) rotate(3deg);
+    opacity: .5;
+}
+
+#player-card.worse-card {
+    transform: scale(.95) rotate(-3deg);
+    opacity: .5;
+}
+
+
+@keyframes card {
+    0%   { transform: scale(.75); opacity: .5; }
+    60%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#player-card {
+    background: #226aba;
+}
+
+#hacker-card {
+    background: #ce3d20;
+}
+
+.card .power {
+    font-size: 30px;
+    position: absolute;
+    bottom: 10px;
+    font-size: 50px;
+}
+
+.license {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.license a {
+    font-size: 16px;
+    color: white;
+}
