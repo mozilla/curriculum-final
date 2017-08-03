@@ -1,5 +1,6 @@
-var playerLife = 10;
-var hackerLife = 10;
+var startingLife = 10
+var playerLife = startingLife;
+var hackerLife = startingLife;
 
 
 var hackerCards = [
@@ -29,6 +30,8 @@ function gameOver(winner){
   document.querySelector(".game-board").classList.add("game-over");
   document.querySelector(".winner-message").innerHHTML = winner + " wins!";
 }
+
+
 
 
 function playGame() {
@@ -86,6 +89,9 @@ function playGame() {
     document.querySelector(".player-stats .life-total").innerHTML = playerLife;
     document.querySelector(".hacker-stats .life-total").innerHTML = hackerLife;
 
+    document.querySelector(".hacker-stats .life-left").style.height = hackerLife / startingLife * 100 + "%";
+    document.querySelector(".player-stats .life-left").style.height = playerLife / startingLife * 100 + "%";
+
 
     if(playerLife <= 0) {
       gameOver("Hacker");
@@ -93,7 +99,7 @@ function playGame() {
       gameOver("Player")
     }
 
-      document.querySelector("button").removeAttribute("disabled");
+    document.querySelector("button").removeAttribute("disabled");
 
   },1000)
 
