@@ -57,10 +57,29 @@ p {
 }
 
 .stats .thumbnail {
-    border: solid 3px white;
-    height: 55px;
-    width: 55px;
+    font-size: 80px;
+    line-height: 60px;
     margin: 0 0 15px 0;
+}
+
+.stats .thumbnail.ouch {
+    animation: ouch .15s linear 3;
+}
+
+@keyframes ouch {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
 }
 
 .stats .name {
@@ -90,30 +109,28 @@ p {
 
 
 .game-over .card {
-    display: none !important;
+/*    display: none !important;*/
 }
 
-.game-over .button {
+.game-over button {
     display: none;
 }
 
 
 
-.game-over .winner-message {
-    display: block;
+.winner-section {
+    display: none;
 }
 
 .winner-message {
-    display: none;
     color: white;
-    font-size: 60px;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 
 button {
     font-size: 20px;
-    position: absolute;
-    top: 0px;
     padding: 10px;
     width: 200px;
     box-sizing: border-box;
@@ -128,9 +145,19 @@ button {
     outline: none;
 }
 
+button.play {
+    position: absolute;
+    top: 0px;
+}
+
+button.restart {
+    margin-top: 15px;
+}
+
 button[disabled=true] {
     opacity: .3;
     transform: scale(.95);
+    cursor: default;
 }
 
 
@@ -155,11 +182,11 @@ button[disabled=true] {
 
 
 #player-card.better-card {
-    transform: scale(1.05) rotate(-3deg);
+    transform: scale(1.05) rotate(-3deg) translateX(30px);
 }
 
 #hacker-card.better-card {
-    transform: scale(1.05) rotate(3deg);
+    transform: scale(1.05) rotate(3deg) translateX(-30px);
 }
 
 #hacker-card.tie-card {
@@ -185,12 +212,12 @@ button[disabled=true] {
 
 
 #hacker-card.worse-card {
-    transform: scale(.95) rotate(3deg);
+    transform: scale(.95) rotate(3deg) translateX(30px);
     opacity: .5;
 }
 
 #player-card.worse-card {
-    transform: scale(.95) rotate(-3deg);
+    transform: scale(.95) rotate(-3deg) translateX(-30px);
     opacity: .5;
 }
 

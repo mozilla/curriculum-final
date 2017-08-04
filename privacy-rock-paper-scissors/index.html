@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
-    <script src="scripts/script.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -23,7 +22,7 @@
           <div class="life-left"></div>
         </div>
         <div class="life-total">20</div>
-        <div class="thumbnail"></div>
+        <div class="thumbnail">😠</div>
         <div class="name">Hacker</div>
       </div>
 
@@ -32,10 +31,11 @@
           <div class="life-left"></div>
         </div>
         <div class="life-total">20</div>
-        <div class="thumbnail"></div>
+        <div class="thumbnail">🤓</div>
         <div class="name">You</div>
-
       </div>
+
+      <!-- Copy and paste emojis from http://getemoji.com/ -->
 
       <div class="card" id="player-card">
         <div class="text"></div>
@@ -48,14 +48,15 @@
       </div>
 
       <button class="play" onClick="playGame()">Go Online!</button>
-
-
-      <div class="winner-message"></div>
     </div>
 
+    <div class="winner-section">
+      <div class="winner-message">You got hacked!</div>
+      <button class="restart" onClick="restartGame()">Play Again</button>
+    </div>
 
     <div class="license">CC-BY <a href="https://teach.mozilla.org">moz://a</a></div>
-
+    <script src="scripts/script.js" type="text/javascript"></script>
   </body>
 
 </html>
