@@ -12,40 +12,60 @@
 
   <body>
 
-    <h1>> Hacker Cards</h1>
-    <p>It's an online safety throwdown</p>
+    <h1><strong>> Hacker Cards</strong> - It's an online safety throwdown</h1>
+
 
     <div class="game-board">
 
-      <div class="stats hacker-stats">
-        <div class="life-bar">
-          <div class="life-left"></div>
-        </div>
-        <div class="life-total">20</div>
-        <div class="thumbnail">😠</div>
-        <div class="name">Hacker</div>
-      </div>
-
-      <div class="stats player-stats">
-        <div class="life-bar">
-          <div class="life-left"></div>
-        </div>
-        <div class="life-total">20</div>
-        <div class="thumbnail">🤓</div>
-        <div class="name">You</div>
-      </div>
-
       <!-- Copy and paste emojis from http://getemoji.com/ -->
 
-      <div class="card" id="player-card">
-        <div class="text"></div>
-        <div class="power"></div>
+      <div class="hacker-area">
+
+        <div class="stats hacker-stats">
+          <div class="life-bar">
+            <div class="life-left"></div>
+          </div>
+          <div class="life-total">20</div>
+          <div class="thumbnail">😠</div>
+          <div class="name">Hacker</div>
+        </div>
+
+        <div class="card hacker-card">
+          <div class="text"></div>
+          <div class="power"></div>
+        </div>
+
       </div>
 
-      <div class="card" id="hacker-card">
-        <div class="text"></div>
-        <div class="power"></div>
+      <div class="player-area">
+
+        <div class="stats player-stats">
+          <div class="life-bar">
+            <div class="life-left"></div>
+          </div>
+          <div class="life-total">20</div>
+          <div class="thumbnail">🤓</div>
+          <div class="name">You</div>
+        </div>
+
+
+        <div class="card player-card">
+          <div class="text"></div>
+          <div class="power"></div>
+        </div>
+
+        <div class="card player-card">
+          <div class="text"></div>
+          <div class="power"></div>
+        </div>
+
+        <div class="card player-card">
+          <div class="text"></div>
+          <div class="power"></div>
+        </div>
+
       </div>
+
 
       <button class="play" onClick="playGame()">Go Online!</button>
     </div>

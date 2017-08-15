@@ -10,55 +10,79 @@ body {
 /*    https://opengameart.org/content/seamless-microscheme-texture*/
     background-repeat: repeat;
     background-size: 200px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    margin: 0;
+  padding: 15px 0 0 0;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 400;
+  background: rgba(0,0,0,.4);
 }
 
 p {
-    margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 .game-board {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 0 20px 0 20px;
-    margin: 30px 0 40px 0;
-    min-height: 450px;
+  margin: 0;
 }
 
+.hacker-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: rgba(0,0,0,.4);
+  padding: 30px 0;
+  min-height: 255px;
+}
+
+.player-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  min-height: 255px;
+}
+
+.player-area .card {
+  cursor: pointer;
+}
+
+
+
 .life-bar {
-    background: rgba(255,255,255,.15);
-    width: 16px;
-    height: 175px;
-    position: relative;
+  background: rgba(255,255,255,.15);
+  width: 12px;
+  height: 125px;
+  position: relative;
 }
 
 .life-left {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: white;
-    width: 100%;
-    height: 50%;
-    transition: height .15s ease-out;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  height: 50%;
+  transition: height .15s ease-out;
 }
 
 .stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    width: 100px;
-    bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  width: 100px;
+  padding-top: 20px;
 }
 
 .stats .thumbnail {
-    font-size: 80px;
-    line-height: 60px;
-    margin: 0 0 15px 0;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0 0 0 0;
 }
 
 .stats .thumbnail.ouch {
@@ -82,27 +106,29 @@ p {
 }
 
 .stats .name {
-    font-size: 20px;
-    line-height: 20px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .life-total {
-    font-size: 40px;
-    line-height: 40px;
-    font-weight: 700;
-    margin: 20px 0;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  margin: 5px 0 0 0;
 }
 
 .hacker-stats {
     position: absolute;
-    right: 10px;
+    left: 0;
+    top: 0;
     text-align: right;
 }
 
 
 .player-stats {
     position: absolute;
-    left: 10px;
+    left: 0;
+    top: 0;
     text-align: left;
 }
 
@@ -144,10 +170,6 @@ button {
     outline: none;
 }
 
-button.play {
-    position: absolute;
-    top: 0px;
-}
 
 button.restart {
     margin-top: 15px;
@@ -163,14 +185,14 @@ button[disabled=true] {
 .card {
     display: none;
     background: white;
-    margin: 100px 20px 0 20px;
-    width: 240px;
-    height: 330px;
+    margin: 0 10px;
+    width: 200px;
+    height: 255px;
     border-radius: 10px;
-    border: solid 10px rgba(0,0,0,.3);
+    border: solid 8px rgba(0,0,0,.3);
     padding: 10px 15px;
     color: black;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     position: relative;
     box-sizing: border-box;
@@ -180,20 +202,23 @@ button[disabled=true] {
 }
 
 
-#player-card.better-card {
-    transform: scale(1.05) rotate(-3deg) translateX(30px);
+.player-card.better-card {
+    transform: scale(1.05) rotate(-3deg);
 }
 
-#hacker-card.better-card {
-    transform: scale(1.05) rotate(3deg) translateX(-30px);
+.hacker-card.better-card {
+    transform: scale(1.05) rotate(3deg);
 }
 
-#hacker-card.tie-card {
-    animation: hacker-tie .4s ease-out;
+.hacker-card.tie-card {
+/*    animation: hacker-tie .4s ease-out;*/
 }
 
-#player-card.tie-card {
-    animation: player-tie .4s ease-out;
+.player-card.tie-card {
+  transform: translateY(0px) !important;
+
+
+/*    animation: player-tie .4s ease-out;*/
 }
 
 @keyframes hacker-tie {
@@ -210,13 +235,13 @@ button[disabled=true] {
 }
 
 
-#hacker-card.worse-card {
+.hacker-card.worse-card {
     transform: scale(.95) rotate(3deg) translateX(30px);
     opacity: .5;
 }
 
-#player-card.worse-card {
-    transform: scale(.95) rotate(-3deg) translateX(-30px);
+.player-card.worse-card {
+    transform: scale(.95) translateY(0px) !important;
     opacity: .5;
 }
 
@@ -227,20 +252,45 @@ button[disabled=true] {
     100% { transform: scale(1); }
 }
 
-#player-card {
+.player-card {
     background: #226aba;
 }
 
-#hacker-card {
+.hacker-card {
     background: #ce3d20;
 }
 
-.card .power {
-    font-size: 30px;
-    position: absolute;
-    bottom: 10px;
-    font-size: 50px;
+.player-area .card:not(.played-card):hover {
+  transform: translateY(-5px);
 }
+
+
+.player-area .card.played-card {
+  transform: translateY(-40px);
+}
+
+
+.card .power {
+  font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+  font-size: 50px;
+  display: none;
+  animation: showPower .2s ease-out;
+}
+
+@keyframes showPower {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .license {
     position: fixed;

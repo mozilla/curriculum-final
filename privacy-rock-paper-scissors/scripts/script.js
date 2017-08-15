@@ -5,9 +5,105 @@ var hackerLife = 5;
 
 var playerStartLife = parseInt(playerLife);
 var hackerStartLife = parseInt(hackerLife);
+var roundStarted = false;
 
 updateScores();
 
+var playerCardEls = document.querySelectorAll(".player-area .card");
+
+for(var i = 0; i < playerCardEls.length; i++) {
+  var playerCardEl = playerCardEls[i];
+  playerCardEl.addEventListener("click",function(e){
+    cardClicked(this);
+  });
+}
+
+// document.querySelector(".player-area").addEventListener("click",function(e){
+//   console.log("hello");
+//   console.log(e.target)
+// });
+
+
+function cardClicked(cardEl) {
+  if(roundStarted) {
+    return;
+  }
+
+  cardEl.classList.add("played-card");
+  roundStarted = true;
+
+  // Wait 500ms to reveal the hacker power
+  setTimeout(function(){
+    revealHackerPower();
+  },500)
+
+  // Wait 750ms to reveal the player power
+  setTimeout(function(){
+    revealPlayerPower();
+  },750)
+
+  // Wait 1250ms to compare the card scoers
+  setTimeout(function(){
+    compareCards();
+  }, 1250);
+}
+
+// Shows the power level on the player card
+function revealPlayerPower(){
+  var playerCard = document.querySelector(".played-card");
+  var playerPowerEl = playerCard.querySelector(".power");
+  playerPowerEl.style.display = "block";
+}
+
+// Shows the power level on the hacker card
+function revealHackerPower(){
+  var hackerCard = document.querySelector(".hacker-card");
+  var hackerPowerEl = hackerCard.querySelector(".power");
+  hackerPowerEl.style.display = "block";
+}
+
+function compareCards(){
+  var playerCard = document.querySelector(".played-card");
+  var playerPowerEl = playerCard.querySelector(".power");
+
+  var hackerCard = document.querySelector(".hacker-card");
+  var hackerPowerEl = hackerCard.querySelector(".power");
+
+  var playerPower = parseInt(playerPowerEl.innerHTML);
+  var hackerPower = parseInt(hackerPowerEl.innerHTML);
+
+
+
+  var powerDifference = playerPower - hackerPower;
+
+
+  if (powerDifference < 0) {
+   // Player Loses
+   playerLife = playerLife + powerDifference;
+   hackerCard.classList.add("better-card");
+   playerCard.classList.add("worse-card");
+   document.querySelector(".player-stats .thumbnail").classList.add("ouch");
+  } else if (powerDifference > 0) {
+   // Player Wins
+   hackerLife = hackerLife - powerDifference;
+   playerCard.classList.add("better-card");
+   hackerCard.classList.add("worse-card");
+   document.querySelector(".hacker-stats .thumbnail").classList.add("ouch");
+  } else {
+   playerCard.classList.add("tie-card");
+   hackerCard.classList.add("tie-card");
+  }
+  //
+  updateScores();
+  //
+  if(playerLife <= 0) {
+   gameOver("Hacker");
+  } else if (hackerLife <= 0){
+   gameOver("Player")
+  }
+//
+ document.querySelector("button").removeAttribute("disabled");
+}
 
 function gameOver(winner) {
   document.querySelector(".game-board").classList.add("game-over");
@@ -20,7 +116,6 @@ function restartGame(){
   document.querySelector(".winner-section").style.display = "none";
   document.querySelector("#hacker-card").style.display = "none";
   document.querySelector("#player-card").style.display = "none";
-
 
   playerLife = playerStartLife;
   hackerLIfe = hackerStartLife;
@@ -62,64 +157,45 @@ function playGame() {
     cards[i].classList.remove("tie-card");
   }
 
+
+  var randomScenarioIndex = Math.floor(Math.random() * (scenarios.length));
+  var scenario = scenarios[randomScenarioIndex];
+
+  var hackerCard = scenario.hackerCard;
+  var hackerCardEl = document.querySelector(".hacker-area .card");
+  // Display the hacker card
+  hackerCardEl.querySelector(".text").innerHTML = hackerCard.description;
+  hackerCardEl.querySelector(".power").innerHTML = hackerCard.power;
+
+  // Display the player cards
+
+  var playerCards = scenario.playerCards;
+
+  for(var i = 0; i < playerCards.length; i++) {
+    var playerCard = playerCards[i];
+    var playerCardEl = playerCardEls[i];
+
+    playerCardEl.querySelector(".text").innerHTML = playerCard.description;
+    playerCardEl.querySelector(".power").innerHTML = playerCard.power;
+  }
+
   // Pick the player card
-  var randomPlayerCardIndex = Math.floor(Math.random() * (playerCards.length));
-  var playerCard = playerCards[randomPlayerCardIndex];
-  document.querySelector("#player-card .text").innerHTML = playerCard.description;
-  document.querySelector("#player-card .power").innerHTML = playerCard.power;
+  // var randomPlayerCardIndex = Math.floor(Math.random() * (playerCards.length));
+  // var playerCard = playerCards[randomPlayerCardIndex];
+  // document.querySelector("#player-card .text").innerHTML = playerCard.description;
+  // document.querySelector("#player-card .power").innerHTML = playerCard.power;
 
   // Remove the "ouch" class animation
-  document.querySelector(".hacker-stats .thumbnail").classList.remove("ouch");
-  document.querySelector(".player-stats .thumbnail").classList.remove("ouch");
+  // document.querySelector(".hacker-stats .thumbnail").classList.remove("ouch");
+  // document.querySelector(".player-stats .thumbnail").classList.remove("ouch");
 
-  // Picks the hacker card
-  var randomhackerCardIndex = Math.floor(Math.random() * (hackerCards.length));
-  var hackerCard = hackerCards[randomhackerCardIndex];
-  document.querySelector("#hacker-card .text").innerHTML = hackerCard.description;
-  document.querySelector("#hacker-card .power").innerHTML = hackerCard.power;
+
 
   setTimeout(function(){
     for(var i = 0; i < cards.length; i++) {
       cards[i].style.display = "block";
     }
   },200)
-
-
-  setTimeout(function(){
-    var powerDifference = playerCard.power - hackerCard.power;
-
-    if(powerDifference < 0) {
-      playerLife = playerLife + powerDifference;
-      document.querySelector("#hacker-card").classList.add("better-card");
-      document.querySelector("#player-card").classList.add("worse-card");
-      document.querySelector(".player-stats .thumbnail").classList.add("ouch");
-    } else if (powerDifference > 0) {
-      hackerLife = hackerLife - powerDifference;
-      document.querySelector("#player-card").classList.add("better-card");
-      document.querySelector("#hacker-card").classList.add("worse-card");
-      document.querySelector(".hacker-stats .thumbnail").classList.add("ouch");
-    } else {
-      document.querySelector("#player-card").classList.add("tie-card");
-      document.querySelector("#hacker-card").classList.add("tie-card");
-    }
-
-    updateScores();
-
-    if(playerLife <= 0) {
-      gameOver("Hacker");
-    } else if (hackerLife <= 0){
-      gameOver("Player")
-    }
-
-    document.querySelector("button").removeAttribute("disabled");
-
-  },1000)
-
-
-
-
-
-
 
 
 }
