@@ -6,8 +6,8 @@ body {
     background: #10280d;
     color: white;
     text-align: center;
-    background-image: url(../chip.svg);
-/*    https://opengameart.org/content/seamless-microscheme-texture*/
+    background-image: url(../images/chip.svg);
+    /*  Image from: https://opengameart.org/content/seamless-microscheme-texture */
     background-repeat: repeat;
     background-size: 200px;
     margin: 0;
@@ -15,9 +15,9 @@ body {
 }
 
 h1 {
-  padding: 15px 0 0 0;
+  padding: 12px 0 0 0;
   margin: 0;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 400;
   background: rgba(0,0,0,.4);
 }
@@ -56,8 +56,9 @@ p {
 .life-bar {
   background: rgba(255,255,255,.15);
   width: 12px;
-  height: 125px;
+  height: 115px;
   position: relative;
+  border-radius: 6px;
 }
 
 .life-left {
@@ -68,15 +69,30 @@ p {
   width: 100%;
   height: 50%;
   transition: height .15s ease-out;
+  border-radius: 6px;
 }
+
+.player-stats .life-left {
+  background: #226aba;
+}
+
+.hacker-stats .life-left {
+  background: #ce3d20;
+}
+
 
 .stats {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 20px;
-  width: 100px;
   padding-top: 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  min-width: 80px;
+  padding: 20px 10px;
+  border-radius: 4px;
 }
 
 .stats .thumbnail {
@@ -85,28 +101,31 @@ p {
   margin: 0 0 0 0;
 }
 
+.player-stats {
+  background: rgba(0,0,0,.3);
+}
+
 .stats .thumbnail.ouch {
-    animation: ouch .15s linear 3;
+  animation: ouch .15s linear 3;
 }
 
 @keyframes ouch {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-10px);
-    }
-    75% {
-        transform: translateX(10px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .stats .name {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
 }
 
@@ -117,30 +136,25 @@ p {
   margin: 5px 0 0 0;
 }
 
-.hacker-stats {
-    position: absolute;
-    left: 0;
-    top: 0;
-    text-align: right;
-}
-
-
-.player-stats {
-    position: absolute;
-    left: 0;
-    top: 0;
-    text-align: left;
-}
-
-
-.game-over .card {
-/*    display: none !important;*/
-}
 
 .game-over button {
-    display: none;
+  display: none;
 }
 
+button.play {
+  position: fixed;
+  bottom: 20px;
+  transition: all .15s ease-out;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,.12);
+}
+
+button:active {
+  transform: scale(.97);
+}
 
 
 .winner-section {
@@ -148,127 +162,147 @@ p {
 }
 
 .winner-message {
-    color: white;
-    font-size: 32px;
-    font-weight: 700;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 
 button {
-    font-size: 20px;
-    padding: 10px;
-    width: 200px;
-    box-sizing: border-box;
-    left: calc(50% - 100px);
-    font-weight: 700;
-    border: solid 3px white;
-    color: white;
-    background: transparent;
-    border-radius: 30px;
-    transition: all ease-out .2s;
-    cursor: pointer;
-    outline: none;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px;
+  box-sizing: border-box;
+  left: calc(50% - 100px);
+  font-weight: 700;
+  border: solid 3px white;
+  color: white;
+  background: transparent;
+  border-radius: 30px;
+  transition: all ease-out .2s;
+  cursor: pointer;
+  outline: none;
 }
 
 
 button.restart {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 button[disabled=true] {
-    opacity: .3;
-    transform: scale(.95);
-    cursor: default;
+  opacity: .3;
+  transform: scale(.95);
+  cursor: default;
 }
 
 
 .card {
-    display: none;
-    background: white;
-    margin: 0 10px;
-    width: 200px;
-    height: 255px;
-    border-radius: 10px;
-    border: solid 8px rgba(0,0,0,.3);
-    padding: 10px 15px;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    position: relative;
-    box-sizing: border-box;
-    text-align: left;
-    animation: card .2s ease-out;
-    transition: transform .2s ease-out;
+  display: none;
+  background: white;
+  margin: 0 10px;
+  width: 180px;
+  height: 235px;
+  border-radius: 10px;
+  border: solid 6px rgba(0,0,0,.3);
+  padding: 10px 15px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  transition: all .15s ease-out;
+}
+
+.card.prepared {
+  display: block;
+  opacity: 0;
+}
+
+.hacker-card.showCard {
+  animation: hackerShowCard .5s ease-out;
+}
+
+/* When the card appears */
+@keyframes hackerShowCard {
+  0%   { transform: translateY(-25px); opacity: .5; }
+  60%  { transform: translateY(5px); }
+  100% { transform: translateY(0px); }
 }
 
 
-.player-card.better-card {
-    transform: scale(1.05) rotate(-3deg);
+.player-card.showCard {
+  animation: playerShowCard .5s ease-out;
 }
 
-.hacker-card.better-card {
-    transform: scale(1.05) rotate(3deg);
+/* When the card appears */
+@keyframes playerShowCard {
+  0%   { transform: translateY(25px); opacity: .5; }
+  60%  { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
 }
 
-.hacker-card.tie-card {
-/*    animation: hacker-tie .4s ease-out;*/
-}
-
-.player-card.tie-card {
-  transform: translateY(0px) !important;
-
-
-/*    animation: player-tie .4s ease-out;*/
-}
-
-@keyframes hacker-tie {
-    0% { transform: scale(1); }
-    30% { transform: translateX(-20px); }
-    100% { transform: translateX(100); }
-}
-
-
-@keyframes player-tie {
-    0% { transform: scale(1); }
-    30% { transform: translateX(20px); }
-    100% { transform: translateX(100); }
-}
-
-
-.hacker-card.worse-card {
-    transform: scale(.95) rotate(3deg) translateX(30px);
-    opacity: .5;
-}
-
-.player-card.worse-card {
-    transform: scale(.95) translateY(0px) !important;
-    opacity: .5;
-}
-
-
-@keyframes card {
-    0%   { transform: scale(.75); opacity: .5; }
-    60%  { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
 
 .player-card {
-    background: #226aba;
+  background-color: #226aba;
 }
 
 .hacker-card {
-    background: #ce3d20;
+  background-color: #ce3d20;
+}
+
+
+.hacker-card.better-card {
+  transform: scale(1.03);
+}
+
+.card.tie-card {
+  transform: translateY(0px) !important;
+}
+
+.card.worse-card {
+  background-image: url(../images/cracks.svg);
+  background-size: 270px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hacker-card.worse-card {
+  transform: scale(.90) translateY(-10px) rotate(3deg);
+}
+
+.player-card.worse-card {
+  transform: scale(.90) translateY(0px) rotate(3deg) !important;
 }
 
 .player-area .card:not(.played-card):hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 5px rgba(0,0,0,.3);
 }
 
-
-.player-area .card.played-card {
+.player-card.played-card {
   transform: translateY(-40px);
+  box-shadow: 0px 10px 5px rgba(0,0,0,.3);
 }
 
+.player-card.better-card {
+  transform: scale(1.03) translateY(-40px);
+}
+
+.card.better-card {
+  animation: betterCard .2s ease-in-out 2;
+}
+
+@keyframes betterCard {
+  50% {
+    border-color: rgba(255,255,255,.3);
+  }
+}
+
+
+.card.better-card .power:after {
+  content: "\2713";
+}
 
 .card .power {
   font-size: 30px;
@@ -290,7 +324,6 @@ button[disabled=true] {
     transform: scale(1);
   }
 }
-
 
 .license {
     position: fixed;

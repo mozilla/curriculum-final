@@ -25,6 +25,8 @@ for(var i = 0; i < playerCardEls.length; i++) {
 
 
 function cardClicked(cardEl) {
+
+
   if(roundStarted) {
     return;
   }
@@ -72,10 +74,7 @@ function compareCards(){
   var playerPower = parseInt(playerPowerEl.innerHTML);
   var hackerPower = parseInt(hackerPowerEl.innerHTML);
 
-
-
   var powerDifference = playerPower - hackerPower;
-
 
   if (powerDifference < 0) {
    // Player Loses
@@ -93,16 +92,18 @@ function compareCards(){
    playerCard.classList.add("tie-card");
    hackerCard.classList.add("tie-card");
   }
-  //
+
   updateScores();
-  //
+
   if(playerLife <= 0) {
-   gameOver("Hacker");
+    gameOver("Hacker");
   } else if (hackerLife <= 0){
-   gameOver("Player")
+    gameOver("Player")
   }
-//
- document.querySelector("button").removeAttribute("disabled");
+
+  roundStarted = false;
+
+  document.querySelector("button.play").removeAttribute("disabled");
 }
 
 function gameOver(winner) {
@@ -152,9 +153,13 @@ function playGame() {
 
   for(var i = 0; i < cards.length; i++) {
     cards[i].style.display = "none";
+    cards[i].querySelector(".power").style.display = "none";
     cards[i].classList.remove("worse-card");
     cards[i].classList.remove("better-card");
     cards[i].classList.remove("tie-card");
+    cards[i].classList.remove("played-card");
+    cards[i].classList.remove("prepared");
+    cards[i].classList.remove("showCard");
   }
 
 
@@ -179,23 +184,27 @@ function playGame() {
     playerCardEl.querySelector(".power").innerHTML = playerCard.power;
   }
 
-  // Pick the player card
-  // var randomPlayerCardIndex = Math.floor(Math.random() * (playerCards.length));
-  // var playerCard = playerCards[randomPlayerCardIndex];
-  // document.querySelector("#player-card .text").innerHTML = playerCard.description;
-  // document.querySelector("#player-card .power").innerHTML = playerCard.power;
 
-  // Remove the "ouch" class animation
-  // document.querySelector(".hacker-stats .thumbnail").classList.remove("ouch");
-  // document.querySelector(".player-stats .thumbnail").classList.remove("ouch");
+  // Show all of the cards
 
-
-
-  setTimeout(function(){
     for(var i = 0; i < cards.length; i++) {
-      cards[i].style.display = "block";
+      var card = cards[i];
+      card.classList.add("prepared");
+      card.style.display = "block";
+
+      setTimeout(function(card){
+        return function() {
+          card.classList.remove("prepared");
+          card.classList.add("showCard");
+        }
+      }(card,i), i * 100);
+
+      // setTimeout(function(){
+      //   cards[i].style.display = "block";
+      // },200);
     }
-  },200)
+
+
 
 
 }
