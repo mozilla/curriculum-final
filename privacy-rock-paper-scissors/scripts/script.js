@@ -137,7 +137,13 @@ function startGame() {
 }
 
 function restartGame(){
+
+
+
   document.querySelector(".game-board").classList.remove("game-over");
+  document.querySelector(".game-board").classList.remove("during-game");
+  document.querySelector(".game-board").classList.add("before-game");
+
   document.querySelector(".winner-section").style.display = "none";
   document.querySelector(".hacker-card").style.display = "none";
 
@@ -204,6 +210,7 @@ function playGame() {
     var card = allCardElements[i];
 
     card.querySelector(".power").style.display = "none";
+    card.style.display = "none";
     card.classList.remove("worse-card");
     card.classList.remove("better-card");
     card.classList.remove("played-card");
@@ -223,7 +230,7 @@ function playGame() {
         card.classList.add("showCard");
         card.style.display = "block";
       }
-    }(card,i), i * 100);
+    }(card,i), parseInt(i+1) * 100);
 
 
   }

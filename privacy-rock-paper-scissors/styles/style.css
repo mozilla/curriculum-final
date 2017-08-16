@@ -2,11 +2,10 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #1d4019;
   color: white;
   text-align: center;
-  background-image: url(../images/chip.svg);
   /*  Image from: https://opengameart.org/content/seamless-microscheme-texture */
+  background-image: url(../images/chip.svg);
   background-repeat: repeat;
   background-size: 200px;
   margin: 0;
@@ -18,7 +17,6 @@ h1 {
   margin: 0;
   font-size: 22px;
   font-weight: 400;
-  background: rgba(0,0,0,.2);
   color: rgba(255,255,255,.6);
   font-style: italic;
 }
@@ -34,12 +32,39 @@ h1 strong {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 30px 0;
+  padding: 30px 0 30px 0;
   min-height: 235px;
+  background-image: url(../images/chip.svg);
+  background-repeat: repeat;
+  background-size: 200px;
+  height: 50vh;
+  box-sizing: border-box;
+}
+
+.game-board {
+  height: 100%;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
 }
 
 .hacker-area {
-  background: rgba(0,0,0,.2);
+  background-color: #3c1912;
+  background-position: bottom;
+  align-items: flex-end;
+}
+
+
+.player-area {
+  background-color: #0d3158;
+  background-position: top;
+  align-items: top;
+}
+
+
+.hacker-area h1 {
+  position: absolute;
+  top: 0;
 }
 
 .player-area .card {
@@ -69,25 +94,29 @@ h1 strong {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: 20px;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  left: 0;
+  top: 0;
+  bottom: 0;
   min-width: 80px;
   padding: 15px 10px 20px 10px;
   border-radius: 4px;
+  background: rgba(0,0,0,.3);
 }
 
 .stats .thumbnail {
   font-size: 50px;
-  line-height: 60px;
-  margin: 0 0 0 0;
+  line-height: 50px;
+  margin: 5px 0;
   text-shadow: 5px 5px 0px rgba(0,0,0,.2);
 }
 
 .stats .thumbnail.ouch {
   animation: ouch .15s linear 3;
 }
+
 
 @keyframes ouch {
   0% {
@@ -120,14 +149,12 @@ h1 strong {
   display: none;
 }
 
-
-
 button.next-turn {
   position: fixed;
   bottom: 20px;
   top: auto;
   transition: all .15s ease-out;
-  background: rgba(0,0,0,.6);
+  background: black;
   display: none;
 }
 
@@ -138,8 +165,8 @@ button.next-turn {
 button.start-game {
   bottom: auto;
   position: fixed;
-  top: 315px;
-  background: rgba(0,0,0,.6);
+  top: calc(50vh - 24px);
+  background: black;
   display: none;
 }
 
@@ -216,7 +243,7 @@ button[disabled=true] {
 .card {
   display: none;
   background: white;
-  margin: 0 15px;
+  margin: 0 10px;
   width: 180px;
   height: 235px;
   padding: 10px 15px;
