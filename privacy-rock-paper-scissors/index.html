@@ -1,19 +1,19 @@
 <html>
 
   <head>
-    <title>Privacy Rock-Paper-Scissors</title>
+    <title>HACKER CARDS</title>
     <meta name="author" content="Mozilla">
-    <meta name="title" content="Privacy Rock-Paper-Scissors">
+    <meta name="title" content="HACKER CARDS">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="styles/customize.css" type="text/css">
     <script src="scripts/cards.js" type="text/javascript"></script>
   </head>
 
   <body>
 
-    <h1><strong>> Hacker Cards</strong> - It's an online safety throwdown</h1>
-
+    <h1><strong>&gt; HACKER CARDS</strong> It's an online safety throwdown</h1>
 
     <div class="game-board">
 
@@ -23,14 +23,14 @@
 
         <div class="stats hacker-stats">
           <div class="life-bar">
-            <div class="life-left"></div>
+            <div class="life-left hacker-color"></div>
           </div>
           <div class="life-total">20</div>
           <div class="thumbnail">😠</div>
           <div class="name">Hacker</div>
         </div>
 
-        <div class="card hacker-card">
+        <div class="card hacker-card hacker-color">
           <div class="text"></div>
           <div class="power"></div>
         </div>
@@ -41,7 +41,7 @@
 
         <div class="stats player-stats">
           <div class="life-bar">
-            <div class="life-left"></div>
+            <div class="life-left player-color"></div>
           </div>
           <div class="life-total">20</div>
           <div class="thumbnail">🤓</div>
@@ -49,33 +49,37 @@
         </div>
 
 
-        <div class="card player-card">
+        <div class="card player-card player-color">
           <div class="text"></div>
           <div class="power"></div>
         </div>
 
-        <div class="card player-card">
+        <div class="card player-card player-color">
           <div class="text"></div>
           <div class="power"></div>
         </div>
 
-        <div class="card player-card">
+        <div class="card player-card player-color">
           <div class="text"></div>
           <div class="power"></div>
         </div>
 
       </div>
 
+      <button class="start-game" onClick="startGame()">Go Online!</button>
+      <button class="next-turn" onClick="playGame()">Keep Surfing!</button>
 
-      <button class="play" onClick="playGame()">Go Online!</button>
-    </div>
-
-    <div class="winner-section">
-      <div class="winner-message">You got hacked!</div>
-      <button class="restart" onClick="restartGame()">Play Again</button>
     </div>
 
     <div class="license">CC-BY <a href="https://teach.mozilla.org">moz://a</a></div>
+
+    <div class="winner-section">
+      <div>
+        <span class="winner-message">You got hacked!</span>
+        <button class="restart" onClick="restartGame()">Play Again</button>
+      </div>
+    </div>
+
     <script src="scripts/script.js" type="text/javascript"></script>
   </body>
 
