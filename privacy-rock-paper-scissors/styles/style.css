@@ -87,7 +87,6 @@ h1 strong {
   width: 100%;
   height: 50%;
   transition: height .15s ease-out;
-
 }
 
 .stats {
@@ -241,8 +240,9 @@ button[disabled=true] {
 }
 
 .card {
-  display: none;
+/*  display: none;*/
   background: white;
+  opacity: 0;
   margin: 0 10px;
   width: 180px;
   height: 235px;
@@ -262,8 +262,13 @@ button[disabled=true] {
   opacity: 0;
 }
 
+.card.showCard {
+  opacity: 1;
+}
+
 .hacker-card.showCard {
   animation: hackerShowCard .5s ease-out;
+
 }
 
 /* When the hacker card appears */
@@ -284,10 +289,6 @@ button[disabled=true] {
   100% { transform: translateY(0px); }
 }
 
-.hacker-card.better-card {
-  transform: scale(1.03);
-}
-
 .card.tie-card {
   transform: translateY(0px) !important;
 }
@@ -296,8 +297,12 @@ button[disabled=true] {
   background: #888;
 }
 
+.hacker-card.better-card {
+  transform: scale(1.03);
+}
+
 .hacker-card.worse-card {
-  transform: scale(.90) translateY(-10px) rotate(3deg);
+  transform: scale(.90) translateY(-25px) rotate(3deg);
 }
 
 .player-card.worse-card {
@@ -315,22 +320,15 @@ button[disabled=true] {
 }
 
 .player-card.better-card {
-  transform: scale(1.03) translateY(-40px);
+  transform: scale(1.03) translateY(-60px);
 }
 
-.card.better-card {
-  animation: betterCard .2s ease-in-out 2;
-}
 
-@keyframes betterCard {
-  50% {
-    border-color: rgba(255,255,255,.3);
-  }
-}
+/* Shows a checkmark on the better card */
 
 .card.better-card:after,
 .card.worse-card:after {
-  font-size: 50px;
+  font-size: 40px;
   position: absolute;
   bottom: 0;
   right: 20px;
@@ -346,23 +344,52 @@ button[disabled=true] {
 }
 
 .card .power {
-  font-size: 30px;
+  font-size: 40px;
   position: absolute;
-  bottom: 0;
-  font-size: 50px;
-  display: none;
-  animation: showPower .2s ease-out;
+  bottom: 10px;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: rgba(0,0,0,0);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.player-card .power {
+  background-image: url(../images/shield.svg);
+}
+
+.hacker-card .power {
+  background-image: url(../images/skull.svg);
+}
+
+.card.reveal-power .power {
+  color: black;
+  animation: showPower .2s ease-out;
+  background: none;
+}
+
 
 @keyframes showPower {
   0% {
-    transform: scale(0);
+    background: none;
+    transform: scaleX(1);
+    color: rgba(0,0,0,0);
   }
-  40% {
-    transform: scale(1.2);
+  49% {
+    color: rgba(0,0,0,0);
+    transform: scaleX(0);
+  }
+  51 % {
+    background: none;
+    color: black;
+    transform: scaleX(0);
   }
   100% {
-    transform: scale(1);
+    transform: scaleX(1);
   }
 }
 

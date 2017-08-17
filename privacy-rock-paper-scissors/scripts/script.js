@@ -49,26 +49,24 @@ function cardClicked(cardEl) {
   // Wait 750ms to reveal the player power
   setTimeout(function(){
     revealPlayerPower();
-  },750)
+  },800)
 
   // Wait 1250ms to compare the card scoers
   setTimeout(function(){
     compareCards();
-  }, 1250);
+  }, 1400);
 }
 
 // Shows the power level on the player card
 function revealPlayerPower(){
   var playerCard = document.querySelector(".played-card");
-  var playerPowerEl = playerCard.querySelector(".power");
-  playerPowerEl.style.display = "block";
+  playerCard.classList.add("reveal-power");
 }
 
 // Shows the power level on the hacker card
 function revealHackerPower(){
   var hackerCard = document.querySelector(".hacker-card");
-  var hackerPowerEl = hackerCard.querySelector(".power");
-  hackerPowerEl.style.display = "block";
+  hackerCard.classList.add("reveal-power");
 }
 
 function compareCards(){
@@ -132,13 +130,10 @@ function gameOver(winner) {
 function startGame() {
   document.querySelector(".game-board").classList.remove("before-game");
   document.querySelector(".game-board").classList.add("during-game");
-
-  playGame();
+  playTurn();
 }
 
 function restartGame(){
-
-
 
   document.querySelector(".game-board").classList.remove("game-over");
   document.querySelector(".game-board").classList.remove("during-game");
@@ -186,7 +181,19 @@ function updateScores(){
   document.querySelector(".hacker-stats .life-left").style.height =  hackerPercent + "%";
 }
 
-function playGame() {
+function shuffleArray(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+
+function playTurn() {
 
   roundFinished = true;
   cardSelected = false;
@@ -201,38 +208,42 @@ function playGame() {
   // Contents of the player cards
   var playerCards = scenario.playerCards;
 
-  //Show cards
   document.querySelector(".next-turn").setAttribute("disabled", "true");
 
   var j = 0;
 
-  for(var i = 0; i < allCardElements.length; i++) { //asdf
+  var cardIndexes = shuffleArray([0,1,2]);
+
+  // shuffle card indexes
+
+
+
+
+  for(var i = 0; i < allCardElements.length; i++) {
     var card = allCardElements[i];
 
-    card.querySelector(".power").style.display = "none";
-    card.style.display = "none";
     card.classList.remove("worse-card");
     card.classList.remove("better-card");
     card.classList.remove("played-card");
     card.classList.remove("tie-card");
     card.classList.remove("prepared");
     card.classList.remove("showCard");
+    card.classList.remove("reveal-power");
 
     if(card.classList.contains("player-card")) {
-      card.querySelector(".text").innerHTML = playerCards[j].description;
-      card.querySelector(".power").innerHTML = playerCards[j].power;
+      card.querySelector(".text").innerHTML = playerCards[cardIndexes[j]].description;
+      card.querySelector(".power").innerHTML = playerCards[cardIndexes[j]].power;
       j++;
     }
 
+    // Reveal each card one by one with a delay of 100ms
     setTimeout(function(card){
       return function() {
         card.classList.remove("prepared");
-        card.classList.add("showCard");
         card.style.display = "block";
+        card.classList.add("showCard");
       }
     }(card,i), parseInt(i+1) * 100);
-
-
   }
 
   // Display the hacker card
