@@ -38,7 +38,7 @@ var scenarios = [
         power : 1,
       }
     ]
-  }
+  },
   {
     hackerCard : {
       description : "I figured out where you live from all the personal information you share on social media.",
@@ -58,7 +58,7 @@ var scenarios = [
         power : 1,
       }
     ]
-  }
+  },
   {
     hackerCard : {
       description : "I watched you type your password and hacked your account.",
@@ -78,7 +78,7 @@ var scenarios = [
         power : 1,
       }
     ]
-  }
+  },
   {
     hackerCard : {
       description : "I watched you type your password and hacked your account.",
