@@ -39,6 +39,8 @@ function cardClicked(cardEl) {
 
   cardEl.classList.add("played-card");
 
+  document.querySelector(".game-board").classList.add("card-selected");
+
   // Wait 500ms to reveal the hacker power
   setTimeout(function(){
     revealHackerPower();
@@ -202,7 +204,9 @@ function playTurn() {
   roundFinished = true;
   cardSelected = false;
 
-  // Hides the next turn button, will show again when turn is over
+  document.querySelector(".game-board").classList.remove("card-selected");
+
+  // Hides the "next turn" button, will show again when turn is over
   document.querySelector(".next-turn").setAttribute("disabled", "true");
 
   for(var i = 0; i < allCardElements.length; i++) {
@@ -212,7 +216,7 @@ function playTurn() {
 
   setTimeout(function(){
     revealCards();
-  }, 1000);
+  }, 500);
 }
 
 function revealCards(){
