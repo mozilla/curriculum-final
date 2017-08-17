@@ -2,11 +2,12 @@
 var playerLife = 10;
 var hackerLife = 10;
 
-// Message text when teh game is over
+// Message when the game is over
 var hackerWinnerMessage = "Game over: You got hacked!";
 var playerWinnerMessage = "You defeated the hacker!";
 
 
+// Game code starts here
 var playerStartLife = parseInt(playerLife);
 var hackerStartLife = parseInt(hackerLife);
 
@@ -17,11 +18,10 @@ updateScores();
 
 document.querySelector(".game-board").classList.add("before-game");
 
-var playerCardEls = document.querySelectorAll(".player-area .card");
-var allCards = document.querySelectorAll(".card");
 var allCardElements = document.querySelectorAll(".card");
 
-for(var i = 0; i < allCards.length; i++) {
+// Adds click handler to all player card elements
+for(var i = 0; i < allCardElements.length; i++) {
   var card = allCardElements[i];
   if(card.classList.contains("player-card")) {
     card.addEventListener("click",function(e){
@@ -34,12 +34,10 @@ for(var i = 0; i < allCards.length; i++) {
 // When a card is clicked
 function cardClicked(cardEl) {
 
-  if(cardSelected) {
-    return;
-  }
+  if(cardSelected) { return; }
+  cardSelected = true;
 
   cardEl.classList.add("played-card");
-  cardSelected = true;
 
   // Wait 500ms to reveal the hacker power
   setTimeout(function(){
@@ -127,14 +125,17 @@ function gameOver(winner) {
   }
 }
 
+
+// Starts the game
 function startGame() {
   document.querySelector(".game-board").classList.remove("before-game");
   document.querySelector(".game-board").classList.add("during-game");
   playTurn();
 }
 
-function restartGame(){
 
+// Start the game over from scratch
+function restartGame(){
   document.querySelector(".game-board").classList.remove("game-over");
   document.querySelector(".game-board").classList.remove("during-game");
   document.querySelector(".game-board").classList.add("before-game");
@@ -142,7 +143,7 @@ function restartGame(){
   document.querySelector(".winner-section").style.display = "none";
   document.querySelector(".hacker-card").style.display = "none";
 
-  var cards = allCards;
+  var cards = allCardElements;
 
   document.querySelector("button").removeAttribute("disabled");
 
@@ -153,46 +154,49 @@ function restartGame(){
   playerLife = playerStartLife;
   hackerLife = hackerStartLife;
 
-  updateScores();
-
   roundFinished = true;
   cardSelected = false;
+
+  updateScores();
 }
 
-
+// Updates the displayed life bar and life totals
 function updateScores(){
-  // Update life totals
+
+  // Update life totals for each player
   document.querySelector(".player-stats .life-total").innerHTML = playerLife;
   document.querySelector(".hacker-stats .life-total").innerHTML = hackerLife;
 
-  // Set player lifebar
+  // Update the player lifebar
   var playerPercent = playerLife / playerStartLife * 100;
   if (playerPercent < 0) {
     playerPercent = 0;
   }
-
   document.querySelector(".player-stats .life-left").style.height =  playerPercent + "%";
 
+  // Update the hacker lifebar
   var hackerPercent = hackerLife / hackerStartLife * 100
   if (hackerPercent < 0) {
     hackerPercent = 0;
   }
-
   document.querySelector(".hacker-stats .life-left").style.height =  hackerPercent + "%";
 }
 
+
+// Shuffles an array
 function shuffleArray(a) {
-    var j, x, i;
-    for (i = a.length; i; i--) {
-        j = Math.floor(Math.random() * i);
-        x = a[i - 1];
-        a[i - 1] = a[j];
-        a[j] = x;
-    }
-    return a;
+  var j, x, i;
+  for (i = a.length; i; i--) {
+    j = Math.floor(Math.random() * i);
+    x = a[i - 1];
+    a[i - 1] = a[j];
+    a[j] = x;
+  }
+  return a;
 }
 
 
+// Plays one turn of the game
 function playTurn() {
 
   roundFinished = true;
@@ -208,16 +212,11 @@ function playTurn() {
   // Contents of the player cards
   var playerCards = scenario.playerCards;
 
+  // Hides the next turn button, will show again when turn is over
   document.querySelector(".next-turn").setAttribute("disabled", "true");
 
   var j = 0;
-
   var cardIndexes = shuffleArray([0,1,2]);
-
-  // shuffle card indexes
-
-
-
 
   for(var i = 0; i < allCardElements.length; i++) {
     var card = allCardElements[i];
@@ -230,6 +229,7 @@ function playTurn() {
     card.classList.remove("showCard");
     card.classList.remove("reveal-power");
 
+    // Display the payer card details
     if(card.classList.contains("player-card")) {
       card.querySelector(".text").innerHTML = playerCards[cardIndexes[j]].description;
       card.querySelector(".power").innerHTML = playerCards[cardIndexes[j]].power;
@@ -249,8 +249,4 @@ function playTurn() {
   // Display the hacker card
   hackerCardEl.querySelector(".text").innerHTML = hackerCard.description;
   hackerCardEl.querySelector(".power").innerHTML = hackerCard.power;
-
-
-
-
 }
