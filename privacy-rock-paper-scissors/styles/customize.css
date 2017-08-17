@@ -9,6 +9,9 @@
   background-image: url(../images/chip.svg);
 }
 
+.player-card .power {
+  background-image: url(../images/shield.svg);
+}
 
 /* Hacker Styles */
 
@@ -21,3 +24,6 @@
   background-image: url(../images/chip.svg);
 }
 
+.hacker-card .power {
+  background-image: url(../images/skull.svg);
+}
