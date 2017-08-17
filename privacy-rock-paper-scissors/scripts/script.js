@@ -202,6 +202,24 @@ function playTurn() {
   roundFinished = true;
   cardSelected = false;
 
+  // Hides the next turn button, will show again when turn is over
+  document.querySelector(".next-turn").setAttribute("disabled", "true");
+
+  for(var i = 0; i < allCardElements.length; i++) {
+    var card = allCardElements[i];
+    card.classList.remove("showCard");
+  }
+
+  setTimeout(function(){
+    revealCards();
+  }, 1000);
+}
+
+function revealCards(){
+  var j = 0;
+  var cardIndexes = shuffleArray([0,1,2]);
+
+
   // Get scenario cards
   var randomScenarioIndex = Math.floor(Math.random() * (scenarios.length));
   var scenario = scenarios[randomScenarioIndex];
@@ -212,12 +230,6 @@ function playTurn() {
   // Contents of the player cards
   var playerCards = scenario.playerCards;
 
-  // Hides the next turn button, will show again when turn is over
-  document.querySelector(".next-turn").setAttribute("disabled", "true");
-
-  var j = 0;
-  var cardIndexes = shuffleArray([0,1,2]);
-
   for(var i = 0; i < allCardElements.length; i++) {
     var card = allCardElements[i];
 
@@ -226,7 +238,6 @@ function playTurn() {
     card.classList.remove("played-card");
     card.classList.remove("tie-card");
     card.classList.remove("prepared");
-    card.classList.remove("showCard");
     card.classList.remove("reveal-power");
 
     // Display the payer card details
@@ -237,13 +248,13 @@ function playTurn() {
     }
 
     // Reveal each card one by one with a delay of 100ms
-    setTimeout(function(card){
+    setTimeout(function(card, j){
       return function() {
         card.classList.remove("prepared");
         card.style.display = "block";
         card.classList.add("showCard");
       }
-    }(card,i), parseInt(i+1) * 100);
+    }(card,i), parseInt(i+1) * 200);
   }
 
   // Display the hacker card

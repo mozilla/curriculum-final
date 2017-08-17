@@ -263,7 +263,6 @@ button[disabled=true] {
 
 .hacker-card.showCard {
   animation: hackerShowCard .5s ease-out;
-
 }
 
 /* When the hacker card appears */
