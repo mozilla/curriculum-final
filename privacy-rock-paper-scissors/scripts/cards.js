@@ -14,7 +14,7 @@ var scenarios = [
         power : 3,
       },
       {
-        description : "I sent the details you asked for so you could check on my account.",
+        description : "I connect to any wifi network I can use in public.",
         power : 1,
       }
     ]
@@ -35,6 +35,66 @@ var scenarios = [
       },
       {
         description : "I sent the details you asked for so you could check on my account.",
+        power : 1,
+      }
+    ]
+  }
+  {
+    hackerCard : {
+      description : "I figured out where you live from all the personal information you share on social media.",
+      power : 3,
+    },
+    playerCards : [
+      {
+        description : "I never share personal information on my social media accounts.",
+        power : 5,
+      },
+      {
+        description : "I keep my accounts private so only my friends can see them.",
+        power : 4,
+      },
+      {
+        description : "I tag everything so my friends always know what I’m doing.",
+        power : 1,
+      }
+    ]
+  }
+  {
+    hackerCard : {
+      description : "I watched you type your password and hacked your account.",
+      power : 2,
+    },
+    playerCards : [
+      {
+        description : "I changed my password on that account and deleted all your posts, but I use different passwords for all of my other accounts.",
+        power : 4,
+      },
+      {
+        description : "I changed my password on all of my accounts because they are the same.",
+        power : 2,
+      },
+      {
+        description : "I deleted that account and started a new one. ",
+        power : 1,
+      }
+    ]
+  }
+  {
+    hackerCard : {
+      description : "I watched you type your password and hacked your account.",
+      power : 2,
+    },
+    playerCards : [
+      {
+        description : "I always use a private browser that never keeps my history.",
+        power : 4,
+      },
+      {
+        description : "I set my browser to delete my history every time I quit. ",
+        power : 3,
+      },
+      {
+        description : "I never clear mybrowser history because I don’t like typing in big web addresses.",
         power : 1,
       }
     ]
