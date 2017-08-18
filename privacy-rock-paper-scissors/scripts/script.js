@@ -206,6 +206,10 @@ function playTurn() {
 
   document.querySelector(".game-board").classList.remove("card-selected");
 
+  // Remove "ouch" class from player and hacker thumbnails
+  document.querySelector(".hacker-stats .thumbnail").classList.remove("ouch");
+  document.querySelector(".player-stats .thumbnail").classList.remove("ouch");
+
   // Hides the "next turn" button, will show again when turn is over
   document.querySelector(".next-turn").setAttribute("disabled", "true");
 
