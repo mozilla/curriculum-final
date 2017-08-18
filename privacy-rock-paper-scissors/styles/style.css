@@ -15,7 +15,7 @@ body {
 .hacker-area h1 {
   padding: 12px 10px 0 10px;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: rgba(255,255,255,.6);
   font-style: italic;
@@ -33,8 +33,7 @@ h1 strong {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 30px 0 30px 0;
-  padding-left: 100px;
+  padding: 30px 10px 30px 110px;
   min-height: 235px;
   background-repeat: repeat;
   background-size: 200px;
@@ -65,10 +64,9 @@ h1 strong {
 
 .life-bar {
   background: rgba(255,255,255,.15);
-  width: 12px;
-  height: 105px;
+  width: 10px;
+  height: 90px;
   position: relative;
-  box-shadow: 5px 5px 0px rgba(0,0,0,.2);
 }
 
 .life-left {
@@ -109,7 +107,7 @@ h1 strong {
 }
 
 .stats .name {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 20px;
 }
@@ -134,6 +132,7 @@ h1 strong {
     transform: translateX(0);
   }
 }
+
 .game-over button {
   display: none;
 }
@@ -207,7 +206,8 @@ button:active {
 
 button {
   font-size: 15px;
-  padding: 8px 25px;
+  line-height: 15px;
+  padding: 8px 22px 9px 22px;
   box-sizing: border-box;
   font-weight: 700;
   border: solid 3px white;
@@ -217,6 +217,13 @@ button {
   transition: all ease-out .2s;
   cursor: pointer;
   outline: none;
+  animation: buttonPulse .2s infinite ease-in-out;
+}
+
+@keyframes buttonPulse {
+  50% {
+    transform: scale(1.02);
+  }
 }
 
 button[disabled=true] {
