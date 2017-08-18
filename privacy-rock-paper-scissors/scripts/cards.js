@@ -66,7 +66,7 @@ var scenarios = [
     },
     playerCards : [
       {
-        description : "I changed my password on that account and deleted all your posts, but I use different passwords for all of my other accounts.",
+        description : "I use different passwords for all of my other accounts.",
         power : 4,
       },
       {
