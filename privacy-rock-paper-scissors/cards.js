@@ -1,3 +1,7 @@
+// You can add new scenarios, but there can only be...
+// * 1 hackerCard per scenario
+// * 3 playerCards per scenario
+
 var scenarios = [
   {
     hackerCard : {

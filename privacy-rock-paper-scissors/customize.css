@@ -6,11 +6,11 @@
 
 .player-area {
   background-color: #0d3158;
-  background-image: url(../images/chip.svg);
+  background-image: url(images/chip.svg);
 }
 
 .player-card .power {
-  background-image: url(../images/shield.svg);
+  background-image: url(images/shield.svg);
 }
 
 /* Hacker Styles */
@@ -21,9 +21,9 @@
 
 .hacker-area {
   background-color: #3c1912;
-  background-image: url(../images/chip.svg);
+  background-image: url(images/chip.svg);
 }
 
 .hacker-card .power {
-  background-image: url(../images/skull.svg);
+  background-image: url(images/skull.svg);
 }
