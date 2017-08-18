@@ -280,8 +280,8 @@ button[disabled=true] {
     opacity: .2;
   }
   50% {
-    top: 30%;
-    height: 30%;
+    top: 20%;
+    height: 50%;
     opacity: .3;
   }
   75% {
