@@ -343,9 +343,6 @@ button[disabled=true] {
   transform: scale(.90) translateY(-25px) rotate(3deg);
 }
 
-.player-card.worse-card {
-  transform: scale(.90) translateY(0px) rotate(3deg) !important;
-}
 
 .game-board:not(.card-selected) .player-area .card:not(.played-card):hover {
   transform: translateY(-10px);
@@ -355,6 +352,11 @@ button[disabled=true] {
 .player-card.played-card {
   transform: translateY(-40px);
   box-shadow: 0px 15px 15px rgba(0,0,0,.3);
+}
+
+.player-card.worse-card {
+  transform: translateY(10px) rotate(3deg) !important;
+  box-shadow: 0px 5px 5px rgba(0,0,0,.3);
 }
 
 .player-card.better-card {
