@@ -94,7 +94,7 @@ var scenarios = [
         power : 3,
       },
       {
-        description : "I never clear mybrowser history because I don’t like typing in big web addresses.",
+        description : "I never clear my browser history because I don’t like typing in big web addresses.",
         power : 1,
       }
     ]
