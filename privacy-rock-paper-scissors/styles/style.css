@@ -263,7 +263,7 @@ button[disabled=true] {
   transform: rotate(-7deg);
 }
 
-.card:hover:after {
+.game-board:not(.card-selected) .player-card:hover:after {
   display: block;
   animation: sheen .35s linear 1;
 }
@@ -368,17 +368,18 @@ button[disabled=true] {
 .card.worse-card:before {
   font-size: 30px;
   position: absolute;
-  bottom: 16px;
+  bottom: 18px;
   right: 20px;
   color: rgba(0,0,0,.3);
+  display: block;
 }
 
-.card.better-card:after {
-/*  content: "\2713";*/
+.card.better-card:before {
+  content: "\2713";
 }
 
-.card.worse-card:after {
-/*  content: "\2717";*/
+.card.worse-card:before {
+  content: "\2717";
 }
 
 .card .power {
