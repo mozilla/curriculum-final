@@ -1,57 +1,95 @@
-/*Layout*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 html {
   height: 100%;
 }
 
 body {
-
-  background: #003158; /* For browsers that do not support gradients */
-  background: -webkit-radial-gradient(#0088F1, #005DA5, #003158); /* Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(#0088F1, #005DA5, #003158); /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(#0088F1, #005DA5, #003158); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(#0088F1, #005DA5, #003158); /* Standard syntax */
-
+  font-family: "Open Sans";
   height: 100%;
-  margin-left: 1em;
+  background-color: #0d3158;
+  background-image: url(../images/chip.svg);
+  /* Image from: https://opengameart.org/content/seamless-microscheme-texture */
+  background-size: 250px;
+  padding: 20px;
+  transition: background-color .15s ease-out;
+}
+
+body.show-story {
+  background-color: #3c1912;
+}
+
+.show-story .form {
+  display: none;
+}
+
+.show-story .story {
+  display: block;
+}
+
+.story {
+  display: none;
 }
 
 button {
+  font-size: 1em;
+  line-height: 15px;
+  padding: 8px 22px 9px 22px;
+  box-sizing: border-box;
+  font-weight: 700;
+  border: solid 3px white;
+  color: white;
+  background: transparent;
+  border-radius: 30px;
+  transition: all ease-out .2s;
+  cursor: pointer;
+  outline: none;
+}
 
-  background-color: #ddd;
-  border: 2px solid #777;
-  border-radius: 5px;
+form {
+  margin-bottom: 2em;
+}
 
-  font-family: 'Zilla Slab', serif;
-  font-size: 1.125em;
-  font-weight: 300;
+button:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,.1);
+}
 
+button:active {
+  transform: scale(.97);
+}
+
+.directions {
+  opacity: .8;
 }
 
 h1, h2 {
-  margin-bottom: 0;
-  color:#fff;
-  font-family: 'Fira Sans', sans-serif;
-  text-shadow: 2px 2px 15px #001525;
-
+  margin: 0;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
   margin-top:0;
-
-  font-size: 4em;
-  font-weight:600;
+  font-size: 2em;
+  font-size: 600;
 }
 
 h2 {
-  margin-top: .125em;
-  font-size: 3em;
+
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
   font-weight:400;
 }
 
 input {
   font-family: 'Zilla Slab', serif;
-  font-size: .9em;
+  font-size: 1em;
+  padding: 8px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
 }
 
 p {
@@ -67,16 +105,39 @@ p {
 
 /*Typography*/
 
+/* Mozilla license info */
+
 .license {
-
-  top: 1em;
-  position: relative;
-
-  color: #fff;
-  font-family: monospace;
-  font-size: .9em;
+  position: fixed;
+  right: 15px;
+  bottom: 14px;
+  font-size: 13px;
+  color: white;
+  color: rgba(255,255,255,.4);
 }
 
 .license a {
-  color: #fff;
+  margin-left: 5px;
+}
+
+.license img {
+  width: 60px;
+  opacity: .4;
+  position: relative;
+  top: 3px;
+  transition: opacity .2s ease-out;
+}
+
+.license img:hover {
+  opacity: .6;
+}
+
+.story [class*=word] {
+  background: rgba(255,255,255,.2);
+  padding: 0 5px;
+  border-bottom: dotted rgba(255,255,255,.3) white;
+}
+
+.story p {
+  font-size: 2em;
 }

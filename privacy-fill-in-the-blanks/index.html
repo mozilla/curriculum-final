@@ -1,48 +1,49 @@
 <!doctype html>
-
 <html>
 
-<head>
-  
-  <title>Privacy Fill-in-the-Blanks Story</title>
-  
-  <meta name="author" content="Mozilla">
-  <meta name="title" content="Privacy Fill-in-the-Blanks Story">
-  <meta charset="utf-8">
-  
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet"> 
-  <link rel="stylesheet" href="styles/style.css" type="text/css">
-  
-  <script src="scripts/script.js" type="text/javascript"></script>
-  
-</head>
+  <head>
+    <title>Privacy Fill-in-the-Blanks Story</title>
+    <meta name="author" content="Mozilla">
+    <meta name="title" content="Privacy Fill-in-the-Blanks Story">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script src="scripts/script.js" type="text/javascript"></script>
+  </head>
 
-<body>
-  
-  <h1>Privacy Fill-in-the-Blanks Story</h1>
-  <h2>The lighter side of online safety</h2>
-  
-  <p><strong>Directions:</strong> Fill in the blanks and then hit the button below to see your story!</p>
-  
-  <div id="story-space">
+  <body>
+    <h1>Privacy Fill-in-the-Blanks Story</h1>
+    <h2>The lighter side of online safety</h2>
 
-    <form name="story">
-      <p><input id="box1" name="box1" type="text"> (a number, like 5 or 832)</p>
-      <p><input id="box2" name="box2" type="text"> (an animal, like "dog" or "cat")</p>
-      <p><input id="box3" name="box3" type="text"> (an adjective, or describing word, like "happy")</p>
-      <p><input id="box4" name="box4" type="text"> (a plural noun, like "automobiles" or "trees")</p>
-      <p><input id="box5" name="box5" type="text"> (an adjective, or describing word, like "happy")</p>
-      <p><input id="box6" name="box6" type="text"> (an adjective, or describing word, like "happy")</p>
-    </form>
+    <div class="form">
+      <p class="directions"><strong>Directions:</strong> Fill in the blanks and then hit the button below to see your story!</p>
+      <form>
+        <p><input name="word-1" type="text"> A number. (Ex - 5 or 832)</p>
+        <p><input name="word-2" type="text"> An animal. (Ex - "dog" or "cat"</p>
+        <p><input name="word-3" type="text"> An adjective, or describing word. (Ex - "automobiles" or "trees")</p>
+        <p><input name="word-4" type="text"> A plural noun. (Ex - "automobiles" or "trees")</p>
+        <p><input name="word-5" type="text"> An adjective, or describing word. (Ex - "happy")</p>
+        <p><input name="word-6" type="text"> An adjective, or describing word. (Ex - "happy") </p>
+      </form>
+      <button onClick="fillBlanks()">Generate my Story!</button>
+    </div>
 
-    <p><button onClick="fillBlanks()">Click here!</button></p>
+    <div class="story">
+      <p>
+        On my way home, I have to pass <span class="word-1"></span> security cameras,
+        so I wear a hoodie that makes me look like a <span class="word-2"></span> to avoid facial recognition.
+        I also set my phone to <span class="word-3"></span> mode to keep it from leaking data.
+      </p>
+      <p>
+        When I have to use my phone, I encrypt all of my messages with <span class="word-4"></span> so no one can read
+        them if they get intercepted. When I go online, I set my browser to <span class="word-5"></span> mode so it doesn't
+        keep track of my browsing history and I never enable <span class="word-6"></span> serivces so no one can use my phone to track me.
+      </p>
+      <button onClick='resetPage()'>Reset</button>
+    </div>
 
-  </div>
-  
-  <div class="license">CC-BY <a href="https://teach.mozilla.org">moz://a</a></div>
-  
-</body>
+    <div class="license">CC-BY <a href="https://teach.mozilla.org"><img src="images/mozilla-logo.svg" /></a></div>
+  </body>
 
 </html>
-  
