@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-html {
-  height: 100%;
-}
 
 body {
   font-family: "Open Sans";
@@ -20,17 +17,19 @@ body.show-story {
   background-color: #163c12;
 }
 
+/* When the story is shown, hide all these things */
+.show-story h1,
+.show-story h2,
 .show-story .form {
+  display: none;
+}
+
+.story {
   display: none;
 }
 
 .show-story .story {
   display: block;
-}
-
-.show-story h1,
-.show-story h2 {
-  display: none;
 }
 
 .monitor {
@@ -70,10 +69,6 @@ body.show-story {
 
 .screen .cursor {
   animation: blink 1s linear infinite;
-}
-
-.story {
-  display: none;
 }
 
 .story [class*=word] {
