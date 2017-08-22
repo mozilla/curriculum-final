@@ -28,6 +28,11 @@ body.show-story {
   display: block;
 }
 
+.show-story h1,
+.show-story h2 {
+  display: none;
+}
+
 .monitor {
   background: #c7bc96;
   padding: 30px 30px 0 30px;
