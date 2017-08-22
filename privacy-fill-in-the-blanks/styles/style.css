@@ -33,8 +33,7 @@ body.show-story {
   padding: 30px;
   border-radius: 15px;
   border-bottom: solid 12px rgba(0,0,0,.3);
-  max-width: 750px;
-  margin: 0 auto;
+  max-width: 650px;
 }
 
 .screen {

@@ -1,5 +1,3 @@
-//This function replaces the form with a story that uses the words typed into the empty boxes.
-
 function fillBlanks() {
   var inputElements = document.querySelectorAll("input");
 
@@ -12,7 +10,6 @@ function fillBlanks() {
     document.querySelector(".story ." + inputName).innerText = inputValue;
   }
 }
-
 
 function goBack() {
   document.querySelector("body").classList.remove("show-story");
