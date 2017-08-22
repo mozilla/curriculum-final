@@ -1,0 +1,56 @@
+/* Modify these styles to change the look of the story */
+
+body {
+  background-color: #0d3158;
+}
+
+/* When the story is shown */
+
+body.show-story {
+  background-color: #163c12;
+}
+
+/* Computer that displays the story */
+
+.monitor {
+  background: #c7bc96;
+}
+
+.screen {
+  background: linear-gradient(-190deg, #333, black);
+  font-family: monospace;
+  border: solid 5px black;
+}
+
+.story p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: #61ca49;
+}
+
+.light {
+  background: #c52424;
+}
+
+/* The filled-in words in the story */
+
+.story [class*=word] {
+  padding: 0 5px;
+  border-bottom: dotted 2px #61ca49;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .75;
+  }
+  100% {
+    opacity: .75;
+  }
+}

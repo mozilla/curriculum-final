@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-
 body {
   font-family: "Open Sans";
-  height: 100%;
   background-color: #0d3158;
   color: white;
   background-image: url(../images/chip.svg);
@@ -15,6 +13,21 @@ body {
 
 body.show-story {
   background-color: #163c12;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8em;
+  font-size: 700;
+}
+
+h2 {
+  margin: 0 0 1.4em 0;
+  padding: 0;
+  font-size: 1.4em;
+  font-weight: 400;
+  font-style: italic;
 }
 
 /* When the story is shown, hide all these things */
@@ -33,7 +46,6 @@ body.show-story {
 }
 
 .monitor {
-  background: #c7bc96;
   padding: 30px 30px 0 30px;
   border-radius: 15px;
   border-bottom: solid 12px rgba(0,0,0,.3);
@@ -51,7 +63,6 @@ body.show-story {
 .light {
   height: 12px;
   width: 12px;
-  background: #c52424;
   position: absolute;
   right: 30px;
   bottom: 20px;
@@ -60,36 +71,13 @@ body.show-story {
 }
 
 .screen {
-  background: linear-gradient(-190deg, #333, black);
   padding: 10px 15px 50px 15px;
   border-radius: 15px;
   font-family: monospace;
-  border: solid 5px black;
 }
 
 .screen .cursor {
   animation: blink 1s linear infinite;
-}
-
-.story [class*=word] {
-  padding: 0 5px;
-  border-bottom: dotted 2px #61ca49;
-  animation: blink 1s linear infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .75;
-  }
-  100% {
-    opacity: .75;
-  }
 }
 
 .story p {
@@ -137,21 +125,6 @@ button:active {
 
 .directions {
   font-size: 1em;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.8em;
-  font-size: 700;
-}
-
-h2 {
-  margin: 0 0 1.4em 0;
-  padding: 0;
-  font-size: 1.4em;
-  font-weight: 400;
-  font-style: italic;
 }
 
 form {

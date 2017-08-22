@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png?1">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="customize.css" type="text/css">
     <script src="scripts/script.js" type="text/javascript"></script>
   </head>
 
@@ -14,6 +14,7 @@
     <h1>Privacy Fill-in-the-Blanks Story</h1>
     <h2>The lighter side of online safety</h2>
 
+    <!-- Form for adding words -->
     <div class="form">
       <p class="directions"><strong>Directions:</strong> Fill in the blanks and then hit the button below to see your story!</p>
       <form>
@@ -27,6 +28,7 @@
       <button onClick="fillBlanks()">Generate my Story!</button> <button onClick='resetForm()'>Reset</button>
     </div>
 
+    <!-- Monitor that displays the story -->
     <div class="story">
       <div class="monitor">
         <div class="screen">
@@ -49,5 +51,4 @@
 
     <div class="license">CC-BY <a href="https://teach.mozilla.org"><img src="images/mozilla-logo.svg" /></a></div>
   </body>
-
 </html>
