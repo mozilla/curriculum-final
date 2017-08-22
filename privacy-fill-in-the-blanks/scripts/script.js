@@ -11,10 +11,13 @@ function fillBlanks() {
   }
 }
 
+
+// Go back from the story to the form
 function goBack() {
   document.querySelector("body").classList.remove("show-story");
 }
 
+// Clear the form fields
 function resetForm(){
   document.querySelector("form").reset();
 }
