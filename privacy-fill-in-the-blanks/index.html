@@ -1,11 +1,9 @@
 <!doctype html>
 <html>
-
   <head>
     <title>Privacy Fill-in-the-Blanks Story</title>
-    <meta name="author" content="Mozilla">
-    <meta name="title" content="Privacy Fill-in-the-Blanks Story">
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png?1">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
@@ -19,28 +17,32 @@
     <div class="form">
       <p class="directions"><strong>Directions:</strong> Fill in the blanks and then hit the button below to see your story!</p>
       <form>
-        <p><input name="word-1" type="text"> A number. (Ex - 5 or 832)</p>
-        <p><input name="word-2" type="text"> An animal. (Ex - "dog" or "cat"</p>
-        <p><input name="word-3" type="text"> An adjective, or describing word. (Ex - "automobiles" or "trees")</p>
-        <p><input name="word-4" type="text"> A plural noun. (Ex - "automobiles" or "trees")</p>
-        <p><input name="word-5" type="text"> An adjective, or describing word. (Ex - "happy")</p>
-        <p><input name="word-6" type="text"> An adjective, or describing word. (Ex - "happy") </p>
+        <p><input name="word-1" type="text" placeholder="A number"> Like "5" or "832"</p>
+        <p><input name="word-2" type="text" placeholder="An animal"> Like "dog" or "cat"</p>
+        <p><input name="word-3" type="text" placeholder="An adjective, or describing word"> Like "fast" or "funny"</p>
+        <p><input name="word-4" type="text" placeholder="A plural noun"> Like "automobiles" or "trees"</p>
+        <p><input name="word-5" type="text" placeholder="An adjective, or describing word"> Like "happy"</p>
+        <p><input name="word-6" type="text" placeholder="An adjective, or describing word"> Like "sad" </p>
       </form>
-      <button onClick="fillBlanks()">Generate my Story!</button>
+      <button onClick="fillBlanks()">Generate my Story!</button> <button onClick='resetForm()'>Reset</button>
     </div>
 
     <div class="story">
-      <p>
-        On my way home, I have to pass <span class="word-1"></span> security cameras,
-        so I wear a hoodie that makes me look like a <span class="word-2"></span> to avoid facial recognition.
-        I also set my phone to <span class="word-3"></span> mode to keep it from leaking data.
-      </p>
-      <p>
-        When I have to use my phone, I encrypt all of my messages with <span class="word-4"></span> so no one can read
-        them if they get intercepted. When I go online, I set my browser to <span class="word-5"></span> mode so it doesn't
-        keep track of my browsing history and I never enable <span class="word-6"></span> serivces so no one can use my phone to track me.
-      </p>
-      <button onClick='resetPage()'>Reset</button>
+      <div class="monitor">
+        <div class="screen">
+          <p>
+            <span class="cursor">&gt;</span> On my way home, I have to pass <span class="word-1"></span> security cameras,
+            so I wear a hoodie that makes me look like a <span class="word-2"></span> to avoid facial recognition.
+            I also set my phone to <span class="word-3"></span> mode to keep it from leaking data.
+          </p>
+          <p>
+            When I have to use my phone, I encrypt all of my messages with <span class="word-4"></span> so no one can read
+            them if they get intercepted. When I go online, I set my browser to <span class="word-5"></span> mode so it doesn't
+            keep track of my browsing history and I never enable <span class="word-6"></span> services so no one can use my phone to track me.
+          </p>
+        </div>
+      </div>
+      <button onClick='goBack()'>&larr; Go Back</button>
     </div>
 
     <div class="license">CC-BY <a href="https://teach.mozilla.org"><img src="images/mozilla-logo.svg" /></a></div>

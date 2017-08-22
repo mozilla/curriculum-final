@@ -8,6 +8,7 @@ body {
   font-family: "Open Sans";
   height: 100%;
   background-color: #0d3158;
+  color: white;
   background-image: url(../images/chip.svg);
   /* Image from: https://opengameart.org/content/seamless-microscheme-texture */
   background-size: 250px;
@@ -16,7 +17,7 @@ body {
 }
 
 body.show-story {
-  background-color: #3c1912;
+  background-color: #163c12;
 }
 
 .show-story .form {
@@ -27,14 +28,70 @@ body.show-story {
   display: block;
 }
 
+.monitor {
+  background: #c7bc96;
+  padding: 30px;
+  border-radius: 15px;
+  border-bottom: solid 12px rgba(0,0,0,.3);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.screen {
+  background: linear-gradient(-190deg, #333, black);
+  padding: 10px 15px 50px 15px;
+  border-radius: 15px;
+  font-family: monospace;
+  border: solid 5px black;
+}
+
+.screen .cursor {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: .5;
+  }
+
+}
+
 .story {
   display: none;
+}
+
+.story [class*=word] {
+  padding: 0 5px;
+  border-bottom: dotted 2px #61ca49;
+}
+
+.story p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: #61ca49;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+
+p {
+  font-size: 1.125em;
+  font-weight:300;
 }
 
 button {
   font-size: 1em;
   line-height: 15px;
-  padding: 8px 22px 9px 22px;
+  padding: 10px 22px 11px 22px;
   box-sizing: border-box;
   font-weight: 700;
   border: solid 3px white;
@@ -44,10 +101,11 @@ button {
   transition: all ease-out .2s;
   cursor: pointer;
   outline: none;
+  margin-right: 5px;
 }
 
-form {
-  margin-bottom: 2em;
+.story button {
+  margin-top: 30px;
 }
 
 button:hover {
@@ -60,50 +118,49 @@ button:active {
 }
 
 .directions {
-  opacity: .8;
-}
-
-h1, h2 {
-  margin: 0;
-  color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
 }
 
 h1 {
-  margin-top:0;
-  font-size: 2em;
-  font-size: 600;
+  margin: 0;
+  padding: 0;
+  font-size: 1.8em;
+  font-size: 700;
 }
 
 h2 {
+  margin: 0 0 1.4em 0;
+  padding: 0;
+  font-size: 1.4em;
+  font-weight: 400;
+  font-style: italic;
+}
 
-  font-size: 1.5em;
-  margin-bottom: 1.5em;
-  font-weight:400;
+form {
+  margin-bottom: 2em;
+}
+
+form p {
+  font-size: 1em;
+  color: rgba(255,255,255,.8);
 }
 
 input {
-  font-family: 'Zilla Slab', serif;
-  font-size: 1em;
+  font-size: inherit;
   padding: 8px;
   outline: none;
-  border-radius: 5px;
+  border-radius: 2px;
   border: none;
   margin-right: 10px;
+  width: 270px;
+  font-family: inherit;
+  transition: transform .1s ease-out;
 }
 
-p {
-  color: #fff;
-  font-family: 'Zilla Slab', serif;
-  font-size: 1.125em;
-  font-weight:300;
-  text-shadow: 1px 1px 10px #001525;
+input:focus {
+  box-shadow: 0px 4px 4px rgba(0,0,0,.3);
+  transform: translateY(-2px);
 }
-
-#story-space {
-}
-
-/*Typography*/
 
 /* Mozilla license info */
 
@@ -130,14 +187,4 @@ p {
 
 .license img:hover {
   opacity: .6;
-}
-
-.story [class*=word] {
-  background: rgba(255,255,255,.2);
-  padding: 0 5px;
-  border-bottom: dotted rgba(255,255,255,.3) white;
-}
-
-.story p {
-  font-size: 2em;
 }

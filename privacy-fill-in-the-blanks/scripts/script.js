@@ -13,7 +13,11 @@ function fillBlanks() {
   }
 }
 
-function resetPage() {
-  document.querySelector("form").reset();
+
+function goBack() {
   document.querySelector("body").classList.remove("show-story");
+}
+
+function resetForm(){
+  document.querySelector("form").reset();
 }
