@@ -48,9 +48,9 @@ body.show-story {
     opacity: 1;
   }
   50% {
-    opacity: .75;
+    opacity: .85;
   }
   100% {
-    opacity: .75;
+    opacity: .85;
   }
 }
