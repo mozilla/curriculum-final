@@ -1,3 +1,7 @@
+// Adds a tooltip to any element with a tooltip attribute.
+// Ex - <p tooltip="Some text">Hello</p>
+// Hovering over the <p> element above will show a tooltip.
+
 var elements = document.querySelectorAll(".card *");
 var tooltipEl = document.querySelector(".tooltip");
 
@@ -5,7 +9,6 @@ for(var i = 0; i < elements.length; i++) {
   var el = elements[i];
 
   el.addEventListener("mouseenter", function(e){
-    e.stopPropagation();
     showTip(this);
   });
 
@@ -36,4 +39,3 @@ function hideTip(el){
   if(!el.hasAttribute("tooltip")) { return }
   tooltipEl.style.display = "none";
 }
-

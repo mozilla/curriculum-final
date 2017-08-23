@@ -73,12 +73,13 @@ p {
 }
 
 .image {
-  background-image: url(images/avatar.jpg);
+  background-image: url(images/portrait.jpg);
+  /* Image from https://opengameart.org/content/an-arith */
   height: 220px;
   background-color: white;
   box-shadow: 0px 3px 0 rgba(0,0,0,.15);
   position: relative;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
@@ -219,4 +220,31 @@ p {
     height: 0%;
     opacity: 0;
   }
+}
+
+/* Mozilla license info */
+
+.license {
+  position: fixed;
+  right: 15px;
+  bottom: 14px;
+  font-size: 13px;
+  color: white;
+  color: rgba(255,255,255,.4);
+}
+
+.license a {
+  margin-left: 5px;
+}
+
+.license img {
+  width: 60px;
+  opacity: .4;
+  position: relative;
+  top: 3px;
+  transition: opacity .2s ease-out;
+}
+
+.license img:hover {
+  opacity: .6;
 }
