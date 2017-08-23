@@ -1,0 +1,158 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  margin: 0;
+  padding: 20px 20px 50px 20px;
+  background-color: #0d3158;
+  background-image: url(images/chip.svg);
+  background-repeat: repeat;
+  background-size: 200px;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+p {
+  color: white;
+  text-align: center;
+  opacity: .8;
+  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
+  max-width: 600px;
+  font-size: 16px;
+}
+
+.card {
+  background-color: #2a79d0;
+  width: 260px;
+  border: solid 10px #000000;
+  padding: 15px 20px 75px 20px;
+  box-shadow: 10px 10px 0 rgba(0,0,0,.2);
+  position: relative;
+  margin: 0 auto;
+}
+
+.name {
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: black;
+  width: 75%;
+  position: relative;
+}
+
+
+.cost {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  font-weight: bold;
+  background: white;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.image {
+  height: 220px;
+  margin-bottom: 35px;
+  background-color: white;
+  box-shadow: 0px 5px 0 rgba(0,0,0,.15);
+  position: relative;
+  background-image: url(avatar.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.type {
+  background: black;
+  text-transform: uppercase;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 15px;
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+}
+
+.flavor-text {
+  font-style: italic;
+}
+
+.abilities {
+  margin-bottom: 20px;
+  background: rgba(255,255,255,.4);
+  padding: 5px 20px;
+  list-style-type: none;
+}
+
+.abilities li {
+  padding: 10px 0;
+  border-bottom: solid 2px rgba(0,0,0,.1);
+}
+
+.abilities li:last-child {
+  border: none;
+}
+
+.stat {
+  padding: 5px 15px;
+  position: absolute;
+  bottom: 0px;
+  font-weight: bold;
+  color: black;
+  font-size: 26px;
+  background: black;
+  color: white;
+}
+
+.stat img {
+  display: inline;
+  width: 20px;
+  height: 20px;
+  opacity: .5;
+}
+
+.power {
+  left: 0px;
+}
+
+.defense {
+  right: 0;
+}
+
+
+/* Tooltip styles */
+
+.tooltip {
+  display: none;
+}
+
+.tooltip {
+  position: fixed;
+  background: rgba(0,0,0,.85);
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  font-size: 14px;
+  padding: 8px 10px;
+  z-index: 99999;
+  color: rgba(255,255,255,.8);
+  animation: tooltipPop .15s ease-out;
+  transform-origin: bottom left;
+}
+
+@keyframes tooltipPop {
+  0%    { transform: scale(.6);  }
+  60%   { transform: scale(1.1); }
+  100%  { transform: scale(1);   }
+}
