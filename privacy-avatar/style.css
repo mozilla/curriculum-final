@@ -24,14 +24,14 @@ p {
   text-align: center;
   opacity: .8;
   margin-bottom: 40px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 35px auto;
   max-width: 600px;
   font-size: 16px;
 }
 
 .card {
   background-color: #2a79d0;
-  width: 260px;
+  width: 300px;
   border: solid 10px #000000;
   padding: 10px 15px 75px 15px;
   box-shadow: 0 0 0 rgba(0,0,0,.2);
@@ -49,9 +49,9 @@ p {
 
 .name {
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
   font-size: 18px;
-/*  color: black;*/
+  text-shadow: 0 2px 0 rgba(0,0,0,.3);
   color: white;
   width: 75%;
   position: relative;
@@ -62,23 +62,24 @@ p {
   position: absolute;
   right: 15px;
   top: 0;
-  font-weight: bold;
-  background: white;
-  background: rgba(255,255,255,.2);
+/*  background: white;*/
+/*  background: rgba(255,255,255,.2);*/
   padding: 10px 15px 7px 15px;
   text-align: center;
   font-size: 18px;
+  font-weight: 700;
+  color: white;
 }
 
 .image {
   height: 220px;
-/*  margin-bottom: 20px;*/
   background-color: white;
   box-shadow: 0px 5px 0 rgba(0,0,0,.15);
   position: relative;
   background-image: url(avatar.jpg);
   background-position: center;
   background-size: cover;
+  position: relative;
   background-repeat: no-repeat;
 }
 
@@ -89,7 +90,6 @@ p {
   font-size: 12px;
   font-weight: 600;
   padding: 10px 0;
-
   text-align: right;
 }
 
@@ -102,6 +102,7 @@ p {
   background: rgba(255,255,255,.3);
   padding: 3px 12px;
   list-style-type: none;
+  margin: 0 0 15px 0;
 }
 
 .abilities li {
